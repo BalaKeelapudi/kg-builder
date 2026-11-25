@@ -1,0 +1,5 @@
+# TI source documents are copyrighted; re-create them with kg/fetch_sources.sh
+sources/*
+!sources/.gitkeep
+__pycache__/
+*.pyc

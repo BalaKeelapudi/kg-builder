@@ -1,0 +1,5055 @@
+{
+ "entities": [
+  {
+   "id": "spruj26a",
+   "label": "SPRUJ26A",
+   "type": "Document",
+   "description": "Motor Control SDK Universal Project and Lab User's Guide; explains running motor drive EVMs with the Universal Motor Control Lab, migrating to a custom board, and porting to a new C2000 device.",
+   "aliases": [
+    "Motor Control SDK Universal Project and Lab",
+    "Universal Motor Control Project and Lab User's Guide"
+   ],
+   "properties": {
+    "revision": "A",
+    "date": "September 2021, revised April 2024",
+    "sections": "Introduction; Motor Control Theory; Running the Universal Lab on TI Hardware Kits; Building a Custom Board; Appendix A Motor Control Parameters"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 1
+    },
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "universal_motor_control_lab",
+   "label": "Universal Motor Control Lab",
+   "type": "Software",
+   "description": "Single project with build examples for sensorless (FAST, eSMO, InstaSPIN-BLDC) and sensored (incremental encoder, Hall) motor control techniques (FOC, trapezoidal), with system features and debug interfaces usable across three-phase inverter motor EVMs.",
+   "aliases": [
+    "Motor Control Universal Lab project",
+    "Universal MotorControl Lab"
+   ],
+   "properties": {
+    "requires": "CCS v12.0.0+, C2000 Compiler v22.6.0 LTS+, C2000Ware MotorControl SDK v4.01.00+"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 1
+    },
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "motorcontrol_sdk",
+   "label": "MotorControl SDK",
+   "type": "Software",
+   "description": "SDK containing the universal motor control solution and lab project; includes firmware that runs on C2000 motor control EVMs and TI designs, and ships a copy of C2000Ware.",
+   "aliases": [
+    "C2000Ware MotorControl SDK",
+    "MotorControlSDK"
+   ],
+   "properties": {
+    "min_version": "V4.01.00"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 1
+    },
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "c2000ware",
+   "label": "C2000Ware",
+   "type": "Software",
+   "description": "Provided as part of the MotorControl SDK; offers device-specific drivers, support software and complete example system applications.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "code_composer_studio",
+   "label": "Code Composer Studio",
+   "type": "Software",
+   "description": "IDE required by the Universal Motor Control Lab; some user parameters can be manipulated through CCS at run time.",
+   "aliases": [
+    "CCS"
+   ],
+   "properties": {
+    "min_version": "v12.0.0"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "c2000_compiler",
+   "label": "C2000 Compiler",
+   "type": "Software",
+   "description": "Compiler required by the Universal Motor Control Lab.",
+   "aliases": [],
+   "properties": {
+    "min_version": "v22.6.0 LTS"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "instaspin_foc",
+   "label": "InstaSPIN-FOC",
+   "type": "Software",
+   "description": "FAST observer is implemented with InstaSPIN-FOC in the lab; no longer requires a C2000 device with special ROM content. Uses measured stator voltage and current to estimate rotor position and speed during flying start.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    },
+    {
+     "doc": "spruj26a",
+     "page": 22
+    },
+    {
+     "doc": "spruj26a",
+     "page": 23
+    }
+   ]
+  },
+  {
+   "id": "instaspin_bldc",
+   "label": "InstaSPIN-BLDC",
+   "type": "Software",
+   "description": "Sensorless technique offered as a build example in the Universal Motor Control Lab.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "fast_estimator",
+   "label": "FAST estimator",
+   "type": "Algorithm",
+   "description": "FAST library estimates motor Flux, Angle, Speed and Torque; requires FPU-enabled C2000 devices supported by C2000Ware-MotorControl-SDK. Called via EST_run in the FOC ISR.",
+   "aliases": [
+    "FAST",
+    "FAST observer",
+    "FAST library"
+   ],
+   "properties": {
+    "outputs": "flux, angle, speed, torque, Rs, Lsd, Lsq, flux psi_s"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    },
+    {
+     "doc": "spruj26a",
+     "page": 11
+    },
+    {
+     "doc": "spruj26a",
+     "page": 13
+    },
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "id": "user_mtr1_h",
+   "label": "user_mtr1.h",
+   "type": "Software",
+   "description": "Header file that stores all user parameters; parameters must be updated here to be saved permanently in the project.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "hal_h",
+   "label": "hal.h",
+   "type": "Software",
+   "description": "HAL header modified to migrate the lab to custom hardware or port to other C2000 MCUs.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "hal_c",
+   "label": "hal.c",
+   "type": "Software",
+   "description": "HAL source file modified to migrate the lab to custom hardware or port to other C2000 MCUs.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "datalog",
+   "label": "DATALOG",
+   "type": "Software",
+   "description": "Data logging module optionally run at the end of the main ISR.",
+   "aliases": [
+    "DataLog"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 2
+    },
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "id": "pwmdac",
+   "label": "PWMDAC",
+   "type": "Software",
+   "description": "PWM-based DAC output module optionally run in the main ISR.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 2
+    },
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "id": "c2000",
+   "label": "C2000",
+   "type": "Device",
+   "description": "TI MCU platform; the lab can be ported to other C2000 MCU controllers.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 1
+    },
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "f28002x",
+   "label": "F28002x",
+   "type": "Device",
+   "description": "C2000 MCU series supported by the Universal Motor Control Lab example.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "f28003x",
+   "label": "F28003x",
+   "type": "Device",
+   "description": "C2000 MCU series supported by the Universal Motor Control Lab example.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "f280013x",
+   "label": "F280013x",
+   "type": "Device",
+   "description": "C2000 MCU series supported by the Universal Motor Control Lab example.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "fpu",
+   "label": "FPU",
+   "type": "Peripheral",
+   "description": "Floating-point unit; FAST observer for InstaSPIN-FOC requires FPU enabled.",
+   "aliases": [
+    "floating-point unit"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "adc",
+   "label": "ADC",
+   "type": "Peripheral",
+   "description": "Samples motor phase currents, phase voltages and DC bus voltage; read via HAL_readAdcData. Max ADC input is 3.3 V.",
+   "aliases": [],
+   "properties": {
+    "max_input": "3.3 V"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    },
+    {
+     "doc": "spruj26a",
+     "page": 17
+    },
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "id": "epwm",
+   "label": "ePWM",
+   "type": "Peripheral",
+   "description": "PWM driver outputs (PWM1A/B..PWM3A/B) driving the three-phase inverter; written via HAL_writePwmData.",
+   "aliases": [
+    "PWM",
+    "PWM Driver"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "id": "can",
+   "label": "CAN",
+   "type": "Peripheral",
+   "description": "CAN interface can be used to start/stop the motor and set the reference speed.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "pmsm",
+   "label": "PMSM",
+   "type": "Motor",
+   "description": "Permanent magnet synchronous motor: wound stator, permanent magnet rotor, and devices to sense rotor position; low rotor inertia, efficient heat dissipation, reduced size. Not self-starting.",
+   "aliases": [
+    "Permanent Magnet Synchronous Motor",
+    "PM synchronous motor"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 4
+    },
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "id": "ipmsm",
+   "label": "IPMSM",
+   "type": "Motor",
+   "description": "Interior PMSM; has electromagnetic and reluctance torque due to large saliency ratio, total torque non-linear in rotor angle; MTPA used to optimize torque.",
+   "aliases": [
+    "IPM",
+    "interior PMSM"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 17
+    },
+    {
+     "doc": "spruj26a",
+     "page": 18
+    }
+   ]
+  },
+  {
+   "id": "spmsm",
+   "label": "SPM",
+   "type": "Motor",
+   "description": "Surface-mounted PMSM; easier to control due to linear torque vs q-axis current relation; conventional control sets id to zero.",
+   "aliases": [
+    "surface-mounted PMSM"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    },
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "id": "dc_motor",
+   "label": "DC motor",
+   "type": "Motor",
+   "description": "Stator and rotor excitation are independently controlled so torque and flux can be tuned independently; commutator keeps rotor flux orthogonal to stator field.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 6
+    },
+    {
+     "doc": "spruj26a",
+     "page": 7
+    }
+   ]
+  },
+  {
+   "id": "acim",
+   "label": "ACIM",
+   "type": "Motor",
+   "description": "Asynchronous/induction machine: rotor speed differs from rotor flux speed (slip); needs non-zero flux reference and a current model to compute rotor flux angle.",
+   "aliases": [
+    "AC induction motor",
+    "asynchronous machine"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 10
+    },
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "id": "three_phase_inverter",
+   "label": "Three-phase inverter",
+   "type": "Component",
+   "description": "Standard three-phase (two-level voltage source) inverter driven by PWM signals to control the motor; its max phase voltage is limited by DC-link voltage and PWM strategy.",
+   "aliases": [
+    "VSI",
+    "Voltage Source Inverter"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 18
+    }
+   ]
+  },
+  {
+   "id": "voltage_feedback_circuit",
+   "label": "Voltage feedback circuit (resistor divider)",
+   "type": "Component",
+   "description": "Resistor-divider circuit that filters and scales motor phase and DC bus voltages for the ADC input range.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "id": "foc",
+   "label": "FOC",
+   "type": "Algorithm",
+   "description": "Field Oriented Control (rotor flux oriented / vector control): decouples torque and magnetizing flux components of stator current via Clarke and Park transforms into a time-invariant d-q system, similar to DC machine control.",
+   "aliases": [
+    "Field Oriented Control",
+    "vector control",
+    "rotor flux oriented control"
+   ],
+   "properties": {
+    "torque_eq": "tau_em = B_stator x B_rotor (Eq 6); tau_em ∝ psi_R x i_sq (Eq 7)",
+    "pmsm_isd_ref": "0"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 4
+    },
+    {
+     "doc": "spruj26a",
+     "page": 6
+    },
+    {
+     "doc": "spruj26a",
+     "page": 7
+    },
+    {
+     "doc": "spruj26a",
+     "page": 10
+    },
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "id": "sensorless_foc",
+   "label": "Sensorless FOC",
+   "type": "Algorithm",
+   "description": "FOC of a PMSM without mechanical position sensor using eSMO+PLL or FAST to estimate rotor angle and speed; shown with flying start or with FWC and MTPA.",
+   "aliases": [],
+   "properties": {
+    "figures": "2-2, 2-10, 2-11, 2-12, 2-13"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 12
+    },
+    {
+     "doc": "spruj26a",
+     "page": 13
+    },
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "id": "trapezoidal_control",
+   "label": "Trapezoidal control",
+   "type": "Algorithm",
+   "description": "Motor control technique offered in the lab alongside FOC.",
+   "aliases": [
+    "Trapezoidal"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "esmo",
+   "label": "eSMO",
+   "type": "Algorithm",
+   "description": "Enhanced sliding mode observer; uses back-EMF model together with a PLL to estimate rotor position and speed for sensorless IPMSM control at middle/high speed; relies on software-estimated phase voltages rather than phase-voltage sensing.",
+   "aliases": [
+    "Enhanced Sliding Mode Observer",
+    "ESMO"
+   ],
+   "properties": {
+    "inputs": "V_alpha, V_beta, I_alpha, I_beta, Vbus",
+    "outputs": "theta_e, omega_e",
+    "discrete_F": "F = exp(-Rs/Ld), exp(-Rs/Lq) (Eq 18)",
+    "discrete_G": "G = (1/Rs)(1-exp(-Rs/Ld)), (1/Rs)(1-exp(-Rs/Lq)) (Eq 19)",
+    "eemf_filter_discrete": "e(n+1)=e(n)+2*pi*fc*(z(n)-e(n)) (Eq 20)"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 11
+    },
+    {
+     "doc": "spruj26a",
+     "page": 14
+    },
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "id": "smo",
+   "label": "Sliding Mode Observer",
+   "type": "Algorithm",
+   "description": "Observer based on sliding mode control; structure purposefully changed by system state to follow a sliding trajectory; fast response, robust, insensitive to parameter changes and disturbances. Traditional reduced-order SMO uses a motor-model current observer, bang-bang control, LPF and angle calculator.",
+   "aliases": [
+    "SMO",
+    "traditional reduced-order sliding mode observer"
+   ],
+   "properties": {
+    "model": "Eq 11 with sliding feedback z"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 14
+    },
+    {
+     "doc": "spruj26a",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "id": "pll",
+   "label": "PLL",
+   "type": "Algorithm",
+   "description": "Quadrature phase-locked loop position tracker that estimates rotor angular velocity and position from estimated back-EMF, eliminating noise/harmonic effects of the arctangent method.",
+   "aliases": [
+    "Phase Locked Loop",
+    "PLL position tracker"
+   ],
+   "properties": {
+    "position_error": "eps = e_beta*cos(th^) - e_alpha*sin(th^) = E*sin(th - th^) (Eq 21); eps_n = th - th^ (Eq 23)",
+    "closed_loop_tf": "(kp*s+ki)/(s^2+kp*s+ki) = (2*xi*wn*s+wn^2)/(s^2+2*xi*wn*s+wn^2) (Eq 24)",
+    "gains": "kp=2*xi*wn, ki=wn^2 (Eq 25)"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 14
+    },
+    {
+     "doc": "spruj26a",
+     "page": 16
+    },
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "id": "clarke_transform",
+   "label": "Clarke transform",
+   "type": "Algorithm",
+   "description": "Projects 3-phase (a,b,c) quantities into the 2-axis orthogonal stationary (alpha,beta) frame; output is time-variant.",
+   "aliases": [
+    "CLARKE"
+   ],
+   "properties": {
+    "equation": "i_salpha = i_a; i_sbeta = (1/sqrt3) i_a + (2/sqrt3) i_b (Eq 9)"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 8
+    },
+    {
+     "doc": "spruj26a",
+     "page": 9
+    },
+    {
+     "doc": "spruj26a",
+     "page": 10
+    },
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "id": "park_transform",
+   "label": "Park transform",
+   "type": "Algorithm",
+   "description": "Most important FOC transform: projects (alpha,beta) into the rotating (d,q) frame aligned with rotor flux, giving DC (time-invariant) flux and torque current components; needs rotor flux position.",
+   "aliases": [
+    "PARK"
+   ],
+   "properties": {
+    "equation": "i_sd = i_salpha cos(th) + i_sbeta sin(th); i_sq = -i_salpha sin(th) + i_sbeta cos(th) (Eq 10)"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 9
+    },
+    {
+     "doc": "spruj26a",
+     "page": 10
+    },
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "id": "inverse_park_transform",
+   "label": "Inverse Park transform",
+   "type": "Algorithm",
+   "description": "Converts Vsdref, Vsqref from current regulators to Vsalpharef, Vsbetaref in the stationary frame; needs rotor flux position.",
+   "aliases": [
+    "INV PARK",
+    "IPARK"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 6
+    },
+    {
+     "doc": "spruj26a",
+     "page": 10
+    },
+    {
+     "doc": "spruj26a",
+     "page": 11
+    },
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "id": "svpwm",
+   "label": "SVPWM",
+   "type": "Algorithm",
+   "description": "Space Vector PWM takes Vsalpharef/Vsbetaref and produces signals (Ta, Tb, Tc) that drive the inverter; limits max voltage to vdc/sqrt3.",
+   "aliases": [
+    "Space Vector PWM",
+    "SVM",
+    "SVGEN",
+    "Space Vector Modulation"
+   ],
+   "properties": {
+    "vmax": "sqrt(vd^2+vq^2) <= vdc/sqrt(3) (Eq 31)"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 11
+    },
+    {
+     "doc": "spruj26a",
+     "page": 12
+    },
+    {
+     "doc": "spruj26a",
+     "page": 18
+    },
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "id": "pi_controller",
+   "label": "PI controller",
+   "type": "Algorithm",
+   "description": "Proportional-integral regulator used for speed, Id, Iq and field-weakening loops and in the PLL.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 12
+    },
+    {
+     "doc": "spruj26a",
+     "page": 17
+    },
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "id": "speed_pi_controller",
+   "label": "Speed PI controller",
+   "type": "Algorithm",
+   "description": "Speed regulator whose output is the torque command Iq_ref (or Is_ref with FW/MTPA); disabled during flying start.",
+   "aliases": [
+    "Speed PI"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 10
+    },
+    {
+     "doc": "spruj26a",
+     "page": 12
+    },
+    {
+     "doc": "spruj26a",
+     "page": 13
+    },
+    {
+     "doc": "spruj26a",
+     "page": 23
+    }
+   ]
+  },
+  {
+   "id": "current_pi_controller",
+   "label": "Id/Iq current PI controllers",
+   "type": "Algorithm",
+   "description": "Current regulators comparing isd/isq with isdref/isqref; outputs Vsdref and Vsqref fed to inverse Park.",
+   "aliases": [
+    "Id PI",
+    "Iq PI"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 10
+    },
+    {
+     "doc": "spruj26a",
+     "page": 12
+    },
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "id": "speed_trajectory",
+   "label": "Speed trajectory ramp",
+   "type": "Algorithm",
+   "description": "Traj Ramp that ramps the speed reference SpdRef to wref for the speed controller.",
+   "aliases": [
+    "Traj Ramp",
+    "Speed Trajectory"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    },
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "id": "mtpa",
+   "label": "MTPA",
+   "type": "Algorithm",
+   "description": "Maximum torque per ampere: computes current angle beta_mtpa and id/iq references to maximize torque for IPM motors in the constant torque region using reluctance torque; Ld/Lq from a LUT.",
+   "aliases": [
+    "Maximum Torque Per Ampere"
+   ],
+   "properties": {
+    "beta_mtpa": "cos^-1[(-psi_m + sqrt(psi_m^2 + 8(Ld-Lq)^2 Is^2)) / (4(Ld-Lq)Is)] (Eq 38)",
+    "id_iq": "Id = Is cos(beta_mtpa); Iq = Is sin(beta_mtpa) (Eq 39-40)",
+    "simplified": "beta_mtpa = cos^-1(Gmtpa - sqrt(Gmtpa^2 + 0.5)) with Gmtpa=Kmtpa/Is (Eq 44-46)"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    },
+    {
+     "doc": "spruj26a",
+     "page": 19
+    },
+    {
+     "doc": "spruj26a",
+     "page": 20
+    },
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "id": "field_weakening",
+   "label": "Field weakening",
+   "type": "Algorithm",
+   "description": "Weakens air-gap flux via negative id (d-axis armature reaction) to run above base speed; FW PI controller on voltage magnitude error outputs beta_fw, saturated at 0 until voltage limit reached.",
+   "aliases": [
+    "FW",
+    "FWC",
+    "field weakening control"
+   ],
+   "properties": {
+    "inputs": "Vs (from Vd,Vq), Vs_ref (from Vbus)",
+    "output": "beta_fw"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 7
+    },
+    {
+     "doc": "spruj26a",
+     "page": 17
+    },
+    {
+     "doc": "spruj26a",
+     "page": 20
+    },
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "id": "fw_mtpa_switching_control",
+   "label": "FW/MTPA switching control",
+   "type": "Algorithm",
+   "description": "Decides which current angle to apply: beta = beta_fw if beta_fw > beta_mtpa, else beta_mtpa; then computes id/iq references from Is_ref.",
+   "aliases": [
+    "Switching Control"
+   ],
+   "properties": {
+    "rule": "Eq 47-48"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "id": "inductance_lut",
+   "label": "Ld/Lq look-up table",
+   "type": "Algorithm",
+   "description": "Robust LUT method modeling Ld as a function of id and Lq as a function of iq, ensuring controllability under parameter variation.",
+   "aliases": [
+    "MTPA LUT",
+    "LUT"
+   ],
+   "properties": {
+    "model": "Ld=f1(id), Lq=f2(iq) (Eq 41-42)"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 20
+    },
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "id": "low_pass_filter",
+   "label": "Low-pass filter (SMO)",
+   "type": "Algorithm",
+   "description": "Filters discontinuous switching signals z_alpha, z_beta to estimate EEMF; introduces phase delay compensated by delta_theta.",
+   "aliases": [
+    "LPF"
+   ],
+   "properties": {
+    "transfer": "e^ = wc/(s+wc) * z (Eq 13)",
+    "cutoff": "wc = 2*pi*fc, chosen per stator current fundamental frequency",
+    "phase_compensation": "delta_theta = -tan^-1(we/wc) (Eq 15)"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "id": "bang_bang_control",
+   "label": "Bang-bang control",
+   "type": "Algorithm",
+   "description": "Sign-function switching of the current estimation error producing sliding feedback z.",
+   "aliases": [],
+   "properties": {
+    "equation": "z = k*sign(i^ - i) (Eq 12)"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "id": "arctangent_angle_calculation",
+   "label": "Arctangent angle calculation",
+   "type": "Algorithm",
+   "description": "Rotor position computed directly from arctangent of estimated back-EMF; accuracy affected by noise and harmonics.",
+   "aliases": [
+    "Angle Calculator"
+   ],
+   "properties": {
+    "equation": "theta_e = -tan^-1(e_alpha/e_beta) + delta_theta (Eq 14,16)"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 15
+    },
+    {
+     "doc": "spruj26a",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "id": "euler_method",
+   "label": "Euler discretization",
+   "type": "Algorithm",
+   "description": "Used to transform the SMO into a time-discrete observer for digital control.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "id": "current_model",
+   "label": "Current model",
+   "type": "Algorithm",
+   "description": "Basic method to calculate rotor flux angle in asynchronous machines using two motor model equations in d-q frame.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "id": "voltage_reconstruction",
+   "label": "Voltage reconstruction",
+   "type": "Algorithm",
+   "description": "Volt_Rec block reconstructing alpha-beta phase voltages from Vbus and PWM for eSMO.",
+   "aliases": [
+    "Volt_Rec"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    },
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "id": "current_reconstruction",
+   "label": "Current reconstruction",
+   "type": "Algorithm",
+   "description": "Step in the main ISR reconstructing phase currents after ADC offset removal.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "id": "hal_writepwmdata",
+   "label": "HAL_writePwmData",
+   "type": "Parameter",
+   "description": "HAL function writing SVM outputs to the PWM driver.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    },
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "id": "hal_readadcdata",
+   "label": "HAL_readAdcData",
+   "type": "Parameter",
+   "description": "HAL function reading ADC phase currents/voltages.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    },
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "id": "est_run",
+   "label": "EST_run",
+   "type": "Parameter",
+   "description": "Function call running the FAST estimator in the ISR.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    },
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "id": "enable_fs",
+   "label": "Enable_FS",
+   "type": "Parameter",
+   "description": "Flag enabling the flying start module.",
+   "aliases": [
+    "Enable FS"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    },
+    {
+     "doc": "spruj26a",
+     "page": 13
+    },
+    {
+     "doc": "spruj26a",
+     "page": 23
+    }
+   ]
+  },
+  {
+   "id": "user_idref",
+   "label": "User_IdRef",
+   "type": "Parameter",
+   "description": "User d-axis current reference fed to Id_ref.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    },
+    {
+     "doc": "spruj26a",
+     "page": 13
+    },
+    {
+     "doc": "spruj26a",
+     "page": 23
+    }
+   ]
+  },
+  {
+   "id": "irated",
+   "label": "Irated",
+   "type": "Parameter",
+   "description": "Rated current input in FOC block diagrams.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    },
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "id": "user_adc_full_scale_voltage_v",
+   "label": "USER_ADC_FULL_SCALE_VOLTAGE_V",
+   "type": "Parameter",
+   "description": "Software value used by eSMO to represent phase voltages; depends on the voltage feedback circuit.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "id": "current_scale_value",
+   "label": "Current scale value",
+   "type": "Parameter",
+   "description": "Hardware-dependent parameter that must be set correctly to identify and run the motor with FOC.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "id": "voltage_scale_value",
+   "label": "Voltage scale value",
+   "type": "Parameter",
+   "description": "Hardware-dependent parameter that must be set correctly to identify and run the motor with FOC.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "id": "voltage_filter_pole",
+   "label": "Voltage filter pole",
+   "type": "Parameter",
+   "description": "Hardware-dependent parameter for voltage feedback filtering for FAST or eSMO.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "id": "kmtpa",
+   "label": "Kmtpa",
+   "type": "Parameter",
+   "description": "Motor-parameter-based MTPA constant computed in the background loop with updated Ld and Lq.",
+   "aliases": [],
+   "properties": {
+    "equation": "Kmtpa = 0.25*psi_m/(Lq-Ld) (Eq 43)"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 20
+    },
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "id": "gmtpa",
+   "label": "Gmtpa",
+   "type": "Parameter",
+   "description": "Intermediate MTPA variable computed in the ISR.",
+   "aliases": [],
+   "properties": {
+    "equation": "Gmtpa = Kmtpa/Is (Eq 45)"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 20
+    }
+   ]
+  },
+  {
+   "id": "sliding_mode_gain",
+   "label": "Sliding mode gains k_alpha, k_beta",
+   "type": "Parameter",
+   "description": "Constant sliding mode gains designed by Lyapunov stability analysis.",
+   "aliases": [
+    "k_alpha",
+    "k_beta"
+   ],
+   "properties": {
+    "condition": "k_alpha > max|e_alpha|, k_beta > max|e_beta|"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "id": "pll_gains",
+   "label": "PLL kp, ki",
+   "type": "Parameter",
+   "description": "Proportional and integral gains of the PLL PI regulator.",
+   "aliases": [],
+   "properties": {
+    "equation": "kp = 2*xi*wn, ki = wn^2"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "id": "lpf_cutoff_frequency",
+   "label": "fc (LPF cutoff)",
+   "type": "Parameter",
+   "description": "Cutoff frequency of SMO LPF, selected according to stator current fundamental frequency.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 15
+    },
+    {
+     "doc": "spruj26a",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "id": "back_emf",
+   "label": "Back-EMF",
+   "type": "Concept",
+   "description": "Voltage induced by rotor; field weakening reduces it; speed and position estimated from BEMF voltages when spinning.",
+   "aliases": [
+    "BEMF",
+    "back electromotive force"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 7
+    },
+    {
+     "doc": "spruj26a",
+     "page": 20
+    },
+    {
+     "doc": "spruj26a",
+     "page": 23
+    }
+   ]
+  },
+  {
+   "id": "eemf",
+   "label": "Extended EMF (EEMF)",
+   "type": "Concept",
+   "description": "Extended electromotive force in alpha-beta axes, the only term containing rotor position information; e = [lambda_pm + (Ld-Lq) id] we [-sin th; cos th] (Eq 3); magnitude E = we*lambda_pm.",
+   "aliases": [
+    "extended electromotive force"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 6
+    },
+    {
+     "doc": "spruj26a",
+     "page": 15
+    },
+    {
+     "doc": "spruj26a",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "id": "rotor_flux_angle",
+   "label": "Rotor flux position (theta)",
+   "type": "Concept",
+   "description": "Core of FOC; needed by Park and inverse Park; error misaligns d-axis. In synchronous machines measured by position sensor or speed integration.",
+   "aliases": [
+    "rotor position",
+    "theta_e",
+    "rotor flux angle"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 9
+    },
+    {
+     "doc": "spruj26a",
+     "page": 10
+    },
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "id": "rotor_speed",
+   "label": "Rotor electrical angular velocity (omega_e)",
+   "type": "Concept",
+   "description": "Electrical angular velocity of the rotor; estimated by PLL/FAST and fed back to speed PI.",
+   "aliases": [
+    "omega_e",
+    "speed estimate"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "id": "d_axis_current",
+   "label": "d-axis current (id)",
+   "type": "Concept",
+   "description": "Flux component of stator current; set to zero for PMSM, negative for field weakening, computed by MTPA for IPMSM.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 7
+    },
+    {
+     "doc": "spruj26a",
+     "page": 10
+    },
+    {
+     "doc": "spruj26a",
+     "page": 19
+    },
+    {
+     "doc": "spruj26a",
+     "page": 20
+    }
+   ]
+  },
+  {
+   "id": "q_axis_current",
+   "label": "q-axis current (iq)",
+   "type": "Concept",
+   "description": "Torque component of stator current; linear relation with torque at fixed rotor flux.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 7
+    },
+    {
+     "doc": "spruj26a",
+     "page": 10
+    },
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "id": "stator_current_space_vector",
+   "label": "Stator current space vector",
+   "type": "Concept",
+   "description": "Complex vector i_s = ia + a*ib + a^2*ic with a = e^(j2pi/3) (Eq 8).",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 8
+    }
+   ]
+  },
+  {
+   "id": "dq_reference_frame",
+   "label": "d-q rotating reference frame",
+   "type": "Concept",
+   "description": "Rotor reference frame aligned with rotor flux in which currents become DC quantities.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 9
+    },
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "id": "alpha_beta_reference_frame",
+   "label": "alpha-beta stationary reference frame",
+   "type": "Concept",
+   "description": "Two-axis orthogonal stationary frame with alpha aligned with phase a.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 6
+    },
+    {
+     "doc": "spruj26a",
+     "page": 9
+    }
+   ]
+  },
+  {
+   "id": "pmsm_dq_model",
+   "label": "PMSM d-q dynamic model",
+   "type": "Concept",
+   "description": "[vd;vq] = [Rs+pLd, -we Lq; we Ld, Rs+pLq][id;iq] + [0; we lambda_pm] (Eq 1); alpha-beta model Eq 2; state equation Eq 4.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 6
+    }
+   ]
+  },
+  {
+   "id": "stator_resistance",
+   "label": "Stator resistance (Rs)",
+   "type": "Concept",
+   "description": "Resistance of stator windings; negligible at high speed.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 18
+    }
+   ]
+  },
+  {
+   "id": "d_axis_inductance",
+   "label": "d-axis inductance (Ld)",
+   "type": "Concept",
+   "description": "d-axis inductance; varies with id and saturation.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 20
+    }
+   ]
+  },
+  {
+   "id": "q_axis_inductance",
+   "label": "q-axis inductance (Lq)",
+   "type": "Concept",
+   "description": "q-axis inductance; varies with iq and saturation.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 20
+    }
+   ]
+  },
+  {
+   "id": "pm_flux_linkage",
+   "label": "Permanent magnet flux linkage (lambda_pm / psi_m)",
+   "type": "Concept",
+   "description": "Flux linkage generated by the permanent magnets.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    },
+    {
+     "doc": "spruj26a",
+     "page": 18
+    }
+   ]
+  },
+  {
+   "id": "sliding_surface",
+   "label": "Sliding surface",
+   "type": "Concept",
+   "description": "Selected on the stator current path: S = i^ - i (Eq 5), since stator current is the only directly measurable quantity.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 6
+    }
+   ]
+  },
+  {
+   "id": "pll_position_error",
+   "label": "PLL position error",
+   "type": "Concept",
+   "description": "eps = E sin(theta - theta^) simplified to E(theta - theta^) when error < pi/2; normalized eps_n.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "id": "electromagnetic_torque",
+   "label": "Electromagnetic torque (Te)",
+   "type": "Concept",
+   "description": "Te = 3/2 p [psi_m iq + (Ld-Lq) id iq] (Eq 28): mutual (magnet) torque plus reluctance torque.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 7
+    },
+    {
+     "doc": "spruj26a",
+     "page": 18
+    },
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "id": "reluctance_torque",
+   "label": "Reluctance torque",
+   "type": "Concept",
+   "description": "Torque from difference between d- and q-axis inductance (saliency), proportional to id*iq*(Ld-Lq).",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    },
+    {
+     "doc": "spruj26a",
+     "page": 18
+    },
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "id": "current_limit",
+   "label": "Current limit circle",
+   "type": "Concept",
+   "description": "sqrt(id^2+iq^2) <= Imax (Eq 29), circle of radius Imax in d-q plane.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 18
+    },
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "id": "voltage_limit",
+   "label": "Voltage limit ellipse",
+   "type": "Concept",
+   "description": "sqrt(vd^2+vq^2) <= Vmax (Eq 30); ellipse shrinking with speed (Eq 32).",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 18
+    },
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "id": "constant_torque_region",
+   "label": "Constant torque region",
+   "type": "Concept",
+   "description": "IPMSM region I where MTPA ensures maximum torque generation.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "id": "constant_power_region",
+   "label": "Constant power region",
+   "type": "Concept",
+   "description": "IPMSM region II where field weakening must be employed, torque capacity reduced.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "id": "constant_voltage_region",
+   "label": "Constant voltage region",
+   "type": "Concept",
+   "description": "IPMSM region III where deep field weakening keeps constant stator voltage.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "id": "stator_current_angle",
+   "label": "Stator current angle (beta)",
+   "type": "Concept",
+   "description": "Angle of stator current in d-q frame: Id = Is cos(beta), Iq = Is sin(beta) (Eq 33-35).",
+   "aliases": [
+    "beta"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 19
+    },
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "id": "beta_mtpa",
+   "label": "beta_mtpa",
+   "type": "Concept",
+   "description": "Current angle generated by MTPA control.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 20
+    },
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "id": "beta_fw",
+   "label": "beta_fw",
+   "type": "Concept",
+   "description": "Current angle output of the FW PI controller.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "id": "dc_bus_voltage",
+   "label": "DC bus voltage (Vbus)",
+   "type": "Concept",
+   "description": "Sampled DC link voltage; limits maximum inverter output voltage.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    },
+    {
+     "doc": "spruj26a",
+     "page": 18
+    },
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "id": "motor_phase_current",
+   "label": "Motor phase current",
+   "type": "Concept",
+   "description": "Measured stator current; only directly measurable physical quantity; two phases fed to Clarke.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 6
+    },
+    {
+     "doc": "spruj26a",
+     "page": 10
+    },
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "id": "motor_phase_voltage",
+   "label": "Motor phase voltage feedback",
+   "type": "Concept",
+   "description": "Phase voltages measured directly for FAST for best performance over widest speed range; not required by eSMO.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "id": "pull_out",
+   "label": "Pull-out",
+   "type": "Concept",
+   "description": "Loss of synchronism when stator field does not rotate at rotor frequency; reason synchronous machine is not self-starting.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "overcurrent_trip",
+   "label": "Overcurrent trip",
+   "type": "Concept",
+   "description": "Can occur when starting a spinning motor in normal mode; prevented by flying start.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    },
+    {
+     "doc": "spruj26a",
+     "page": 23
+    }
+   ]
+  },
+  {
+   "id": "position_sensor",
+   "label": "Mechanical position sensor",
+   "type": "Concept",
+   "description": "Rotor position sensor; increases cost, size, reliability problems in home appliances.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 7
+    },
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "id": "encoder",
+   "label": "Incremental encoder",
+   "type": "Concept",
+   "description": "Sensored rotor position feedback option.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    },
+    {
+     "doc": "spruj26a",
+     "page": 7
+    }
+   ]
+  },
+  {
+   "id": "hall_sensor",
+   "label": "Hall sensor",
+   "type": "Concept",
+   "description": "Sensored rotor position feedback option.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "saliency",
+   "label": "Saliency ratio",
+   "type": "Concept",
+   "description": "Large saliency ratio of IPMSM yields reluctance torque.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "id": "base_speed",
+   "label": "Base speed",
+   "type": "Concept",
+   "description": "Field weakening extends operation above base speed / rated speed.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    },
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "id": "flying_start",
+   "label": "Flying start",
+   "type": "Feature",
+   "description": "Determines speed and direction of a spinning motor and starts output at that speed; applies zero torque current, estimates position/speed, then enables speed closed loop.",
+   "aliases": [
+    "FS"
+   ],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    },
+    {
+     "doc": "spruj26a",
+     "page": 22
+    },
+    {
+     "doc": "spruj26a",
+     "page": 23
+    }
+   ]
+  },
+  {
+   "id": "sensorless_mode",
+   "label": "Sensorless control",
+   "type": "Feature",
+   "description": "Rotor speed/position estimation without mechanical sensor (FAST, eSMO, InstaSPIN-BLDC).",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    },
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "id": "sensored_mode",
+   "label": "Sensored control",
+   "type": "Feature",
+   "description": "Control using incremental encoder or Hall sensors.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "motor_parameter_identification",
+   "label": "Motor identification",
+   "type": "Feature",
+   "description": "Enable Motor Identification option of the FAST estimator (Rs, Lsd, Lsq, flux).",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    },
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "id": "rs_online_recalibration",
+   "label": "Rs online recalibration",
+   "type": "Feature",
+   "description": "Enable Rs Online Recalibration option with FAST; Id/Iq references updated for Rs online in ISR.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    },
+    {
+     "doc": "spruj26a",
+     "page": 14
+    },
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "id": "force_angle_startup",
+   "label": "Force angle startup",
+   "type": "Feature",
+   "description": "Enable Force Angle Startup option with FAST.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    },
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "id": "motor_start_stop_interface",
+   "label": "Start/stop and speed reference interface",
+   "type": "Feature",
+   "description": "Interface functions to start/stop motor and set reference speed via push button, potentiometer, or CAN.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "over_modulation",
+   "label": "Over-modulation",
+   "type": "Feature",
+   "description": "Driver parameters set for over-modulation voltage; PWM compensation for over modulation run in ISR.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "id": "adc_offset_calibration",
+   "label": "ADC offset calculation",
+   "type": "Feature",
+   "description": "ADC offsets calculated at startup with PWM at 50% duty and removed from ADC results in ISR.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "id": "home_appliances",
+   "label": "Home appliances",
+   "type": "Application",
+   "description": "PMSM widely used in home appliances; sensorless control avoids sensor cost.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 14
+    },
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "id": "air_conditioner_fan",
+   "label": "Air-conditioner fan drive",
+   "type": "Application",
+   "description": "Flying start is important for fan drive in air-condition applications.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "id": "compressor",
+   "label": "Compressor and fan motors",
+   "type": "Application",
+   "description": "Current/voltage scale and voltage filter pole calculation for compressor and fan motor control.",
+   "aliases": [],
+   "properties": {},
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  }
+ ],
+ "relations": [
+  {
+   "source": "universal_motor_control_lab",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 6
+    }
+   ]
+  },
+  {
+   "source": "esmo",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "source": "pll",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "mtpa",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "source": "field_weakening",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 20
+    }
+   ]
+  },
+  {
+   "source": "flying_start",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "source": "pmsm",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "ipmsm",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "clarke_transform",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 8
+    }
+   ]
+  },
+  {
+   "source": "park_transform",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 9
+    }
+   ]
+  },
+  {
+   "source": "inverse_park_transform",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 10
+    }
+   ]
+  },
+  {
+   "source": "svpwm",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "source": "smo",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "sensorless_foc",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Described in the Universal Project and Lab user's guide.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "motorcontrol_sdk",
+   "type": "part_of",
+   "evidence": "The universal motor control solution, as well as the lab project, is located within the MotorControl SDK.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "c2000ware",
+   "type": "uses",
+   "evidence": "Lab is built within the MotorControl SDK folder and additionally uses files from C2000Ware.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "c2000ware",
+   "type": "contains",
+   "evidence": "A copy of C2000Ware is provided as part of the MotorControl SDK.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "code_composer_studio",
+   "type": "requires",
+   "evidence": "Requires Code Composer Studio v12.0.0 or newer.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "c2000_compiler",
+   "type": "requires",
+   "evidence": "Requires C2000 Compiler v22.6.0 LTS or newer.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "motorcontrol_sdk",
+   "type": "requires",
+   "evidence": "Requires C2000Ware MotorControl SDK V4.01.00 or newer.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "f28002x",
+   "type": "runs_on",
+   "evidence": "Provides an example using the F28002x, F28003x, and F280013x series C2000 MCU.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "c2000",
+   "type": "is_a",
+   "evidence": "F28002x, F28003x, and F280013x series C2000 MCU.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "f28003x",
+   "type": "runs_on",
+   "evidence": "Provides an example using the F28002x, F28003x, and F280013x series C2000 MCU.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "f28003x",
+   "target": "c2000",
+   "type": "is_a",
+   "evidence": "F28002x, F28003x, and F280013x series C2000 MCU.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "f280013x",
+   "type": "runs_on",
+   "evidence": "Provides an example using the F28002x, F28003x, and F280013x series C2000 MCU.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "c2000",
+   "type": "is_a",
+   "evidence": "F28002x, F28003x, and F280013x series C2000 MCU.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "fast_estimator",
+   "type": "supports",
+   "evidence": "Build examples for Sensorless (FAST, eSMO, InstaSPIN-BLDC) and Sensored (Encoder, Hall) techniques (FOC, Trapezoidal).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "esmo",
+   "type": "supports",
+   "evidence": "Build examples for Sensorless (FAST, eSMO, InstaSPIN-BLDC) and Sensored (Encoder, Hall) techniques (FOC, Trapezoidal).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "instaspin_bldc",
+   "type": "supports",
+   "evidence": "Build examples for Sensorless (FAST, eSMO, InstaSPIN-BLDC) and Sensored (Encoder, Hall) techniques (FOC, Trapezoidal).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "encoder",
+   "type": "supports",
+   "evidence": "Build examples for Sensorless (FAST, eSMO, InstaSPIN-BLDC) and Sensored (Encoder, Hall) techniques (FOC, Trapezoidal).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "hall_sensor",
+   "type": "supports",
+   "evidence": "Build examples for Sensorless (FAST, eSMO, InstaSPIN-BLDC) and Sensored (Encoder, Hall) techniques (FOC, Trapezoidal).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "foc",
+   "type": "supports",
+   "evidence": "Build examples for Sensorless (FAST, eSMO, InstaSPIN-BLDC) and Sensored (Encoder, Hall) techniques (FOC, Trapezoidal).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "trapezoidal_control",
+   "type": "supports",
+   "evidence": "Build examples for Sensorless (FAST, eSMO, InstaSPIN-BLDC) and Sensored (Encoder, Hall) techniques (FOC, Trapezoidal).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "sensorless_mode",
+   "type": "supports",
+   "evidence": "Build examples for different Sensorless motor control techniques.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "sensored_mode",
+   "type": "supports",
+   "evidence": "Build examples for Sensored (Incremental Encoder, Hall) techniques.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "sensored_mode",
+   "target": "encoder",
+   "type": "uses",
+   "evidence": "Sensored (Incremental Encoder, Hall) motor control techniques.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "sensored_mode",
+   "target": "hall_sensor",
+   "type": "uses",
+   "evidence": "Sensored (Incremental Encoder, Hall) motor control techniques.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "sensorless_mode",
+   "target": "fast_estimator",
+   "type": "uses",
+   "evidence": "Sensorless (FAST, eSMO, InstaSPIN-BLDC).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "sensorless_mode",
+   "target": "esmo",
+   "type": "uses",
+   "evidence": "Sensorless (FAST, eSMO, InstaSPIN-BLDC).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "sensorless_mode",
+   "target": "instaspin_bldc",
+   "type": "uses",
+   "evidence": "Sensorless (FAST, eSMO, InstaSPIN-BLDC).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc",
+   "target": "fast_estimator",
+   "type": "implements",
+   "evidence": "The FAST library is implemented with InstaSPIN-FOC in this Universal Motor Control Lab project.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "instaspin_foc",
+   "type": "uses",
+   "evidence": "FAST library is implemented with InstaSPIN-FOC in this project.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "fpu",
+   "type": "requires",
+   "evidence": "Enables FAST observer for InstaSPIN-FOC with FPU enabled ... supported C2000 devices.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "c2000",
+   "type": "runs_on",
+   "evidence": "No longer needs a C2000 device with special ROM content to use FAST.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "user_mtr1_h",
+   "type": "contains",
+   "evidence": "user_mtr1.h is the header file that stores all of the user parameters.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "hal_h",
+   "type": "contains",
+   "evidence": "Migrate/port the lab by modifying the hal.h and hal.c files.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "hal_c",
+   "type": "contains",
+   "evidence": "Migrate/port the lab by modifying the hal.h and hal.c files.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "motor_start_stop_interface",
+   "type": "supports",
+   "evidence": "Interface functions to start/stop the motor and set reference speed via push button, potentiometer, or CAN.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "motor_start_stop_interface",
+   "target": "can",
+   "type": "uses",
+   "evidence": "Set the reference speed by using push a button, potentiometer, or CAN interface.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "c2000",
+   "type": "runs_on",
+   "evidence": "Includes firmware that runs on C2000 motor control EVMs and TI designs.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "ipmsm",
+   "target": "pmsm",
+   "type": "is_a",
+   "evidence": "The PMSM includes two major types: SPM and IPM.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "spmsm",
+   "target": "pmsm",
+   "type": "is_a",
+   "evidence": "The PMSM includes two major types: SPM and IPM.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "pmsm",
+   "target": "home_appliances",
+   "type": "targets",
+   "evidence": "PMSM is widely used in home appliance applications.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "pmsm",
+   "target": "pm_flux_linkage",
+   "type": "related_to",
+   "evidence": "Permanent magnets rigidly fixed to rotating axis create a constant rotor flux.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "pmsm",
+   "target": "pull_out",
+   "type": "related_to",
+   "evidence": "Machine experiences pull-out; reason synchronous machine is not self starting.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "pmsm",
+   "target": "rotor_flux_angle",
+   "type": "requires",
+   "evidence": "Synchronization requires knowing the rotor position to generate the right stator field.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "pmsm_dq_model",
+   "target": "pmsm",
+   "type": "related_to",
+   "evidence": "Dynamic model of a generic PMSM written in the d-q rotor reference frame (Eq 1).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "source": "stator_resistance",
+   "target": "pmsm_dq_model",
+   "type": "part_of",
+   "evidence": "Rs, Ld, Lq, lambda_pm, omega_e appear in the PMSM d-q voltage model.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "source": "d_axis_inductance",
+   "target": "pmsm_dq_model",
+   "type": "part_of",
+   "evidence": "Rs, Ld, Lq, lambda_pm, omega_e appear in the PMSM d-q voltage model.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "source": "q_axis_inductance",
+   "target": "pmsm_dq_model",
+   "type": "part_of",
+   "evidence": "Rs, Ld, Lq, lambda_pm, omega_e appear in the PMSM d-q voltage model.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "source": "pm_flux_linkage",
+   "target": "pmsm_dq_model",
+   "type": "part_of",
+   "evidence": "Rs, Ld, Lq, lambda_pm, omega_e appear in the PMSM d-q voltage model.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "source": "rotor_speed",
+   "target": "pmsm_dq_model",
+   "type": "part_of",
+   "evidence": "Rs, Ld, Lq, lambda_pm, omega_e appear in the PMSM d-q voltage model.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "source": "pmsm_dq_model",
+   "target": "dq_reference_frame",
+   "type": "uses",
+   "evidence": "Dynamic model written in the d-q rotor reference frame.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "source": "eemf",
+   "target": "rotor_flux_angle",
+   "type": "contains",
+   "evidence": "EEMF is the only term that contains the rotor pole position information.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 6
+    }
+   ]
+  },
+  {
+   "source": "eemf",
+   "target": "alpha_beta_reference_frame",
+   "type": "uses",
+   "evidence": "Components of EEMF in the alpha-beta axis.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 6
+    }
+   ]
+  },
+  {
+   "source": "three_phase_inverter",
+   "target": "ipmsm",
+   "type": "controls",
+   "evidence": "The motor is controlled by a standard three-phase inverter.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "source": "sensorless_foc",
+   "target": "foc",
+   "type": "is_a",
+   "evidence": "Sensorless FOC structure of a PMSM system.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "source": "sensorless_foc",
+   "target": "esmo",
+   "type": "uses",
+   "evidence": "The eSMO is used for achieving the sensorless control an IPMSM system.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "source": "sensorless_foc",
+   "target": "fast_estimator",
+   "type": "uses",
+   "evidence": "Sensorless FOC of PMSM using FAST with flying start.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "source": "sensorless_foc",
+   "target": "pmsm",
+   "type": "controls",
+   "evidence": "Overall block diagram of sensorless FOC of a PMSM motor.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "esmo",
+   "target": "pll",
+   "type": "uses",
+   "evidence": "eSMO model designed by utilizing the back EMF model together with a PLL model.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "source": "esmo",
+   "target": "rotor_flux_angle",
+   "type": "estimates",
+   "evidence": "eSMO ... for estimating the rotor position and speed.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "source": "esmo",
+   "target": "rotor_speed",
+   "type": "estimates",
+   "evidence": "eSMO ... for estimating the rotor position and speed.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "source": "esmo",
+   "target": "eemf",
+   "type": "estimates",
+   "evidence": "Estimated EEMF obtained by low-pass filter from switching signals.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "source": "esmo",
+   "target": "smo",
+   "type": "extends",
+   "evidence": "Conventional PLL integrated into the SMO forms eSMO with PLL.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "source": "esmo",
+   "target": "ipmsm",
+   "type": "controls",
+   "evidence": "eSMO achieves sensorless control of the IPMSM drive at middle or high speed.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "source": "pll",
+   "target": "rotor_flux_angle",
+   "type": "estimates",
+   "evidence": "Back-EMF estimations used with a PLL model to estimate motor angular velocity and position.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "source": "pll",
+   "target": "rotor_speed",
+   "type": "estimates",
+   "evidence": "PLL model used for velocity and position estimations.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "source": "eemf",
+   "target": "pll",
+   "type": "input_to",
+   "evidence": "The back-EMF estimations e_alpha and e_beta can be used with a PLL model.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "source": "pll",
+   "target": "pi_controller",
+   "type": "uses",
+   "evidence": "kp and ki are the proportional and integral gains of the standard PI regulator.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "pll_gains",
+   "target": "pll",
+   "type": "configures",
+   "evidence": "kp = 2 xi wn, ki = wn^2.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "pll",
+   "target": "pll_position_error",
+   "type": "uses",
+   "evidence": "The position error can be defined as eps = E sin(theta - theta^).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "source": "pll",
+   "target": "arctangent_angle_calculation",
+   "type": "alternative_to",
+   "evidence": "With arc tangent, accuracy affected by noise; PLL eliminates this issue.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "source": "smo",
+   "target": "sliding_surface",
+   "type": "uses",
+   "evidence": "Sliding surface is selected on the stator current path.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 6
+    }
+   ]
+  },
+  {
+   "source": "smo",
+   "target": "bang_bang_control",
+   "type": "contains",
+   "evidence": "Block diagram: Bang-Bang Control producing Z.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "source": "smo",
+   "target": "low_pass_filter",
+   "type": "contains",
+   "evidence": "Estimated EEMF obtained by low-pass filter from discontinuous switching signals.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "source": "smo",
+   "target": "arctangent_angle_calculation",
+   "type": "contains",
+   "evidence": "Rotor position directly calculated from arc-tangent of the back EMF.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "source": "smo",
+   "target": "euler_method",
+   "type": "uses",
+   "evidence": "Euler method transforms to a time discrete observer.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "source": "sliding_mode_gain",
+   "target": "bang_bang_control",
+   "type": "configures",
+   "evidence": "k_alpha and k_beta constant sliding mode gain designed by Lyapunov stability analysis.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "source": "lpf_cutoff_frequency",
+   "target": "low_pass_filter",
+   "type": "configures",
+   "evidence": "wc = 2 pi fc is the cutoff angular frequency of the LPF.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "source": "bang_bang_control",
+   "target": "low_pass_filter",
+   "type": "input_to",
+   "evidence": "EEMF obtained by low-pass filter from discontinuous switching signals z.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "source": "low_pass_filter",
+   "target": "arctangent_angle_calculation",
+   "type": "input_to",
+   "evidence": "Rotor position calculated from arc-tangent of filtered back EMF, plus phase compensation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "source": "arctangent_angle_calculation",
+   "target": "rotor_flux_angle",
+   "type": "estimates",
+   "evidence": "Estimated rotor position by SMO: theta_e = -tan^-1(e_alpha/e_beta) + delta_theta.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "source": "motor_phase_current",
+   "target": "esmo",
+   "type": "input_to",
+   "evidence": "eSMO inputs I and V; Iα_in, Iβ_in feed eSMO.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "source": "dc_bus_voltage",
+   "target": "esmo",
+   "type": "input_to",
+   "evidence": "Vbus input to SMO/PLL block diagram.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "source": "voltage_reconstruction",
+   "target": "esmo",
+   "type": "input_to",
+   "evidence": "Vα_in, Vβ_in from Volt_Rec feed eSMO.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "dc_bus_voltage",
+   "target": "voltage_reconstruction",
+   "type": "input_to",
+   "evidence": "Vbus feeds Volt_Rec block.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "esmo",
+   "target": "motor_phase_voltage",
+   "type": "alternative_to",
+   "evidence": "eSMO relies on software estimation values to represent voltage phases without phase voltage sensing.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "esmo",
+   "target": "user_adc_full_scale_voltage_v",
+   "type": "uses",
+   "evidence": "This software value (USER_ADC_FULL_SCALE_VOLTAGE_V) depends on the voltage sensing circuit.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "motor_phase_voltage",
+   "type": "requires",
+   "evidence": "Motor phase voltage feedback is needed in the FAST estimator for best performance at widest speed range.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "rotor_flux_angle",
+   "type": "estimates",
+   "evidence": "FAST estimates motor Flux, Angle, Speed, and Torque.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "rotor_speed",
+   "type": "estimates",
+   "evidence": "FAST estimates motor Flux, Angle, Speed, and Torque.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "electromagnetic_torque",
+   "type": "estimates",
+   "evidence": "FAST estimates motor Flux, Angle, Speed, and Torque.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "pm_flux_linkage",
+   "type": "estimates",
+   "evidence": "FAST estimates motor Flux, Angle, Speed, and Torque.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "esmo",
+   "type": "alternative_to",
+   "evidence": "Key module is estimation of rotor position using eSMO or FAST estimator.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "source": "est_run",
+   "target": "fast_estimator",
+   "type": "configures",
+   "evidence": "EST_run block invokes the FAST estimator in the FOC diagram.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "motor_parameter_identification",
+   "type": "supports",
+   "evidence": "FAST estimator diagram options: Enable Motor Identification / Rs Online Recalibration / Force Angle Startup.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "rs_online_recalibration",
+   "type": "supports",
+   "evidence": "FAST estimator diagram options: Enable Motor Identification / Rs Online Recalibration / Force Angle Startup.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "force_angle_startup",
+   "type": "supports",
+   "evidence": "FAST estimator diagram options: Enable Motor Identification / Rs Online Recalibration / Force Angle Startup.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "source": "motor_parameter_identification",
+   "target": "stator_resistance",
+   "type": "estimates",
+   "evidence": "FAST outputs Motor Parameters ID: Rs, Lsd, Lsq.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "source": "motor_parameter_identification",
+   "target": "d_axis_inductance",
+   "type": "estimates",
+   "evidence": "FAST outputs Motor Parameters ID: Rs, Lsd, Lsq.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "source": "motor_parameter_identification",
+   "target": "q_axis_inductance",
+   "type": "estimates",
+   "evidence": "FAST outputs Motor Parameters ID: Rs, Lsd, Lsq.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "source": "rs_online_recalibration",
+   "target": "stator_resistance",
+   "type": "estimates",
+   "evidence": "Enable Rs Online Recalibration.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "clarke_transform",
+   "type": "uses",
+   "evidence": "Two measured phase currents feed the Clarke transformation module.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 10
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "park_transform",
+   "type": "uses",
+   "evidence": "isα, isβ are inputs of the Park transformation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 10
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "inverse_park_transform",
+   "type": "uses",
+   "evidence": "Current regulator outputs are applied to the inverse Park transformation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 10
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "svpwm",
+   "type": "uses",
+   "evidence": "Vsαref, Vsβref are the inputs of the Space Vector PWM.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "current_pi_controller",
+   "type": "uses",
+   "evidence": "isd and isq compared to references isdref and isqref.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 10
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "speed_pi_controller",
+   "type": "uses",
+   "evidence": "isqref could be the output of the speed regulator in speed FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 10
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "rotor_flux_angle",
+   "type": "requires",
+   "evidence": "Knowledge of the rotor flux position is the core of the FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "d_axis_current",
+   "type": "controls",
+   "evidence": "Direct component of stator current set to zero; may be used for field weakening.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 7
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "q_axis_current",
+   "type": "controls",
+   "evidence": "Quadrature component controlled to generate the commanded torque.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 7
+    }
+   ]
+  },
+  {
+   "source": "q_axis_current",
+   "target": "electromagnetic_torque",
+   "type": "controls",
+   "evidence": "Linear relationship between torque and torque component iSq at fixed rotor flux.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 7
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "pmsm",
+   "type": "controls",
+   "evidence": "Field oriented control for the PMSM drive allows torque control independently with flux.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "acim",
+   "type": "controls",
+   "evidence": "Can control either synchronous or induction machines by changing the flux reference.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 10
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "dc_motor",
+   "type": "related_to",
+   "evidence": "FOC leads to a structure similar to that of a DC machine control.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 7
+    }
+   ]
+  },
+  {
+   "source": "acim",
+   "target": "current_model",
+   "type": "uses",
+   "evidence": "Basic method is use of the current model to calculate theta.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "position_sensor",
+   "type": "uses",
+   "evidence": "Rotor position can be achieved with a position sensor such as incremental encoder.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 7
+    }
+   ]
+  },
+  {
+   "source": "encoder",
+   "target": "position_sensor",
+   "type": "is_a",
+   "evidence": "Position sensor such as incremental encoder.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 7
+    }
+   ]
+  },
+  {
+   "source": "adc",
+   "target": "motor_phase_current",
+   "type": "measures",
+   "evidence": "HAL_readAdcData reads Ia, Ib, Ic from ADC driver.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "adc",
+   "target": "dc_bus_voltage",
+   "type": "measures",
+   "evidence": "Sampled measurements of dc bus power supply voltage.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "adc",
+   "target": "motor_phase_voltage",
+   "type": "measures",
+   "evidence": "Sampled measurements of voltage on each motor phase (Va, Vb, Vc to ADC).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "hal_readadcdata",
+   "target": "adc",
+   "type": "uses",
+   "evidence": "HAL_readAdcData reads ADC driver data.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "hal_writepwmdata",
+   "target": "epwm",
+   "type": "uses",
+   "evidence": "HAL_writePwmData writes Ta, Tb, Tc to the PWM driver.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "motor_phase_current",
+   "target": "clarke_transform",
+   "type": "input_to",
+   "evidence": "Two motor phase currents are measured. These measurements feed the Clarke transformation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 10
+    }
+   ]
+  },
+  {
+   "source": "clarke_transform",
+   "target": "park_transform",
+   "type": "input_to",
+   "evidence": "Outputs isα and isβ are the inputs of the Park transformation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 10
+    }
+   ]
+  },
+  {
+   "source": "clarke_transform",
+   "target": "esmo",
+   "type": "input_to",
+   "evidence": "Iα_in, Iβ_in from CLARKE feed eSMO.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "clarke_transform",
+   "target": "fast_estimator",
+   "type": "input_to",
+   "evidence": "Iα_in, Iβ_in and Vα_in, Vβ_in from CLARKE feed the FAST estimator.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "source": "clarke_transform",
+   "target": "stator_current_space_vector",
+   "type": "uses",
+   "evidence": "Transformation of the current space vector into (α, β).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 8
+    }
+   ]
+  },
+  {
+   "source": "clarke_transform",
+   "target": "alpha_beta_reference_frame",
+   "type": "produces",
+   "evidence": "a,b,c to α,β: outputs a 2-coordinate time-variant system.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 8
+    }
+   ]
+  },
+  {
+   "source": "park_transform",
+   "target": "dq_reference_frame",
+   "type": "produces",
+   "evidence": "α,β to d,q: outputs a 2-coordinate time-invariant system.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 8
+    }
+   ]
+  },
+  {
+   "source": "park_transform",
+   "target": "rotor_flux_angle",
+   "type": "requires",
+   "evidence": "Both Park and inverse Park transformations need the rotor flux position.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "source": "inverse_park_transform",
+   "target": "rotor_flux_angle",
+   "type": "requires",
+   "evidence": "Both Park and inverse Park transformations need the rotor flux position.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "source": "park_transform",
+   "target": "current_pi_controller",
+   "type": "input_to",
+   "evidence": "isd and isq compared to references isdref and isqref.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 10
+    }
+   ]
+  },
+  {
+   "source": "park_transform",
+   "target": "d_axis_current",
+   "type": "produces",
+   "evidence": "Flux and torque components of the current vector (Eq 10).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 9
+    }
+   ]
+  },
+  {
+   "source": "park_transform",
+   "target": "q_axis_current",
+   "type": "produces",
+   "evidence": "Flux and torque components of the current vector (Eq 10).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 9
+    }
+   ]
+  },
+  {
+   "source": "current_pi_controller",
+   "target": "inverse_park_transform",
+   "type": "input_to",
+   "evidence": "Outputs of current regulators Vsdref and Vsqref are applied to inverse Park.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 10
+    }
+   ]
+  },
+  {
+   "source": "inverse_park_transform",
+   "target": "svpwm",
+   "type": "input_to",
+   "evidence": "Vsαref and Vsβref are the inputs of the Space Vector PWM.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "source": "svpwm",
+   "target": "three_phase_inverter",
+   "type": "controls",
+   "evidence": "The outputs of this block are the signals that drive the inverter.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "source": "svpwm",
+   "target": "hal_writepwmdata",
+   "type": "input_to",
+   "evidence": "Ta, Tb, Tc to HAL_writePwmData and PWM driver.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "epwm",
+   "target": "three_phase_inverter",
+   "type": "controls",
+   "evidence": "PWM1A..PWM3B drive the 3-phase inverter.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 5
+    }
+   ]
+  },
+  {
+   "source": "speed_pi_controller",
+   "target": "current_pi_controller",
+   "type": "input_to",
+   "evidence": "Torque command isqref could be the output of the speed regulator.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 10
+    }
+   ]
+  },
+  {
+   "source": "speed_trajectory",
+   "target": "speed_pi_controller",
+   "type": "input_to",
+   "evidence": "SpdRef via Traj Ramp gives wref to Speed PI.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "rotor_speed",
+   "target": "speed_pi_controller",
+   "type": "input_to",
+   "evidence": "Estimated speed w~ fed back to Speed PI.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "esmo",
+   "target": "park_transform",
+   "type": "input_to",
+   "evidence": "Estimated angle theta from eSMO feeds PARK and INV PARK.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "speed_pi_controller",
+   "target": "pi_controller",
+   "type": "is_a",
+   "evidence": "Speed PI.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "current_pi_controller",
+   "target": "pi_controller",
+   "type": "is_a",
+   "evidence": "Id PI and Iq PI.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "user_idref",
+   "target": "current_pi_controller",
+   "type": "configures",
+   "evidence": "User_IdRef provides Id_ref to Id PI.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "irated",
+   "target": "sensorless_foc",
+   "type": "configures",
+   "evidence": "Irated input in sensorless FOC block diagram.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "mtpa",
+   "target": "ipmsm",
+   "type": "controls",
+   "evidence": "MTPA technique can be used for IPM motors to optimize torque generation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "mtpa",
+   "target": "constant_torque_region",
+   "type": "related_to",
+   "evidence": "Constant Torque Region: MTPA can be implemented to ensure maximum torque generation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "source": "mtpa",
+   "target": "reluctance_torque",
+   "type": "uses",
+   "evidence": "An IPMSM will utilize the reluctance torque; d-axis current should be controlled.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "source": "mtpa",
+   "target": "beta_mtpa",
+   "type": "produces",
+   "evidence": "MTPA control generates current angle beta_mtpa.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "source": "mtpa",
+   "target": "inductance_lut",
+   "type": "uses",
+   "evidence": "Robust LUT method ensures controllability under electrical parameter variations.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 20
+    }
+   ]
+  },
+  {
+   "source": "inductance_lut",
+   "target": "d_axis_inductance",
+   "type": "estimates",
+   "evidence": "Ld modeled as a function of id.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 20
+    }
+   ]
+  },
+  {
+   "source": "inductance_lut",
+   "target": "q_axis_inductance",
+   "type": "estimates",
+   "evidence": "Lq modeled as a function of iq.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 20
+    }
+   ]
+  },
+  {
+   "source": "kmtpa",
+   "target": "mtpa",
+   "type": "configures",
+   "evidence": "Kmtpa computed in background loop using updated Ld and Lq.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 20
+    }
+   ]
+  },
+  {
+   "source": "gmtpa",
+   "target": "mtpa",
+   "type": "configures",
+   "evidence": "Gmtpa used to calculate beta_mtpa in the ISR.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 20
+    }
+   ]
+  },
+  {
+   "source": "kmtpa",
+   "target": "gmtpa",
+   "type": "input_to",
+   "evidence": "Gmtpa = Kmtpa / Is.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 20
+    }
+   ]
+  },
+  {
+   "source": "field_weakening",
+   "target": "beta_fw",
+   "type": "produces",
+   "evidence": "beta_fw is the output of the field weakening PI controller.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "source": "field_weakening",
+   "target": "pi_controller",
+   "type": "uses",
+   "evidence": "Field weakening (FW) PI controller.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "source": "field_weakening",
+   "target": "d_axis_current",
+   "type": "controls",
+   "evidence": "Air gap flux weakened by adding a negative id.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 20
+    }
+   ]
+  },
+  {
+   "source": "field_weakening",
+   "target": "back_emf",
+   "type": "related_to",
+   "evidence": "Field weakening opposes rotor flux, reducing back-emf, allowing higher speeds.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 7
+    }
+   ]
+  },
+  {
+   "source": "field_weakening",
+   "target": "constant_power_region",
+   "type": "related_to",
+   "evidence": "Constant Power Region: field weakening control must be employed.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "source": "field_weakening",
+   "target": "constant_voltage_region",
+   "type": "related_to",
+   "evidence": "Deep field weakening keeps a constant stator voltage.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "source": "field_weakening",
+   "target": "base_speed",
+   "type": "enables",
+   "evidence": "Enables motor operation over its base speed.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "dc_bus_voltage",
+   "target": "field_weakening",
+   "type": "input_to",
+   "evidence": "Vbus feeds Vs_ref for the FW PI controller.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "source": "field_weakening",
+   "target": "voltage_limit",
+   "type": "uses",
+   "evidence": "Before voltage magnitude reaches its limit, FW PI output saturated at 0.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "source": "field_weakening",
+   "target": "mtpa",
+   "type": "alternative_to",
+   "evidence": "Field weakening chosen instead of MTPA in constant power and voltage regions.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 20
+    }
+   ]
+  },
+  {
+   "source": "beta_mtpa",
+   "target": "fw_mtpa_switching_control",
+   "type": "input_to",
+   "evidence": "Switching control decides which angle should be applied.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "source": "beta_fw",
+   "target": "fw_mtpa_switching_control",
+   "type": "input_to",
+   "evidence": "beta = beta_fw if beta_fw > beta_mtpa.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "source": "fw_mtpa_switching_control",
+   "target": "stator_current_angle",
+   "type": "produces",
+   "evidence": "Current angle chosen per Eq 47-48.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "source": "fw_mtpa_switching_control",
+   "target": "current_pi_controller",
+   "type": "input_to",
+   "evidence": "Calculates reference id and iq (Id_ref, Iq_ref).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "source": "speed_pi_controller",
+   "target": "fw_mtpa_switching_control",
+   "type": "input_to",
+   "evidence": "Speed PI outputs Is_ref to switching control.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "source": "mtpa",
+   "target": "stator_current_angle",
+   "type": "related_to",
+   "evidence": "Torque depends on angle of the stator current vector (Eq 36).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 19
+    }
+   ]
+  },
+  {
+   "source": "electromagnetic_torque",
+   "target": "reluctance_torque",
+   "type": "contains",
+   "evidence": "Torque composed of mutual reaction torque and reluctance torque.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 18
+    }
+   ]
+  },
+  {
+   "source": "reluctance_torque",
+   "target": "saliency",
+   "type": "related_to",
+   "evidence": "IPMSM has reluctance torques due to a large saliency ratio.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "ipmsm",
+   "target": "saliency",
+   "type": "related_to",
+   "evidence": "IPMSM has electromagnetic and reluctance torques due to a large saliency ratio.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "current_limit",
+   "target": "three_phase_inverter",
+   "type": "related_to",
+   "evidence": "Imax is maximum allowable current of the inverter or motor.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 18
+    }
+   ]
+  },
+  {
+   "source": "voltage_limit",
+   "target": "svpwm",
+   "type": "related_to",
+   "evidence": "Max voltage limited to vdc/sqrt3 if SVPWM is adopted.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 18
+    }
+   ]
+  },
+  {
+   "source": "voltage_limit",
+   "target": "dc_bus_voltage",
+   "type": "related_to",
+   "evidence": "Max phase voltage limited by DC link voltage and PWM strategy.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 18
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc",
+   "target": "field_weakening",
+   "type": "supports",
+   "evidence": "Flowchart to run InstaSPIN-FOC with FW and MTPA.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc",
+   "target": "mtpa",
+   "type": "supports",
+   "evidence": "Flowchart to run InstaSPIN-FOC with FW and MTPA.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "source": "sensorless_foc",
+   "target": "field_weakening",
+   "type": "uses",
+   "evidence": "Sensorless FOC using eSMO/FAST with FWC and MTPA.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "source": "sensorless_foc",
+   "target": "mtpa",
+   "type": "uses",
+   "evidence": "Sensorless FOC using eSMO/FAST with FWC and MTPA.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "source": "sensorless_foc",
+   "target": "flying_start",
+   "type": "uses",
+   "evidence": "Sensorless FOC using eSMO/FAST with Flying Start.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc",
+   "target": "datalog",
+   "type": "uses",
+   "evidence": "Run DataLog and PWMDAC (Options) in main ISR.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc",
+   "target": "pwmdac",
+   "type": "uses",
+   "evidence": "Run DataLog and PWMDAC (Options) in main ISR.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "source": "adc_offset_calibration",
+   "target": "current_reconstruction",
+   "type": "precedes",
+   "evidence": "Remove ADC Offsets, then Current Reconstruction.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "source": "adc_offset_calibration",
+   "target": "adc",
+   "type": "configures",
+   "evidence": "Run ADC Offset Calculation; PWM duty 50%.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "source": "current_reconstruction",
+   "target": "clarke_transform",
+   "type": "precedes",
+   "evidence": "Current Reconstruction ... Run CLARK Transform on Current and Voltage.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc",
+   "target": "over_modulation",
+   "type": "supports",
+   "evidence": "Set Driver Parameters for Over-Modulation; Run PWM compensation for Over Modulation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "source": "over_modulation",
+   "target": "svpwm",
+   "type": "related_to",
+   "evidence": "Run SVGEN then PWM compensation for over modulation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "source": "speed_trajectory",
+   "target": "speed_pi_controller",
+   "type": "precedes",
+   "evidence": "Run Speed Trajectory ... Run Speed PI Controller.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "source": "flying_start",
+   "target": "rotor_speed",
+   "type": "estimates",
+   "evidence": "Determines the speed and direction of a spinning motor.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "source": "flying_start",
+   "target": "overcurrent_trip",
+   "type": "protects",
+   "evidence": "This process prevents an over current trip.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 23
+    }
+   ]
+  },
+  {
+   "source": "flying_start",
+   "target": "air_conditioner_fan",
+   "type": "targets",
+   "evidence": "Important function in air-condition application for fan drive.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "source": "flying_start",
+   "target": "speed_pi_controller",
+   "type": "controls",
+   "evidence": "Flying start outputs a flag to enable or disable speed close loop control.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 23
+    }
+   ]
+  },
+  {
+   "source": "flying_start",
+   "target": "q_axis_current",
+   "type": "controls",
+   "evidence": "A zero reference torque current is set while flying start is operating.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 23
+    }
+   ]
+  },
+  {
+   "source": "flying_start",
+   "target": "back_emf",
+   "type": "uses",
+   "evidence": "Speed and position can be estimated from the BEMF voltages.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 23
+    }
+   ]
+  },
+  {
+   "source": "flying_start",
+   "target": "instaspin_foc",
+   "type": "uses",
+   "evidence": "InstaSPIN-FOC module uses these signals to estimate rotor position and speed.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 23
+    }
+   ]
+  },
+  {
+   "source": "flying_start",
+   "target": "fast_estimator",
+   "type": "uses",
+   "evidence": "Flying start control block diagram uses FAST EST.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 23
+    }
+   ]
+  },
+  {
+   "source": "enable_fs",
+   "target": "flying_start",
+   "type": "configures",
+   "evidence": "Enable_FS flag enables the FS module.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "adc",
+   "type": "requires",
+   "evidence": "Algorithm uses sampled measurements of dc bus voltage, phase voltages and phase currents.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "voltage_feedback_circuit",
+   "target": "motor_phase_voltage",
+   "type": "measures",
+   "evidence": "Motor voltage filtered and scaled for ADC input using resistor dividers.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "voltage_feedback_circuit",
+   "target": "dc_bus_voltage",
+   "type": "measures",
+   "evidence": "Similar circuit measures all three phases and dc bus.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "voltage_feedback_circuit",
+   "target": "adc",
+   "type": "connects_to",
+   "evidence": "Voltage scaled for the ADC input range (max 3.3 V).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "voltage_feedback_circuit",
+   "target": "user_adc_full_scale_voltage_v",
+   "type": "configures",
+   "evidence": "Software value depends on the circuit that senses the voltage feedback.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "current_scale_value",
+   "target": "foc",
+   "type": "configures",
+   "evidence": "Hardware dependent parameters to identify the motor properly and run it using FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "voltage_scale_value",
+   "target": "foc",
+   "type": "configures",
+   "evidence": "Hardware dependent parameters to identify the motor properly and run it using FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "voltage_filter_pole",
+   "target": "foc",
+   "type": "configures",
+   "evidence": "Hardware dependent parameters to identify the motor properly and run it using FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "current_scale_value",
+   "target": "compressor",
+   "type": "related_to",
+   "evidence": "Calculate current scale for compressor and fan motors control.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "source": "sensorless_mode",
+   "target": "home_appliances",
+   "type": "targets",
+   "evidence": "In home appliance applications sensorless control methods are implemented.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "source": "sensorless_mode",
+   "target": "position_sensor",
+   "type": "alternative_to",
+   "evidence": "Mechanical sensor causes cost, size, reliability problems; sensorless methods overcome these.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "source": "smo",
+   "target": "sensorless_mode",
+   "type": "implements",
+   "evidence": "SMO commonly utilized due to reliability and robustness.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 14
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,5527 @@
+{
+ "entities": [
+  {
+   "id": "spruj26a",
+   "label": "SPRUJ26A",
+   "type": "Document",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ],
+   "description": "Motor Control SDK Universal Project and Lab User's Guide (Rev. A, September 2021, revised April 2024).",
+   "aliases": [
+    "Universal Motor Control Project and Lab User's Guide"
+   ]
+  },
+  {
+   "id": "universal_motor_control_lab",
+   "label": "Universal Motor Control Lab",
+   "type": "Software",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    },
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ],
+   "description": "Universal motor control lab project in MotorControl SDK, evaluated on C2000 LaunchPads or controlCARDs with motor drive evaluation boards.",
+   "aliases": [
+    "Universal Lab"
+   ]
+  },
+  {
+   "id": "motorcontrol_sdk",
+   "label": "MotorControl SDK",
+   "type": "Software",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 27
+    },
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ],
+   "description": "TI SDK that supports the listed motor drive evaluation kits for the universal lab.",
+   "aliases": [
+    "C2000WARE-MOTORCONTROL-SDK"
+   ]
+  },
+  {
+   "id": "c2000ware",
+   "label": "C2000Ware",
+   "type": "Software",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    },
+    {
+     "doc": "spruj26a",
+     "page": 28
+    },
+    {
+     "doc": "spruj26a",
+     "page": 30
+    },
+    {
+     "doc": "spruj26a",
+     "page": 31
+    },
+    {
+     "doc": "spruj26a",
+     "page": 32
+    },
+    {
+     "doc": "spruj26a",
+     "page": 33
+    },
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ],
+   "description": "Holds LaunchPad and controlCARD hardware files under <install_location>\\boards."
+  },
+  {
+   "id": "code_composer_studio",
+   "label": "Code Composer Studio",
+   "type": "Software",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ],
+   "description": "IDE to download as Step 3 of getting started.",
+   "aliases": [
+    "CCS"
+   ]
+  },
+  {
+   "id": "instaspin_foc",
+   "label": "InstaSPIN-FOC",
+   "type": "Software",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    },
+    {
+     "doc": "spruj26a",
+     "page": 34
+    },
+    {
+     "doc": "spruj26a",
+     "page": 36
+    },
+    {
+     "doc": "spruj26a",
+     "page": 37
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    },
+    {
+     "doc": "spruj26a",
+     "page": 40
+    },
+    {
+     "doc": "spruj26a",
+     "page": 41
+    },
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ],
+   "description": "Sensorless algorithm; the inverter boards are suitable for use with it. Run during flying start to estimate real speed."
+  },
+  {
+   "id": "sfra",
+   "label": "SFRA",
+   "type": "Software",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 28
+    },
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ],
+   "description": "Software frequency response analyzer; uses XDS110 virtual COM port on LaunchPads."
+  },
+  {
+   "id": "user_mtr1_h",
+   "label": "user_mtr1.h",
+   "type": "Software",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ],
+   "description": "Header file defining motor user constants such as USER_MOTOR1_NUM_ENC_SLOTS."
+  },
+  {
+   "id": "c2000_e2e_forum",
+   "label": "TI C2000 E2E forum",
+   "type": "Software",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ],
+   "description": "Forum for searching or asking design questions (Step 5)."
+  },
+  {
+   "id": "flying_start",
+   "label": "Flying start",
+   "type": "Feature",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ],
+   "description": "Routine disables speed closed loop, sets Iq reference to zero, enables FOC/InstaSPIN estimator to estimate real motor speed, then re-enables speed control."
+  },
+  {
+   "id": "foc",
+   "label": "FOC",
+   "type": "Algorithm",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    },
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ],
+   "description": "Field-oriented control."
+  },
+  {
+   "id": "speed_fs_min",
+   "label": "Speed_fs_min",
+   "type": "Parameter",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ],
+   "description": "Minimum speed threshold in the flying start flowchart; if Speed_est is below it, Speed_int is set to 0, else Speed_int=Speed_est."
+  },
+  {
+   "id": "speed_est",
+   "label": "Speed_est",
+   "type": "Parameter",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ],
+   "description": "Estimated speed read during flying start."
+  },
+  {
+   "id": "c2000",
+   "label": "C2000",
+   "type": "Device",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ],
+   "description": "TI C2000 real-time microcontroller family."
+  },
+  {
+   "id": "f28002x",
+   "label": "F28002x",
+   "type": "Device",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    },
+    {
+     "doc": "spruj26a",
+     "page": 27
+    },
+    {
+     "doc": "spruj26a",
+     "page": 31
+    }
+   ],
+   "description": "TMS320F28002x C2000 MCU series with IEEE 754 FPU and TMU.",
+   "aliases": [
+    "TMS320F28002x"
+   ]
+  },
+  {
+   "id": "f28003x",
+   "label": "F28003x",
+   "type": "Device",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    },
+    {
+     "doc": "spruj26a",
+     "page": 28
+    },
+    {
+     "doc": "spruj26a",
+     "page": 32
+    }
+   ],
+   "description": "TMS320F28003x C2000 MCU series with IEEE 754 FPU and TMU.",
+   "aliases": [
+    "TMS320F28003x"
+   ]
+  },
+  {
+   "id": "f280013x",
+   "label": "F280013x",
+   "type": "Device",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    },
+    {
+     "doc": "spruj26a",
+     "page": 30
+    },
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ],
+   "description": "TMS320F280013x C2000 MCU series with IEEE 754 FPU and TMU.",
+   "aliases": [
+    "TMS320F280013x"
+   ]
+  },
+  {
+   "id": "f280025c",
+   "label": "F280025C",
+   "type": "Device",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    },
+    {
+     "doc": "spruj26a",
+     "page": 28
+    },
+    {
+     "doc": "spruj26a",
+     "page": 31
+    }
+   ],
+   "description": "C2000 MCU (U1) on LAUNCHXL-F280025C and TMDSCNCD280025C.",
+   "aliases": [
+    "TMS320F280025C"
+   ]
+  },
+  {
+   "id": "f280039c",
+   "label": "F280039C",
+   "type": "Device",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 28
+    },
+    {
+     "doc": "spruj26a",
+     "page": 29
+    },
+    {
+     "doc": "spruj26a",
+     "page": 32
+    }
+   ],
+   "description": "C2000 MCU (U1) on LAUNCHXL-F280039C and TMDSCNCD280039C.",
+   "aliases": [
+    "TMS320F280039C"
+   ]
+  },
+  {
+   "id": "f2800137",
+   "label": "F2800137",
+   "type": "Device",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 30
+    },
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ],
+   "description": "C2000 MCU (U1) on LAUNCHXL-F2800137 and TMDSCNCD2800137.",
+   "aliases": [
+    "TMS320F2800137"
+   ]
+  },
+  {
+   "id": "fpu",
+   "label": "FPU",
+   "type": "Peripheral",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ],
+   "description": "IEEE 754 Floating-Point Unit."
+  },
+  {
+   "id": "tmu",
+   "label": "TMU",
+   "type": "Peripheral",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ],
+   "description": "Trigonometric Math Unit."
+  },
+  {
+   "id": "eqep",
+   "label": "eQEP",
+   "type": "Peripheral",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    },
+    {
+     "doc": "spruj26a",
+     "page": 29
+    },
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ],
+   "description": "Enhanced QEP; eQEP1 used for encoder interface J12, eQEP2 for Hall sensor interface J13."
+  },
+  {
+   "id": "can",
+   "label": "CAN",
+   "type": "Peripheral",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    },
+    {
+     "doc": "spruj26a",
+     "page": 29
+    },
+    {
+     "doc": "spruj26a",
+     "page": 30
+    },
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ],
+   "description": "CAN interface routed to transceiver/J14 when CMD_CAN_EN is set."
+  },
+  {
+   "id": "spi",
+   "label": "SPI",
+   "type": "Peripheral",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    },
+    {
+     "doc": "spruj26a",
+     "page": 39
+    }
+   ],
+   "description": "SPI used to configure DRV gate drivers; SPIA-STE connected to DRV nSCS."
+  },
+  {
+   "id": "sci",
+   "label": "SCI",
+   "type": "Peripheral",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    },
+    {
+     "doc": "spruj26a",
+     "page": 29
+    }
+   ],
+   "description": "UART routed to XDS110 virtual COM port.",
+   "aliases": [
+    "UART"
+   ]
+  },
+  {
+   "id": "fsi",
+   "label": "FSI",
+   "type": "Peripheral",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 31
+    },
+    {
+     "doc": "spruj26a",
+     "page": 32
+    }
+   ],
+   "description": "FSI header J1 on controlCARDs."
+  },
+  {
+   "id": "adc",
+   "label": "ADC",
+   "type": "Peripheral",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 31
+    },
+    {
+     "doc": "spruj26a",
+     "page": 32
+    },
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ],
+   "description": "ADC with VREFHI reference selection (internal/external) on controlCARDs."
+  },
+  {
+   "id": "epwm",
+   "label": "ePWM",
+   "type": "Peripheral",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ],
+   "description": "PWM outputs low-pass filtered as PWMDAC on [Main]-J14 of TMDSHVMTRINSPIN."
+  },
+  {
+   "id": "cmd_can_en",
+   "label": "CMD_CAN_EN",
+   "type": "Parameter",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    },
+    {
+     "doc": "spruj26a",
+     "page": 29
+    },
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ],
+   "description": "Pre-defined project symbol enabling CAN; S4 switch routes CAN GPIOs to J14."
+  },
+  {
+   "id": "user_motor1_num_enc_slots",
+   "label": "USER_MOTOR1_NUM_ENC_SLOTS",
+   "type": "Parameter",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ],
+   "description": "Number of encoder slots per rotation (not quadrature counts); wrong value makes motor spin faster or slower."
+  },
+  {
+   "id": "enc_module",
+   "label": "ENC module",
+   "type": "Software",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ],
+   "description": "Lab module converting encoder signal into an angle; requires slots per rotation."
+  },
+  {
+   "id": "encoder",
+   "label": "Encoder",
+   "type": "Concept",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ],
+   "description": "QEP encoder; A-A, B-B, I-I wiring required, often +5V and ground.",
+   "aliases": [
+    "QEP encoder"
+   ]
+  },
+  {
+   "id": "hall_sensor",
+   "label": "Hall sensor",
+   "type": "Concept",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ],
+   "description": "Hall sensors; A-A, B-B, C-C wiring required."
+  },
+  {
+   "id": "xds110",
+   "label": "XDS110 debugger",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    },
+    {
+     "doc": "spruj26a",
+     "page": 29
+    },
+    {
+     "doc": "spruj26a",
+     "page": 30
+    },
+    {
+     "doc": "spruj26a",
+     "page": 32
+    },
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ],
+   "description": "On-board debugger with virtual COM port on LaunchPads and controlCARDs."
+  },
+  {
+   "id": "xds100v2",
+   "label": "XDS100v2 emulator",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 31
+    },
+    {
+     "doc": "spruj26a",
+     "page": 43
+    }
+   ],
+   "description": "On-card emulator on TMDSCNCD280025C; XDS100 also on TMDSHVMTRINSPIN."
+  },
+  {
+   "id": "hsec180",
+   "label": "HSEC180 connector",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 31
+    },
+    {
+     "doc": "spruj26a",
+     "page": 32
+    },
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ],
+   "description": "180-pin High Speed Edge Connector of controlCARDs."
+  },
+  {
+   "id": "dimm100",
+   "label": "DIMM100 connector",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 31
+    },
+    {
+     "doc": "spruj26a",
+     "page": 34
+    },
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ],
+   "description": "100-pin DIMM controlCARD socket used by existing evaluation tools such as TMDSHVMTRINSPIN."
+  },
+  {
+   "id": "launchxl_f280025c",
+   "label": "LAUNCHXL-F280025C",
+   "type": "EvaluationKit",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    },
+    {
+     "doc": "spruj26a",
+     "page": 28
+    }
+   ],
+   "description": "Low-cost development board for F28002x devices; supports two BoosterPack plug-in modules.",
+   "aliases": [
+    "F28002x Series LaunchPad Development Kit"
+   ],
+   "properties": {
+    "form_factor": "LaunchPad, two BoosterPack sites (site 1 J1-J4, site 2 J5-J8)",
+    "jumpers": "JP1, JP2, JP3, J101 installed; JP8 for DAC128S board",
+    "S2": "SEL1 UP: GPIO28/29 to BoosterPack; SEL2 UP: GPIO16/17 to XDS110 virtual COM",
+    "S3": "GPIO24 DOWN (0), GPIO32 UP (1): wait boot mode",
+    "S4": "DOWN: GPIO32/33 to CAN transceiver J14 if CMD_CAN_EN",
+    "S5": "QEP1 DOWN: GPIO44/37/43 to eQEP1 J12 encoder; QEP2 DOWN: GPIO14/25/26 to eQEP2 J13 Hall",
+    "encoder_connector": "J12",
+    "hall_connector": "J13",
+    "can_connector": "J14",
+    "vrefhi_header": "J15"
+   }
+  },
+  {
+   "id": "launchxl_f280039c",
+   "label": "LAUNCHXL-F280039C",
+   "type": "EvaluationKit",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 28
+    },
+    {
+     "doc": "spruj26a",
+     "page": 29
+    }
+   ],
+   "description": "Low-cost development board for F28003x devices; supports two BoosterPack plug-in modules.",
+   "aliases": [
+    "C2000 F28003x Series LaunchPad Development Kit"
+   ],
+   "properties": {
+    "form_factor": "LaunchPad, two BoosterPack sites",
+    "jumpers": "JP1, JP2, J101 installed; JP8 for DAC128S board",
+    "S2": "SEL1 UP: GPIO28/29 to BoosterPack; SEL2 UP: GPIO15/56 to XDS110 virtual COM",
+    "S3": "GPIO24 DOWN (0), GPIO32 UP (1): wait boot mode",
+    "S4": "DOWN: GPIO4/5 to CAN J14 if CMD_CAN_EN; UP: to BoosterPack",
+    "S5": "QEP1 DOWN: GPIO40/41/59 to eQEP1 J12 encoder; QEP2 DOWN: GPIO14/55/57 to eQEP2 J13 Hall",
+    "encoder_connector": "J12",
+    "hall_connector": "J13",
+    "can_connector": "J14"
+   }
+  },
+  {
+   "id": "launchxl_f2800137",
+   "label": "LAUNCHXL-F2800137",
+   "type": "EvaluationKit",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ],
+   "description": "Low-cost development board for F280013x devices; supports two BoosterPack plug-in modules.",
+   "aliases": [
+    "C2000 F2800137 Series LaunchPad Development Kit"
+   ],
+   "properties": {
+    "form_factor": "LaunchPad, two BoosterPack sites",
+    "jumpers": "JP1, JP2, J101 installed; JP8 for DAC128S board",
+    "S2": "SEL1 UP: GPIO28/29 to BoosterPack; SEL1 DOWN for SFRA via XDS110 COM (only with BOOSTXL-3PHGANINV; other kits need GPIO29 to enable DRV)",
+    "S3": "GPIO24 DOWN (0), GPIO32 UP (1): wait boot mode",
+    "S4": "CAN ROUTE DOWN: GPIO4/5 to J14 if CMD_CAN_EN; UP: to BoosterPack",
+    "S5": "QEP1 DOWN: GPIO40/41/39 to eQEP1 J12",
+    "encoder_connector": "J12 (shared by encoder and Hall)",
+    "hall_connector": "none (no J13); Hall reading unavailable by default"
+   }
+  },
+  {
+   "id": "wait_boot_mode",
+   "label": "Wait boot mode",
+   "type": "Feature",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    },
+    {
+     "doc": "spruj26a",
+     "page": 29
+    },
+    {
+     "doc": "spruj26a",
+     "page": 30
+    },
+    {
+     "doc": "spruj26a",
+     "page": 31
+    },
+    {
+     "doc": "spruj26a",
+     "page": 32
+    },
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ],
+   "description": "Boot mode set by GPIO24=0 and GPIO32=1, reducing risk of connectivity issues or execution of previously loaded code."
+  },
+  {
+   "id": "tmdscncd280025c",
+   "label": "TMDSCNCD280025C",
+   "type": "EvaluationKit",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 31
+    }
+   ],
+   "description": "Low-cost evaluation board (controlCARD) for F28002X devices with HSEC180 connector; used on TMDSHVMTRINSPIN via TMDSADAP180TO100.",
+   "aliases": [
+    "TMS320F280025C controlCARD"
+   ],
+   "properties": {
+    "connector": "HSEC180",
+    "S1:A": "SEL1 and SEL2 UP: on-card XDS100v2 emulator and ISO UART",
+    "S1": "both DOWN: GPIO24/25 to HSEC",
+    "S2": "both DOWN: GPIO26/27 to HSEC",
+    "S3": "UP: external crystal",
+    "S4": "SEL1 DOWN GPIO24=0, SEL2 UP GPIO32=1: wait boot mode",
+    "S5": "SEL1 DOWN: A8/C11 to HSEC pin 30; SEL2 UP: internal voltage reference"
+   }
+  },
+  {
+   "id": "tmdscncd280039c",
+   "label": "TMDSCNCD280039C",
+   "type": "EvaluationKit",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 32
+    }
+   ],
+   "description": "Low-cost evaluation board (controlCARD) for F28003X devices with HSEC180 connector; used on TMDSHVMTRINSPIN via TMDSADAP180TO100.",
+   "aliases": [
+    "TMS320F280039C controlCARD"
+   ],
+   "properties": {
+    "connector": "HSEC180",
+    "S1:A": "SEL1 and SEL2 LEFT: on-card XDS110 emulator and ISO UART",
+    "S1": "UP: external crystal",
+    "S2": "SEL1 DOWN GPIO24=0, SEL2 UP GPIO32=1: wait boot mode",
+    "S3": "DOWN: internal voltage reference"
+   }
+  },
+  {
+   "id": "tmdscncd2800137",
+   "label": "TMDSCNCD2800137",
+   "type": "EvaluationKit",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ],
+   "description": "Low-cost evaluation board (controlCARD) for F280013X devices with HSEC180 connector; used on TMDSHVMTRINSPIN via TMDSADAP180TO100.",
+   "aliases": [
+    "TMS320F2800137 controlCARD"
+   ],
+   "properties": {
+    "connector": "HSEC180",
+    "S1:A": "SEL1 and SEL2 LEFT: on-card XDS110 emulator and ISO UART",
+    "S1": "UP: GPIO35/37 to HSEC",
+    "S2": "UP: external crystal",
+    "S3": "SEL1 DOWN GPIO24=0, SEL2 UP GPIO32=1: wait boot mode",
+    "S4": "SEL1 DOWN: A8/C11 to HSEC pin 30; SEL2 UP: internal voltage reference"
+   }
+  },
+  {
+   "id": "tmdsadap180to100",
+   "label": "TMDSADAP180TO100",
+   "type": "EvaluationKit",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ],
+   "description": "Adapter allowing 180-pin C2000 controlCARDs to be used with existing 100-pin DIMM based evaluation tools.",
+   "aliases": [
+    "180-to-100 pin adapter"
+   ],
+   "properties": {
+    "S1": "RIGHT (cCard-30&33, on right for HV-Kit)",
+    "S2": "LEFT (cCard-80&83)",
+    "S3": "LEFT (cCard-31&84)",
+    "S4": "LEFT (cCard-81&34)"
+   }
+  },
+  {
+   "id": "pmsm",
+   "label": "PMSM",
+   "type": "Motor",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    },
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ],
+   "description": "Permanent magnet synchronous motor."
+  },
+  {
+   "id": "bldc",
+   "label": "BLDC",
+   "type": "Motor",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    },
+    {
+     "doc": "spruj26a",
+     "page": 41
+    },
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ],
+   "description": "Brushless DC motor."
+  },
+  {
+   "id": "acim",
+   "label": "ACIM",
+   "type": "Motor",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ],
+   "description": "AC induction motor (ACI).",
+   "aliases": [
+    "ACI"
+   ]
+  },
+  {
+   "id": "lvservomtr",
+   "label": "LVSERVOMTR",
+   "type": "Motor",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ],
+   "description": "Low-voltage servo motor with embedded encoder; tested with low-voltage inverter boards.",
+   "properties": {
+    "phase_U": "BLACK (16AWG)",
+    "phase_V": "RED (16AWG)",
+    "phase_W": "WHITE (16AWG)",
+    "encoder_wiring": "GND BLACK J4-1, +5V RED J4-2, I BROWN J4-3, B ORANGE J4-4, A BLUE",
+    "hall_wiring": "GND BLACK J10-1, +5V RED J10-2, A GRAY-WHITE J10-3, B GREEN-WHITE J10-4, C GREEN J10-5",
+    "position_sensors": "encoder and Hall sensors"
+   }
+  },
+  {
+   "id": "lvbldcmtr",
+   "label": "LVBLDCMTR",
+   "type": "Motor",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ],
+   "description": "Low-voltage BLDC motor with embedded Hall sensors; not supported for encoder-based sensored FOC.",
+   "properties": {
+    "phase_U": "YELLOW",
+    "phase_V": "RED",
+    "phase_W": "BLACK",
+    "hall_wiring": "GND BLACK, +5V RED, A BLUE, B GREEN, C WHITE"
+   }
+  },
+  {
+   "id": "hvpmsmmtr",
+   "label": "HVPMSMMTR",
+   "type": "Motor",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ],
+   "description": "High-voltage PMSM with embedded encoder; tested with TMDSHVMTRINSPIN; not supported for Hall-based sensored FOC.",
+   "properties": {
+    "phase_U": "RED",
+    "phase_V": "BLUE/BLACK",
+    "phase_W": "WHITE",
+    "encoder_wiring": "GND BLACK, +5V RED, I YELLOW, B GREEN, A BLUE"
+   }
+  },
+  {
+   "id": "hvbldcmtr",
+   "label": "HVBLDCMTR",
+   "type": "Motor",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ],
+   "description": "High-voltage BLDC motor with embedded Hall sensors; not supported for encoder-based sensored FOC.",
+   "properties": {
+    "phase_U": "YELLOW",
+    "phase_V": "RED",
+    "phase_W": "BLACK",
+    "hall_wiring": "GND BLACK, +5V RED, A BLUE, B GREEN, C WHITE"
+   }
+  },
+  {
+   "id": "fast_estimator",
+   "label": "FAST estimator",
+   "type": "Algorithm",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ],
+   "description": "FAST estimator based sensorless-FOC rotor position sensing.",
+   "aliases": [
+    "FAST"
+   ]
+  },
+  {
+   "id": "esmo",
+   "label": "eSMO",
+   "type": "Algorithm",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ],
+   "description": "eSMO observer based sensorless-FOC."
+  },
+  {
+   "id": "sensorless_foc",
+   "label": "Sensorless FOC",
+   "type": "Feature",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ],
+   "description": "Sensorless field-oriented control via FAST or eSMO."
+  },
+  {
+   "id": "sensored_foc",
+   "label": "Sensored FOC",
+   "type": "Feature",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ],
+   "description": "QEP encoder or Hall sensor based sensored-FOC; requires correct wiring order."
+  },
+  {
+   "id": "sensorless_trapezoidal_control",
+   "label": "Sensorless trapezoidal control",
+   "type": "Algorithm",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ],
+   "description": "Sensorless trapezoidal control listed for DRV8329AEVM.",
+   "aliases": [
+    "trapzoidal control"
+   ]
+  },
+  {
+   "id": "single_shunt_current_sensing",
+   "label": "Single shunt dc-link current sensing",
+   "type": "Concept",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ],
+   "description": "Current sensing topology using one dc-link shunt."
+  },
+  {
+   "id": "three_shunt_current_sensing",
+   "label": "Three low-side current shunt sensing",
+   "type": "Concept",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 36
+    },
+    {
+     "doc": "spruj26a",
+     "page": 37
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ],
+   "description": "Current sensing using three low-side shunts and amplifiers."
+  },
+  {
+   "id": "inline_shunt_current_sensing",
+   "label": "In-line phase current shunt sensing",
+   "type": "Concept",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 40
+    }
+   ],
+   "description": "Three shunt-based in-line motor phase current sensing."
+  },
+  {
+   "id": "integrated_csa",
+   "label": "Integrated current-sense amplifiers",
+   "type": "Concept",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 41
+    }
+   ],
+   "description": "CSAs integrated in the driver for three-phase low-side current measurement.",
+   "aliases": [
+    "CSA"
+   ]
+  },
+  {
+   "id": "voltage_sensing",
+   "label": "DC bus and three-phase voltage sensing",
+   "type": "Concept",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    },
+    {
+     "doc": "spruj26a",
+     "page": 36
+    },
+    {
+     "doc": "spruj26a",
+     "page": 37
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    },
+    {
+     "doc": "spruj26a",
+     "page": 40
+    },
+    {
+     "doc": "spruj26a",
+     "page": 41
+    },
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ],
+   "description": "Individual DC bus and three-phase voltage sensing on the inverter module."
+  },
+  {
+   "id": "short_circuit_protection",
+   "label": "Short circuit protection",
+   "type": "Concept",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    },
+    {
+     "doc": "spruj26a",
+     "page": 37
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ],
+   "description": "Drive stage protection against short circuit (with thermal, shoot-through and undervoltage)."
+  },
+  {
+   "id": "thermal_protection",
+   "label": "Thermal protection",
+   "type": "Concept",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    },
+    {
+     "doc": "spruj26a",
+     "page": 37
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ],
+   "description": "Drive-stage thermal protection."
+  },
+  {
+   "id": "shoot_through_protection",
+   "label": "Shoot-through protection",
+   "type": "Concept",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    },
+    {
+     "doc": "spruj26a",
+     "page": 37
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ],
+   "description": "Drive-stage shoot-through protection."
+  },
+  {
+   "id": "undervoltage_protection",
+   "label": "Undervoltage protection",
+   "type": "Concept",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    },
+    {
+     "doc": "spruj26a",
+     "page": 37
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ],
+   "description": "Drive-stage undervoltage protection."
+  },
+  {
+   "id": "overcurrent_protection",
+   "label": "Overcurrent protection",
+   "type": "Concept",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 44
+    },
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ],
+   "description": "IPM over current protection on TMDSHVMTRINSPIN, enabled by [Main]-J8 with threshold selected by J7/VR1.",
+   "aliases": [
+    "OCP"
+   ]
+  },
+  {
+   "id": "drv8329a",
+   "label": "DRV8329A",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ],
+   "description": "Gate driver on DRV8329AEVM."
+  },
+  {
+   "id": "csd18536kt",
+   "label": "CSD18536KT",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ],
+   "description": "NexFET MOSFET on DRV8329AEVM (Table 3-1 lists CSD18536KTTT)."
+  },
+  {
+   "id": "drv8323rh",
+   "label": "DRV8323RH",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 36
+    }
+   ],
+   "description": "Gate driver on BOOSTXL-DRV8323RH (hardware-configured)."
+  },
+  {
+   "id": "drv8323rs",
+   "label": "DRV8323RS",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ],
+   "description": "SPI gate driver on BOOSTXL-DRV8323RS with IDRIVE configuration and fault pin; ABS max supply 65 V.",
+   "properties": {
+    "abs_max_supply": "65 V"
+   }
+  },
+  {
+   "id": "csd88599q5dc",
+   "label": "CSD88599Q5DC",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 36
+    },
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ],
+   "description": "NexFET power block used on BOOSTXL-DRV8323RH/RS."
+  },
+  {
+   "id": "drv8353rs",
+   "label": "DRV8353RS",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ],
+   "description": "SPI-configurable gate driver on DRV8353RS-EVM."
+  },
+  {
+   "id": "csd19532q5b",
+   "label": "CSD19532Q5B",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ],
+   "description": "NexFET power block used on DRV8353RS-EVM."
+  },
+  {
+   "id": "drv8316",
+   "label": "DRV8316",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 41
+    }
+   ],
+   "description": "Driver with three integrated half-H-bridge MOSFETs and integrated CSAs, 8-A peak."
+  },
+  {
+   "id": "gan_fet",
+   "label": "GaN power stage",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 40
+    }
+   ],
+   "description": "Three-phase GaN inverter power stage on BOOSTXL-3PHGANINV."
+  },
+  {
+   "id": "ipm",
+   "label": "IPM",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 44
+    },
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ],
+   "description": "Intelligent power module on TMDSHVMTRINSPIN with heat sink and DC fan."
+  },
+  {
+   "id": "pfc_stage",
+   "label": "PFC stage",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 43
+    },
+    {
+     "doc": "spruj26a",
+     "page": 44
+    },
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ],
+   "description": "Power factor correction stage on TMDSHVMTRINSPIN (750W max); bypassed with BS1-BS5 banana cable."
+  },
+  {
+   "id": "aux_power_supply_module",
+   "label": "Aux power supply module",
+   "type": "Component",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 43
+    },
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ],
+   "description": "TMDSHVMTRINSPIN aux supply sourcing from bridge or PFC output per [Main]-J2."
+  },
+  {
+   "id": "drv8329aevm",
+   "label": "DRV8329AEVM",
+   "type": "EvaluationKit",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 34
+    },
+    {
+     "doc": "spruj26a",
+     "page": 35
+    },
+    {
+     "doc": "spruj26a",
+     "page": 36
+    }
+   ],
+   "description": "4.5-60V, 30-A three-phase BLDC drive stage based on DRV8329A gate driver and CSD18536KT MOSFET, with DC bus/three-phase voltage sensing and single-shunt dc-link current amplifiers.",
+   "properties": {
+    "voltage_range": "4.5-60 V",
+    "current": "30 A",
+    "recommended_supply": "9-54 V",
+    "mount": "on top of LaunchPad via male-to-female adapters",
+    "setup": "bend LaunchPad J5-42 if using DAC128S085EVM"
+   }
+  },
+  {
+   "id": "boostxl_drv8323rh",
+   "label": "BOOSTXL-DRV8323RH",
+   "type": "EvaluationKit",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 36
+    },
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ],
+   "description": "15-A three-phase BLDC drive stage based on DRV8323RH gate driver and CSD88599Q5DC NexFET power blocks, with three low-side current shunt amplifiers and voltage sensing.",
+   "properties": {
+    "voltage_range": "6-54 V",
+    "current": "15 A",
+    "recommended_supply": "6-40 V",
+    "max_supply": "65 V",
+    "setup": "populate C9, C10, C11 with 47nF; bend LaunchPad J3-29/J3-30; optional jumper J3-29 (LaunchPad) to J3-11 (BoosterPack) for potentiometer speed reference; bend J5-42 if DAC128S085EVM"
+   }
+  },
+  {
+   "id": "boostxl_drv8323rs",
+   "label": "BOOSTXL-DRV8323RS",
+   "type": "EvaluationKit",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 37
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ],
+   "description": "15-A three-phase BLDC drive stage based on DRV8323RS gate driver and CSD88599Q5DC NexFET power blocks, with three low-side current shunt amplifiers, IDRIVE and SPI-configurable protection.",
+   "properties": {
+    "voltage_range": "6-54 V",
+    "current": "15 A",
+    "recommended_supply": "6-40 V",
+    "abs_max_supply": "65 V (DRV8323RS)",
+    "setup": "populate C9-C11 47nF; bend J3-29/J3-30 and J2-12; jumper J4-18(nSCS/GAIN) to J4-4 (F280025C/39C) or J4-16 (F2800137) for SPIA-STE; optional J3-29 to J3-11 for potentiometer"
+   }
+  },
+  {
+   "id": "drv8353rs_evm",
+   "label": "DRV8353RS-EVM",
+   "type": "EvaluationKit",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    },
+    {
+     "doc": "spruj26a",
+     "page": 39
+    }
+   ],
+   "description": "15-A three-phase BLDC drive stage based on DRV8353RS gate driver and CSD19532Q5B NexFET power blocks, with three low-side current shunt amplifiers and SPI-configurable protection.",
+   "properties": {
+    "voltage_range": "9-95 V",
+    "current": "15 A",
+    "recommended_supply": "9-54 V",
+    "mount": "bottom of LaunchPad via male-to-male adapters; disconnect J1-17 and J1-19",
+    "setup": "do not connect J3-29/J3-30; jumper J2-19 to J2-12 (F280025C/39C) or J2-13 to J2-12 (F2800137) for SPI-STE"
+   }
+  },
+  {
+   "id": "boostxl_3phganinv",
+   "label": "BOOSTXL-3PHGANINV",
+   "type": "EvaluationKit",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 40
+    }
+   ],
+   "description": "48-V/10-A three-phase GaN inverter with precision in-line shunt-based phase current sensing and DC bus/three-phase voltage sensing.",
+   "properties": {
+    "voltage_range": "12-60 V (Table 3-1)",
+    "current": "3.5 A (Table 3-1); 10 A (Section 3.2.12)",
+    "rated": "48 V/10 A",
+    "recommended_supply": "12-54 V"
+   }
+  },
+  {
+   "id": "drv8316revm",
+   "label": "DRV8316REVM",
+   "type": "EvaluationKit",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 41
+    }
+   ],
+   "description": "Three half-H-bridge integrated MOSFET driver board for three-phase BLDC motors, 8-A peak, with integrated CSAs and voltage sensing.",
+   "properties": {
+    "voltage_range": "4.5-35 V",
+    "peak_current": "8 A",
+    "recommended_supply": "4.5-24 V",
+    "abs_max_supply": "40 V"
+   }
+  },
+  {
+   "id": "servo_drives",
+   "label": "Servo drives",
+   "type": "Application",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 40
+    }
+   ],
+   "description": "Precision drives targeted by BOOSTXL-3PHGANINV."
+  },
+  {
+   "id": "dac128s085evm",
+   "label": "DAC128S085EVM",
+   "type": "EvaluationKit",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    },
+    {
+     "doc": "spruj26a",
+     "page": 35
+    },
+    {
+     "doc": "spruj26a",
+     "page": 36
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ],
+   "description": "Optional DAC board on LaunchPad site 2 (J5-J8) used only for debugging to monitor software variables; requires bending J5-42 and JA-2 to JB-2 jumper.",
+   "aliases": [
+    "DAC128S board"
+   ],
+   "properties": {
+    "site": "LaunchPad J5/J7 and J6/J8; JP8 jumpers power it"
+   }
+  },
+  {
+   "id": "tmdshvmtrinspin",
+   "label": "TMDSHVMTRINSPIN",
+   "type": "EvaluationKit",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 42
+    },
+    {
+     "doc": "spruj26a",
+     "page": 43
+    },
+    {
+     "doc": "spruj26a",
+     "page": 44
+    },
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ],
+   "description": "DIMM100 controlCARD based high voltage motor control kit for ACI, BLDC and PMSM motors with DC bus and three-phase voltage sensing and three low-side current shunts.",
+   "aliases": [
+    "High Voltage Motor Control Kit",
+    "HVKIT"
+   ],
+   "properties": {
+    "voltage": "400 V",
+    "current": "10 A",
+    "ac_input": "85-132VAC/170-250VAC via [Main]-P1 (750W max)",
+    "inverter_dc_bus": "[Main]-BS5, 1.5KW max",
+    "motor_output": "[Main]-TB3, 220V 3-phase AC, 1.5KW max",
+    "pfc": "750W max, bypassed with BS1-BS5 banana cable",
+    "jumpers": "[Main]-J3, J4, J5, J8 populated; J9 and [M3]-J5 not populated (use controlCARD emulation); J7 on pins 2-3",
+    "dc_power": "recommended external 15V DC to [M6]-JP1 with [Main]-J2 unpopulated",
+    "fan": "DC fan on [Main]-J17 for load > 150W",
+    "fuse": "[M1]-F1 250VAC 4A slow acting",
+    "pwmdac": "[Main]-J14",
+    "can": "[Main]-J16 isolated CAN",
+    "qep_hall": "[Main]-H1"
+   }
+  }
+ ],
+ "relations": [
+  {
+   "source": "universal_motor_control_lab",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Universal Project and Lab User's Guide",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "motorcontrol_sdk",
+   "type": "part_of",
+   "evidence": "universal motor control lab project in MotorControl SDK",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "code_composer_studio",
+   "type": "requires",
+   "evidence": "Step 3: Download the latest version of Code Composer Studio IDE.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "c2000_e2e_forum",
+   "type": "related_to",
+   "evidence": "search existing answers or ask your own question using the TI C2000 E2E forum",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Table 3-1 lists kits supported ... in MotorControl SDK",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "c2000ware",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "hardware files are in the boards folder of C2000Ware",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "instaspin_foc",
+   "type": "uses",
+   "evidence": "routine runs InstaSPIN-FOC and the real motor speed can be estimated",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "USER_MOTOR1_NUM_ENC_SLOTS constant defined in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "sfra",
+   "type": "supports",
+   "evidence": "GPIO16/17 to XDS100 COM Port for SFRA",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 28
+    }
+   ]
+  },
+  {
+   "source": "flying_start",
+   "target": "instaspin_foc",
+   "type": "uses",
+   "evidence": "Enable InstaSPIN EST ... real motor speed can be estimated",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "flying_start",
+   "target": "foc",
+   "type": "uses",
+   "evidence": "enables the FOC module during starting run the motor",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "speed_fs_min",
+   "target": "flying_start",
+   "type": "configures",
+   "evidence": "Speed_est < Speed_fs_min -> Set Speed_int=0",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "speed_est",
+   "target": "speed_fs_min",
+   "type": "input_to",
+   "evidence": "Speed_est < Speed_fs_min decision",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "flying_start",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Figure 2-24. Flying Start Module Program Flowchart",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "flying_start",
+   "type": "supports",
+   "evidence": "flying start module routine",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "c2000",
+   "type": "is_a",
+   "evidence": "a member of the C2000 real-time Microcontroller family",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "fpu",
+   "type": "contains",
+   "evidence": "with IEEE 754 Floating-Point Unit (FPU)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "tmu",
+   "type": "contains",
+   "evidence": "and Trigonometric Math Unit (TMU)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "f28003x",
+   "target": "c2000",
+   "type": "is_a",
+   "evidence": "a member of the C2000 real-time Microcontroller family",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "f28003x",
+   "target": "fpu",
+   "type": "contains",
+   "evidence": "with IEEE 754 Floating-Point Unit (FPU)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "f28003x",
+   "target": "tmu",
+   "type": "contains",
+   "evidence": "and Trigonometric Math Unit (TMU)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "c2000",
+   "type": "is_a",
+   "evidence": "a member of the C2000 real-time Microcontroller family",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "fpu",
+   "type": "contains",
+   "evidence": "with IEEE 754 Floating-Point Unit (FPU)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "tmu",
+   "type": "contains",
+   "evidence": "and Trigonometric Math Unit (TMU)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "f280025c",
+   "target": "f28002x",
+   "type": "part_of",
+   "evidence": "series of F28002x devices",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "source": "f280039c",
+   "target": "f28003x",
+   "type": "part_of",
+   "evidence": "series of F28003x devices",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 28
+    }
+   ]
+  },
+  {
+   "source": "f2800137",
+   "target": "f280013x",
+   "type": "part_of",
+   "evidence": "series of F280013x devices",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "c2000",
+   "type": "runs_on",
+   "evidence": "use one of these LaunchPad kits or controlCARDs ... to evaluate this lab",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "source": "cmd_can_en",
+   "target": "can",
+   "type": "enables",
+   "evidence": "GPIO32 and GPIO33 are routed to the CAN transceiver ... if CMD_CAN_EN is set",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "source": "cmd_can_en",
+   "target": "universal_motor_control_lab",
+   "type": "configures",
+   "evidence": "pre-define symbols CMD_CAN_EN is set in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_num_enc_slots",
+   "target": "enc_module",
+   "type": "configures",
+   "evidence": "allows the ENC module to correctly convert the encoder signal into an angle",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_num_enc_slots",
+   "target": "user_mtr1_h",
+   "type": "part_of",
+   "evidence": "defined in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "enc_module",
+   "target": "encoder",
+   "type": "uses",
+   "evidence": "convert the encoder signal into an angle",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "eqep",
+   "target": "encoder",
+   "type": "measures",
+   "evidence": "route GPIO44/37/43 to eQEP1 for the encoder interface on J12",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "source": "eqep",
+   "target": "hall_sensor",
+   "type": "measures",
+   "evidence": "route GPIO14/25/26 to eQEP2 for the Hall sensor interface on J13",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "source": "xds110",
+   "target": "sci",
+   "type": "connects_to",
+   "evidence": "route GPIO16 and GPIO17 to the virtual COM port of the XDS110 debugger",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280025c",
+   "target": "f280025c",
+   "type": "based_on",
+   "evidence": "LAUNCHXL-F280025C ... F280025C Microcontroller (U1)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280025c",
+   "target": "f28002x",
+   "type": "supports",
+   "evidence": "development board for the TI C2000 ... series of F28002X devices",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280025c",
+   "target": "xds110",
+   "type": "contains",
+   "evidence": "Add all jumpers on J101 for cJTAG and UART of XDS110",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    },
+    {
+     "doc": "spruj26a",
+     "page": 28
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280025c",
+   "target": "eqep",
+   "type": "uses",
+   "evidence": "S5 QEP select switch routes GPIOs to eQEP1 for encoder on J12",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    },
+    {
+     "doc": "spruj26a",
+     "page": 28
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280025c",
+   "target": "can",
+   "type": "uses",
+   "evidence": "S4 routes CAN GPIOs to J14 CAN interface",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    },
+    {
+     "doc": "spruj26a",
+     "page": 28
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280025c",
+   "target": "c2000ware",
+   "type": "related_to",
+   "evidence": "hardware files are in boards\\LaunchPads\\LAUNCHXL_F280025C folder of C2000Ware",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280025c",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Section 3.2 LAUNCHXL-F280025C Setup",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280025c",
+   "target": "universal_motor_control_lab",
+   "type": "supports",
+   "evidence": "Table 3-1 C2000 MCU Evaluation Module for the universal lab",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280025c",
+   "target": "cmd_can_en",
+   "type": "related_to",
+   "evidence": "CAN routed to J14 if pre-define symbol CMD_CAN_EN is set",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    },
+    {
+     "doc": "spruj26a",
+     "page": 28
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280039c",
+   "target": "f280039c",
+   "type": "based_on",
+   "evidence": "LAUNCHXL-F280039C ... F280039C Microcontroller (U1)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 28
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280039c",
+   "target": "f28003x",
+   "type": "supports",
+   "evidence": "development board for the TI C2000 ... series of F28003X devices",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 28
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280039c",
+   "target": "xds110",
+   "type": "contains",
+   "evidence": "Add all jumpers on J101 for cJTAG and UART of XDS110",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 28
+    },
+    {
+     "doc": "spruj26a",
+     "page": 29
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280039c",
+   "target": "eqep",
+   "type": "uses",
+   "evidence": "S5 QEP select switch routes GPIOs to eQEP1 for encoder on J12",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 28
+    },
+    {
+     "doc": "spruj26a",
+     "page": 29
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280039c",
+   "target": "can",
+   "type": "uses",
+   "evidence": "S4 routes CAN GPIOs to J14 CAN interface",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 28
+    },
+    {
+     "doc": "spruj26a",
+     "page": 29
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280039c",
+   "target": "c2000ware",
+   "type": "related_to",
+   "evidence": "hardware files are in boards\\LaunchPads\\LAUNCHXL_F280039C folder of C2000Ware",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 28
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280039c",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Section 3.2 LAUNCHXL-F280039C Setup",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 28
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280039c",
+   "target": "universal_motor_control_lab",
+   "type": "supports",
+   "evidence": "Table 3-1 C2000 MCU Evaluation Module for the universal lab",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280039c",
+   "target": "cmd_can_en",
+   "type": "related_to",
+   "evidence": "CAN routed to J14 if pre-define symbol CMD_CAN_EN is set",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 28
+    },
+    {
+     "doc": "spruj26a",
+     "page": 29
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "f2800137",
+   "type": "based_on",
+   "evidence": "LAUNCHXL-F2800137 ... F2800137 Microcontroller (U1)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "f280013x",
+   "type": "supports",
+   "evidence": "development board for the TI C2000 ... series of F280013X devices",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "xds110",
+   "type": "contains",
+   "evidence": "Add all jumpers on J101 for cJTAG and UART of XDS110",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "eqep",
+   "type": "uses",
+   "evidence": "S5 QEP select switch routes GPIOs to eQEP1 for encoder on J12",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "can",
+   "type": "uses",
+   "evidence": "S4 routes CAN GPIOs to J14 CAN interface",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "c2000ware",
+   "type": "related_to",
+   "evidence": "hardware files are in boards\\LaunchPads\\LAUNCHXL_F2800137 folder of C2000Ware",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Section 3.2 LAUNCHXL-F2800137 Setup",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "universal_motor_control_lab",
+   "type": "supports",
+   "evidence": "Table 3-1 C2000 MCU Evaluation Module for the universal lab",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "cmd_can_en",
+   "type": "related_to",
+   "evidence": "CAN routed to J14 if pre-define symbol CMD_CAN_EN is set",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280025c",
+   "target": "wait_boot_mode",
+   "type": "supports",
+   "evidence": "pull GPIO24 low and GPIO32 high to put the device into wait boot mode",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280039c",
+   "target": "wait_boot_mode",
+   "type": "supports",
+   "evidence": "pull GPIO24 low and GPIO32 high to put the device into wait boot mode",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 29
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "wait_boot_mode",
+   "type": "supports",
+   "evidence": "pull GPIO24 low and GPIO32 high to put the device into wait boot mode",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280025c",
+   "target": "wait_boot_mode",
+   "type": "supports",
+   "evidence": "pull GPIO24 low and GPIO32 high to put the device into wait boot mode",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 31
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280039c",
+   "target": "wait_boot_mode",
+   "type": "supports",
+   "evidence": "pull GPIO24 low and GPIO32 high to put the device into wait boot mode",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 32
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd2800137",
+   "target": "wait_boot_mode",
+   "type": "supports",
+   "evidence": "pull GPIO24 low and GPIO32 high to put the device into wait boot mode",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "hall_sensor",
+   "type": "related_to",
+   "evidence": "There is no J13 on LAUNCHXL-F2800137. Hall reading unavailable by default.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280025c",
+   "target": "hall_sensor",
+   "type": "connects_to",
+   "evidence": "GPIO14/25/26 to eQEP2 for the Hall sensor interface on J13",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280039c",
+   "target": "hall_sensor",
+   "type": "connects_to",
+   "evidence": "GPIO14/55/57 to the eQEP2 Hall sensor interface on J13",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 29
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280025c",
+   "target": "f280025c",
+   "type": "based_on",
+   "evidence": "U1 C2000 F280025C microcontroller",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 31
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280025c",
+   "target": "f28002x",
+   "type": "supports",
+   "evidence": "evaluation and development board for TI C2000 MCU series of TMS320F28002X devices",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 31
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280025c",
+   "target": "hsec180",
+   "type": "contains",
+   "evidence": "comes with a HSEC180 (180-pin High Speed Edge Connector)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 31
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280025c",
+   "target": "xds100v2",
+   "type": "contains",
+   "evidence": "using the on-Card emulator and ISO UART communication",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 31
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280025c",
+   "target": "fsi",
+   "type": "contains",
+   "evidence": "J1 FSI header",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 31
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280025c",
+   "target": "adc",
+   "type": "configures",
+   "evidence": "ADC VREFHI selection switch: enable internal voltage reference",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 31
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280025c",
+   "target": "tmdsadap180to100",
+   "type": "requires",
+   "evidence": "controlCARD needs TMDSADAP180TO100 to be used on TMDSHVMTRINSPIN",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280025c",
+   "target": "tmdshvmtrinspin",
+   "type": "compatible_with",
+   "evidence": "can be used on existing 100-Pin DIMM based TMDSHVMTRINSPIN with TMDSADAP180TO100 adapter",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 31
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280025c",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Section 3.2 TMDSCNCD280025C Setup",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 31
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280025c",
+   "target": "universal_motor_control_lab",
+   "type": "supports",
+   "evidence": "Table 3-1 C2000 MCU Evaluation Module for TMDSHVMTRINSPIN",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "tmdsadap180to100",
+   "target": "tmdscncd280025c",
+   "type": "compatible_with",
+   "evidence": "TMDSCNCD280025C, TMDSCNCD280039C or TMDSCNCD2800137 controlCARD needs TMDSADAP180TO100",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280039c",
+   "target": "f280039c",
+   "type": "based_on",
+   "evidence": "U1 C2000 F280039C microcontroller",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 32
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280039c",
+   "target": "f28003x",
+   "type": "supports",
+   "evidence": "evaluation and development board for TI C2000 MCU series of TMS320F28003X devices",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 32
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280039c",
+   "target": "hsec180",
+   "type": "contains",
+   "evidence": "comes with a HSEC180 (180-pin High Speed Edge Connector)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 32
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280039c",
+   "target": "xds110",
+   "type": "contains",
+   "evidence": "using the on-Card emulator and ISO UART communication",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 32
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280039c",
+   "target": "fsi",
+   "type": "contains",
+   "evidence": "J1 FSI header",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 32
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280039c",
+   "target": "adc",
+   "type": "configures",
+   "evidence": "ADC VREFHI selection switch: enable internal voltage reference",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 32
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280039c",
+   "target": "tmdsadap180to100",
+   "type": "requires",
+   "evidence": "controlCARD needs TMDSADAP180TO100 to be used on TMDSHVMTRINSPIN",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280039c",
+   "target": "tmdshvmtrinspin",
+   "type": "compatible_with",
+   "evidence": "can be used on existing 100-Pin DIMM based TMDSHVMTRINSPIN with TMDSADAP180TO100 adapter",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 32
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280039c",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Section 3.2 TMDSCNCD280039C Setup",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 32
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280039c",
+   "target": "universal_motor_control_lab",
+   "type": "supports",
+   "evidence": "Table 3-1 C2000 MCU Evaluation Module for TMDSHVMTRINSPIN",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "tmdsadap180to100",
+   "target": "tmdscncd280039c",
+   "type": "compatible_with",
+   "evidence": "TMDSCNCD280025C, TMDSCNCD280039C or TMDSCNCD2800137 controlCARD needs TMDSADAP180TO100",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd2800137",
+   "target": "f2800137",
+   "type": "based_on",
+   "evidence": "U1 C2000 F2800137 microcontroller",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd2800137",
+   "target": "f280013x",
+   "type": "supports",
+   "evidence": "evaluation and development board for TI C2000 MCU series of TMS320F280013X devices",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd2800137",
+   "target": "hsec180",
+   "type": "contains",
+   "evidence": "comes with a HSEC180 (180-pin High Speed Edge Connector)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd2800137",
+   "target": "xds110",
+   "type": "contains",
+   "evidence": "using the on-Card emulator and ISO UART communication",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd2800137",
+   "target": "fsi",
+   "type": "contains",
+   "evidence": "J1 FSI header",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd2800137",
+   "target": "adc",
+   "type": "configures",
+   "evidence": "ADC VREFHI selection switch: enable internal voltage reference",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd2800137",
+   "target": "tmdsadap180to100",
+   "type": "requires",
+   "evidence": "controlCARD needs TMDSADAP180TO100 to be used on TMDSHVMTRINSPIN",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd2800137",
+   "target": "tmdshvmtrinspin",
+   "type": "compatible_with",
+   "evidence": "can be used on existing 100-Pin DIMM based TMDSHVMTRINSPIN with TMDSADAP180TO100 adapter",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd2800137",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Section 3.2 TMDSCNCD2800137 Setup",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 33
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd2800137",
+   "target": "universal_motor_control_lab",
+   "type": "supports",
+   "evidence": "Table 3-1 C2000 MCU Evaluation Module for TMDSHVMTRINSPIN",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "tmdsadap180to100",
+   "target": "tmdscncd2800137",
+   "type": "compatible_with",
+   "evidence": "TMDSCNCD280025C, TMDSCNCD280039C or TMDSCNCD2800137 controlCARD needs TMDSADAP180TO100",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "tmdsadap180to100",
+   "target": "hsec180",
+   "type": "connects_to",
+   "evidence": "allows the use of 180-Pin C2000 controlCARDs",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "tmdsadap180to100",
+   "target": "dimm100",
+   "type": "connects_to",
+   "evidence": "with existing 100-Pin DIMM based evaluation tools",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "tmdsadap180to100",
+   "target": "tmdshvmtrinspin",
+   "type": "compatible_with",
+   "evidence": "insert the controlCARD with the TMDSADAP180TO100 adapter into the TMDSHVMTRINSPIN",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ]
+  },
+  {
+   "source": "tmdsadap180to100",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "3.2.7 TMDSADAP180TO100 Setup",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "lvservomtr",
+   "target": "pmsm",
+   "type": "is_a",
+   "evidence": "LVSERVOMTR motor type",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "lvservomtr",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Table 3-2 Motor Phase, Encoder, or Hall Sensors Connections",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "lvbldcmtr",
+   "target": "bldc",
+   "type": "is_a",
+   "evidence": "LVBLDCMTR motor type",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "lvbldcmtr",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Table 3-2 Motor Phase, Encoder, or Hall Sensors Connections",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "hvpmsmmtr",
+   "target": "pmsm",
+   "type": "is_a",
+   "evidence": "HVPMSMMTR motor type",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "hvpmsmmtr",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Table 3-2 Motor Phase, Encoder, or Hall Sensors Connections",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "hvbldcmtr",
+   "target": "bldc",
+   "type": "is_a",
+   "evidence": "HVBLDCMTR motor type",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "hvbldcmtr",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Table 3-2 Motor Phase, Encoder, or Hall Sensors Connections",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "lvservomtr",
+   "target": "encoder",
+   "type": "contains",
+   "evidence": "(Encoder Embedded)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "hvpmsmmtr",
+   "target": "encoder",
+   "type": "contains",
+   "evidence": "(Encoder Embedded)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "lvservomtr",
+   "target": "hall_sensor",
+   "type": "contains",
+   "evidence": "(Hall Sensors Embedded)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "lvbldcmtr",
+   "target": "hall_sensor",
+   "type": "contains",
+   "evidence": "(Hall Sensors Embedded)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "hvbldcmtr",
+   "target": "hall_sensor",
+   "type": "contains",
+   "evidence": "(Hall Sensors Embedded)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "sensorless_foc",
+   "type": "implements",
+   "evidence": "FAST estimator based sensorless-FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "esmo",
+   "target": "sensorless_foc",
+   "type": "implements",
+   "evidence": "eSMO observer based sensorless-FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "sensorless_foc",
+   "target": "foc",
+   "type": "is_a",
+   "evidence": "sensorless-FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "sensored_foc",
+   "target": "foc",
+   "type": "is_a",
+   "evidence": "sensored-FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "sensored_foc",
+   "target": "encoder",
+   "type": "uses",
+   "evidence": "QEP encoder based sensored-FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "sensored_foc",
+   "target": "hall_sensor",
+   "type": "uses",
+   "evidence": "Hall sensors based sensored-FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "sensorless_foc",
+   "type": "supports",
+   "evidence": "rotor position sensing methods in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "sensored_foc",
+   "type": "supports",
+   "evidence": "If the lab is set to use Encoder or Hall based sensored-FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "sensorless_trapezoidal_control",
+   "type": "supports",
+   "evidence": "Sensorless trapzoidal control (DRV8329AEVM)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "single_shunt_current_sensing",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Table 3-1 current sensing topology",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "three_shunt_current_sensing",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Table 3-1 current sensing topology",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "inline_shunt_current_sensing",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Table 3-1 current sensing topology",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "integrated_csa",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Table 3-1 current sensing topology",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "voltage_sensing",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Table 3-1 current sensing topology",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8323rs",
+   "target": "spi",
+   "type": "uses",
+   "evidence": "protection ... through configurable SPI by C2000 MCUs",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs",
+   "target": "spi",
+   "type": "uses",
+   "evidence": "configurable via the device's SPI registers interfacing with C2000 MCUs",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "drv8329a",
+   "target": "bldc",
+   "type": "controls",
+   "evidence": "drive stage based on the DRV8329A gate driver ... for BLDC/PMSM motors",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "drv8316",
+   "target": "integrated_csa",
+   "type": "contains",
+   "evidence": "The DRV8316 device integrates current-sense amplifiers (CSA)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 41
+    }
+   ]
+  },
+  {
+   "source": "drv8323rh",
+   "target": "csd88599q5dc",
+   "type": "controls",
+   "evidence": "based on the DRV8323RH gate driver and CSD88599Q5DC NexFET power blocks",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 36
+    }
+   ]
+  },
+  {
+   "source": "drv8323rs",
+   "target": "csd88599q5dc",
+   "type": "controls",
+   "evidence": "based on the DRV8323RS gate driver and CSD88599Q5DC NexFET power blocks",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs",
+   "target": "csd19532q5b",
+   "type": "controls",
+   "evidence": "based on the DRV8353RS gate driver and CSD19532Q5B NexFET power blocks",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "drv8329a",
+   "target": "csd18536kt",
+   "type": "controls",
+   "evidence": "based on the DRV8329A gate driver and CSD18536KT MOSFET",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "drv8316",
+   "target": "bldc",
+   "type": "controls",
+   "evidence": "three half-H-bridge integrated MOSFET drivers for driving a three-phase BLDC motor",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 41
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "ipm",
+   "type": "contains",
+   "evidence": "IPM on TMDSHVMTRINSPIN",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 44
+    },
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "pfc_stage",
+   "type": "contains",
+   "evidence": "PFC stage on TMDSHVMTRINSPIN",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 43
+    },
+    {
+     "doc": "spruj26a",
+     "page": 44
+    },
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "aux_power_supply_module",
+   "type": "contains",
+   "evidence": "Aux power supply module on TMDSHVMTRINSPIN",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 43
+    },
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ]
+  },
+  {
+   "source": "overcurrent_protection",
+   "target": "ipm",
+   "type": "protects",
+   "evidence": "J8 is used to enable/disable the IPM over current protection",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ]
+  },
+  {
+   "source": "aux_power_supply_module",
+   "target": "pfc_stage",
+   "type": "connects_to",
+   "evidence": "When Jumper connected to PFC position the aux power supply module sources power from the output of the PFC stage",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "drv8329a",
+   "type": "contains",
+   "evidence": "DRV8329AEVM based on DRV8329A",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "csd18536kt",
+   "type": "contains",
+   "evidence": "DRV8329AEVM based on CSD18536KT",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "single_shunt_current_sensing",
+   "type": "uses",
+   "evidence": "Table 3-1 current sensing topology",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "voltage_sensing",
+   "type": "uses",
+   "evidence": "individual DC bus and three-phase voltage sensing",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "instaspin_foc",
+   "type": "supports",
+   "evidence": "suitable for use with the sensorless InstaSPIN-FOC algorithm",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "universal_motor_control_lab",
+   "type": "supports",
+   "evidence": "Motor Drive Evaluation Kits Supported by Motor Control SDK",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Setup section for DRV8329AEVM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "bldc",
+   "type": "controls",
+   "evidence": "for BLDC/PMSM control",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "pmsm",
+   "type": "controls",
+   "evidence": "for BLDC/PMSM control",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "lvservomtr",
+   "type": "supports",
+   "evidence": "Tested Motors: LVSERVOMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "lvbldcmtr",
+   "type": "supports",
+   "evidence": "Tested Motors: LVBLDCMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "fast_estimator",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "esmo",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "sensored_foc",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "launchxl_f280025c",
+   "type": "compatible_with",
+   "evidence": "connect DRV8329AEVM to J1/J3 and J4/J2 of LAUNCHXL-F280025C",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "launchxl_f280039c",
+   "type": "compatible_with",
+   "evidence": "connect DRV8329AEVM to J1/J3 and J4/J2 of LAUNCHXL-F280039C",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "launchxl_f2800137",
+   "type": "compatible_with",
+   "evidence": "connect DRV8329AEVM to J1/J3 and J4/J2 of LAUNCHXL-F2800137",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "drv8323rh",
+   "type": "contains",
+   "evidence": "BOOSTXL-DRV8323RH based on DRV8323RH",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 36
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "csd88599q5dc",
+   "type": "contains",
+   "evidence": "BOOSTXL-DRV8323RH based on CSD88599Q5DC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 36
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "three_shunt_current_sensing",
+   "type": "uses",
+   "evidence": "Table 3-1 current sensing topology",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "voltage_sensing",
+   "type": "uses",
+   "evidence": "individual DC bus and three-phase voltage sensing",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 36
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "instaspin_foc",
+   "type": "supports",
+   "evidence": "suitable for use with the sensorless InstaSPIN-FOC algorithm",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 36
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "universal_motor_control_lab",
+   "type": "supports",
+   "evidence": "Motor Drive Evaluation Kits Supported by Motor Control SDK",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Setup section for BOOSTXL-DRV8323RH",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 36
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "bldc",
+   "type": "controls",
+   "evidence": "for BLDC/PMSM control",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 36
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "pmsm",
+   "type": "controls",
+   "evidence": "for BLDC/PMSM control",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 36
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "lvservomtr",
+   "type": "supports",
+   "evidence": "Tested Motors: LVSERVOMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "lvbldcmtr",
+   "type": "supports",
+   "evidence": "Tested Motors: LVBLDCMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "fast_estimator",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "esmo",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "sensored_foc",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "launchxl_f280025c",
+   "type": "compatible_with",
+   "evidence": "connect BOOSTXL-DRV8323RH to J1/J3 and J4/J2 of LAUNCHXL-F280025C",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 36
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "launchxl_f280039c",
+   "type": "compatible_with",
+   "evidence": "connect BOOSTXL-DRV8323RH to J1/J3 and J4/J2 of LAUNCHXL-F280039C",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 36
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rh",
+   "target": "launchxl_f2800137",
+   "type": "compatible_with",
+   "evidence": "connect BOOSTXL-DRV8323RH to J1/J3 and J4/J2 of LAUNCHXL-F2800137",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 36
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "drv8323rs",
+   "type": "contains",
+   "evidence": "BOOSTXL-DRV8323RS based on DRV8323RS",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "csd88599q5dc",
+   "type": "contains",
+   "evidence": "BOOSTXL-DRV8323RS based on CSD88599Q5DC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "three_shunt_current_sensing",
+   "type": "uses",
+   "evidence": "Table 3-1 current sensing topology",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "voltage_sensing",
+   "type": "uses",
+   "evidence": "individual DC bus and three-phase voltage sensing",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "instaspin_foc",
+   "type": "supports",
+   "evidence": "suitable for use with the sensorless InstaSPIN-FOC algorithm",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "universal_motor_control_lab",
+   "type": "supports",
+   "evidence": "Motor Drive Evaluation Kits Supported by Motor Control SDK",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Setup section for BOOSTXL-DRV8323RS",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "bldc",
+   "type": "controls",
+   "evidence": "for BLDC/PMSM control",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "pmsm",
+   "type": "controls",
+   "evidence": "for BLDC/PMSM control",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "lvservomtr",
+   "type": "supports",
+   "evidence": "Tested Motors: LVSERVOMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "lvbldcmtr",
+   "type": "supports",
+   "evidence": "Tested Motors: LVBLDCMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "fast_estimator",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "esmo",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "sensored_foc",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "launchxl_f280025c",
+   "type": "compatible_with",
+   "evidence": "connect BOOSTXL-DRV8323RS to J1/J3 and J4/J2 of LAUNCHXL-F280025C",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "launchxl_f280039c",
+   "type": "compatible_with",
+   "evidence": "connect BOOSTXL-DRV8323RS to J1/J3 and J4/J2 of LAUNCHXL-F280039C",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "launchxl_f2800137",
+   "type": "compatible_with",
+   "evidence": "connect BOOSTXL-DRV8323RS to J1/J3 and J4/J2 of LAUNCHXL-F2800137",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "drv8353rs",
+   "type": "contains",
+   "evidence": "DRV8353RS-EVM based on DRV8353RS",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "csd19532q5b",
+   "type": "contains",
+   "evidence": "DRV8353RS-EVM based on CSD19532Q5B",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "three_shunt_current_sensing",
+   "type": "uses",
+   "evidence": "Table 3-1 current sensing topology",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "voltage_sensing",
+   "type": "uses",
+   "evidence": "individual DC bus and three-phase voltage sensing",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "instaspin_foc",
+   "type": "supports",
+   "evidence": "suitable for use with the sensorless InstaSPIN-FOC algorithm",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "universal_motor_control_lab",
+   "type": "supports",
+   "evidence": "Motor Drive Evaluation Kits Supported by Motor Control SDK",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Setup section for DRV8353RS-EVM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "bldc",
+   "type": "controls",
+   "evidence": "for BLDC/PMSM control",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "pmsm",
+   "type": "controls",
+   "evidence": "for BLDC/PMSM control",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "lvservomtr",
+   "type": "supports",
+   "evidence": "Tested Motors: LVSERVOMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "lvbldcmtr",
+   "type": "supports",
+   "evidence": "Tested Motors: LVBLDCMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "fast_estimator",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "esmo",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "sensored_foc",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "launchxl_f280025c",
+   "type": "compatible_with",
+   "evidence": "connect DRV8353RS-EVM to J1/J3 and J4/J2 of LAUNCHXL-F280025C",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "launchxl_f280039c",
+   "type": "compatible_with",
+   "evidence": "connect DRV8353RS-EVM to J1/J3 and J4/J2 of LAUNCHXL-F280039C",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "launchxl_f2800137",
+   "type": "compatible_with",
+   "evidence": "connect DRV8353RS-EVM to J1/J3 and J4/J2 of LAUNCHXL-F2800137",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "gan_fet",
+   "type": "contains",
+   "evidence": "BOOSTXL-3PHGANINV based on GaN power stage",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 40
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "inline_shunt_current_sensing",
+   "type": "uses",
+   "evidence": "Table 3-1 current sensing topology",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "voltage_sensing",
+   "type": "uses",
+   "evidence": "individual DC bus and three-phase voltage sensing",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 40
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "instaspin_foc",
+   "type": "supports",
+   "evidence": "suitable for use with the sensorless InstaSPIN-FOC algorithm",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 40
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "universal_motor_control_lab",
+   "type": "supports",
+   "evidence": "Motor Drive Evaluation Kits Supported by Motor Control SDK",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Setup section for BOOSTXL-3PHGANINV",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 40
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "bldc",
+   "type": "controls",
+   "evidence": "for BLDC/PMSM control",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 40
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "pmsm",
+   "type": "controls",
+   "evidence": "for BLDC/PMSM control",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 40
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "lvservomtr",
+   "type": "supports",
+   "evidence": "Tested Motors: LVSERVOMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "lvbldcmtr",
+   "type": "supports",
+   "evidence": "Tested Motors: LVBLDCMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "fast_estimator",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "esmo",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "sensored_foc",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "launchxl_f280025c",
+   "type": "compatible_with",
+   "evidence": "connect BOOSTXL-3PHGANINV to J1/J3 and J4/J2 of LAUNCHXL-F280025C",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 40
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "launchxl_f280039c",
+   "type": "compatible_with",
+   "evidence": "connect BOOSTXL-3PHGANINV to J1/J3 and J4/J2 of LAUNCHXL-F280039C",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 40
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "launchxl_f2800137",
+   "type": "compatible_with",
+   "evidence": "connect BOOSTXL-3PHGANINV to J1/J3 and J4/J2 of LAUNCHXL-F2800137",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 40
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "drv8316",
+   "type": "contains",
+   "evidence": "DRV8316REVM based on DRV8316",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 41
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "integrated_csa",
+   "type": "uses",
+   "evidence": "Table 3-1 current sensing topology",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "voltage_sensing",
+   "type": "uses",
+   "evidence": "individual DC bus and three-phase voltage sensing",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 41
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "instaspin_foc",
+   "type": "supports",
+   "evidence": "suitable for use with the sensorless InstaSPIN-FOC algorithm",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 41
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "universal_motor_control_lab",
+   "type": "supports",
+   "evidence": "Motor Drive Evaluation Kits Supported by Motor Control SDK",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "Setup section for DRV8316REVM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 41
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "bldc",
+   "type": "controls",
+   "evidence": "for BLDC/PMSM control",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 41
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "pmsm",
+   "type": "controls",
+   "evidence": "for BLDC/PMSM control",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 41
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "lvservomtr",
+   "type": "supports",
+   "evidence": "Tested Motors: LVSERVOMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "lvbldcmtr",
+   "type": "supports",
+   "evidence": "Tested Motors: LVBLDCMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "fast_estimator",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "esmo",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "sensored_foc",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "launchxl_f280025c",
+   "type": "compatible_with",
+   "evidence": "connect DRV8316REVM to J1/J3 and J4/J2 of LAUNCHXL-F280025C",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 41
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "launchxl_f280039c",
+   "type": "compatible_with",
+   "evidence": "connect DRV8316REVM to J1/J3 and J4/J2 of LAUNCHXL-F280039C",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 41
+    }
+   ]
+  },
+  {
+   "source": "drv8316revm",
+   "target": "launchxl_f2800137",
+   "type": "compatible_with",
+   "evidence": "connect DRV8316REVM to J1/J3 and J4/J2 of LAUNCHXL-F2800137",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    },
+    {
+     "doc": "spruj26a",
+     "page": 41
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "sensorless_trapezoidal_control",
+   "type": "supports",
+   "evidence": "Sensorless trapzoidal control",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "short_circuit_protection",
+   "type": "supports",
+   "evidence": "fully protected with short circuit, thermal, shoot-through, and under voltage protection",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "thermal_protection",
+   "type": "supports",
+   "evidence": "fully protected with short circuit, thermal, shoot-through, and under voltage protection",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "shoot_through_protection",
+   "type": "supports",
+   "evidence": "fully protected with short circuit, thermal, shoot-through, and under voltage protection",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "undervoltage_protection",
+   "type": "supports",
+   "evidence": "fully protected with short circuit, thermal, shoot-through, and under voltage protection",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "short_circuit_protection",
+   "type": "supports",
+   "evidence": "fully protected with short circuit, thermal, shoot-through, and under voltage protection",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "thermal_protection",
+   "type": "supports",
+   "evidence": "fully protected with short circuit, thermal, shoot-through, and under voltage protection",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "shoot_through_protection",
+   "type": "supports",
+   "evidence": "fully protected with short circuit, thermal, shoot-through, and under voltage protection",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "undervoltage_protection",
+   "type": "supports",
+   "evidence": "fully protected with short circuit, thermal, shoot-through, and under voltage protection",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "short_circuit_protection",
+   "type": "supports",
+   "evidence": "fully protected with short circuit, thermal, shoot-through, and under voltage protection",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "thermal_protection",
+   "type": "supports",
+   "evidence": "fully protected with short circuit, thermal, shoot-through, and under voltage protection",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "shoot_through_protection",
+   "type": "supports",
+   "evidence": "fully protected with short circuit, thermal, shoot-through, and under voltage protection",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "undervoltage_protection",
+   "type": "supports",
+   "evidence": "fully protected with short circuit, thermal, shoot-through, and under voltage protection",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "servo_drives",
+   "type": "targets",
+   "evidence": "accurate control of precision drives such as servo drives",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 40
+    }
+   ]
+  },
+  {
+   "source": "boostxl_3phganinv",
+   "target": "sfra",
+   "type": "supports",
+   "evidence": "only SFRA support on the LAUNCHXL-F2800137 with the BOOSTXL-3PHGANINV",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 30
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "spi",
+   "type": "uses",
+   "evidence": "connect DRV nSCS to SPI-STE of the C2000 device",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    },
+    {
+     "doc": "spruj26a",
+     "page": 39
+    }
+   ]
+  },
+  {
+   "source": "drv8353rs_evm",
+   "target": "spi",
+   "type": "uses",
+   "evidence": "connect DRV nSCS to SPI-STE of the C2000 device",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 38
+    },
+    {
+     "doc": "spruj26a",
+     "page": 39
+    }
+   ]
+  },
+  {
+   "source": "dac128s085evm",
+   "target": "launchxl_f280025c",
+   "type": "compatible_with",
+   "evidence": "Connect DAC128S085EVM to LAUNCHXL-F280025C J5/J7 and J6/J8",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    },
+    {
+     "doc": "spruj26a",
+     "page": 35
+    }
+   ]
+  },
+  {
+   "source": "dac128s085evm",
+   "target": "launchxl_f280039c",
+   "type": "compatible_with",
+   "evidence": "Connect DAC128S085EVM to LAUNCHXL-F280039C J5/J7 and J6/J8",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    },
+    {
+     "doc": "spruj26a",
+     "page": 35
+    }
+   ]
+  },
+  {
+   "source": "dac128s085evm",
+   "target": "launchxl_f2800137",
+   "type": "compatible_with",
+   "evidence": "Connect DAC128S085EVM to LAUNCHXL-F2800137 J5/J7 and J6/J8",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 34
+    },
+    {
+     "doc": "spruj26a",
+     "page": 35
+    }
+   ]
+  },
+  {
+   "source": "dac128s085evm",
+   "target": "spi",
+   "type": "uses",
+   "evidence": "Connect JA-2 to JB-2 using a wire for SPI of DAC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 37
+    }
+   ]
+  },
+  {
+   "source": "dac128s085evm",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "LAUNCHXL-F280025C Connected to the DRV8329AEVM and DAC128S085EVM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 35
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "three_shunt_current_sensing",
+   "type": "uses",
+   "evidence": "Three low-side current shunt; individual DC bus and three-phase voltage sensing",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "voltage_sensing",
+   "type": "uses",
+   "evidence": "Three low-side current shunt; individual DC bus and three-phase voltage sensing",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    },
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "acim",
+   "type": "controls",
+   "evidence": "control of ... AC induction (ACI), BLDC, and PMSM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "bldc",
+   "type": "controls",
+   "evidence": "control of ... AC induction (ACI), BLDC, and PMSM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "pmsm",
+   "type": "controls",
+   "evidence": "control of ... AC induction (ACI), BLDC, and PMSM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "hvpmsmmtr",
+   "type": "supports",
+   "evidence": "Tested Motors: HVPMSMMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "hvbldcmtr",
+   "type": "supports",
+   "evidence": "Tested Motors: HVBLDCMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "fast_estimator",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "esmo",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "sensored_foc",
+   "type": "supports",
+   "evidence": "Rotor Position Sensing Method in Table 3-1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "dimm100",
+   "type": "contains",
+   "evidence": "DIMM100 controlCARD based motherboard",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "instaspin_foc",
+   "type": "supports",
+   "evidence": "suitable for use with the sensorless InstaSPIN-FOC algorithm",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "universal_motor_control_lab",
+   "type": "supports",
+   "evidence": "Table 3-1 TMDSHVMTRINSPIN 400V, 10A 3-ph inverter",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "motorcontrol_sdk",
+   "type": "related_to",
+   "evidence": "hardware Files are in solutions\\tmdshvmtrinspin\\hardware of C2000WARE-MOTORCONTROL-SDK",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "3.2.14 TMDSHVMTRINSPIN Setup",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 42
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "overcurrent_protection",
+   "type": "supports",
+   "evidence": "[Main]-J8 enable/disable the IPM over current protection; J7 threshold source",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "xds100v2",
+   "type": "contains",
+   "evidence": "disable the XDS100 on HVKIT",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 43
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "can",
+   "type": "uses",
+   "evidence": "[Main]-J16 Isolated CAN bus connector",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "epwm",
+   "type": "uses",
+   "evidence": "PWMDAC outputs: PWM attached to a first-order low-pass filter",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "encoder",
+   "type": "connects_to",
+   "evidence": "[Main]-H1 QEP connector: connects with a 0-5V QEP sensor",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "hall_sensor",
+   "type": "connects_to",
+   "evidence": "CAP/Hall effect sensor connector: connects with a 0-5V sensor",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 45
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280025c",
+   "target": "encoder",
+   "type": "connects_to",
+   "evidence": "J12 encoder interface",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280039c",
+   "target": "encoder",
+   "type": "connects_to",
+   "evidence": "J12 encoder interface",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "encoder",
+   "type": "connects_to",
+   "evidence": "J12 encoder interface",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 26
+    }
+   ]
+  }
+ ]
+}

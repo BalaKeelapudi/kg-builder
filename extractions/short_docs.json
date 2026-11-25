@@ -1,0 +1,5680 @@
+{
+ "entities": [
+  {
+   "id": "spruio7a",
+   "label": "SPRUIO7A",
+   "type": "Document",
+   "description": "C2000Ware MotorControl SDK Getting Started Guide, Rev. A (March 2019, revised October 2022).",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    }
+   ],
+   "aliases": [
+    "C2000Ware MotorControl SDK Getting Started Guide"
+   ],
+   "properties": {
+    "revision": "A",
+    "date": "October 2022",
+    "author": "Whitney Dewey"
+   }
+  },
+  {
+   "id": "sprt755",
+   "label": "SPRT755",
+   "type": "Document",
+   "description": "Product overview of C2000 F280013x real-time microcontrollers (October 2022).",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ],
+   "aliases": [
+    "C2000 F280013x Real-Time Microcontrollers Product Overview"
+   ],
+   "properties": {
+    "date": "October 2022"
+   }
+  },
+  {
+   "id": "sszt350",
+   "label": "SSZT350",
+   "type": "Document",
+   "description": "Technical article 'Customizing On-chip Peripherals Defies Conventional Logic' about the C2000 configurable logic block (January 2020).",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ],
+   "properties": {
+    "date": "January 2020",
+    "author": "Eric Best"
+   }
+  },
+  {
+   "id": "sszt464",
+   "label": "SSZT464",
+   "type": "Document",
+   "description": "Technical article 'Real-time Controllers Get New Connectivity Capabilities' introducing the F2838x series (June 2019).",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    }
+   ],
+   "properties": {
+    "date": "June 2019",
+    "author": "Chris Clearman"
+   }
+  },
+  {
+   "id": "sszt496",
+   "label": "SSZT496",
+   "type": "Document",
+   "description": "Technical article 'Motor Control Software Development Kit Jump-starts New Designs' introducing the C2000Ware MotorControl SDK (September 2019).",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ],
+   "properties": {
+    "date": "September 2019",
+    "author": "Chris Clearman"
+   }
+  },
+  {
+   "id": "motorcontrol_sdk",
+   "label": "C2000Ware MotorControl SDK",
+   "type": "Software",
+   "description": "Software development kit for C2000 real-time controller-based three-phase motor control system development; includes firmware running on C2000 motor control EVMs and TI designs.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    },
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ],
+   "aliases": [
+    "MotorControl SDK",
+    "C2000WARE-MOTORCONTROL-SDK"
+   ],
+   "properties": {
+    "update_cadence": "quarterly or biannually (planned)"
+   }
+  },
+  {
+   "id": "c2000",
+   "label": "C2000",
+   "type": "Device",
+   "description": "TI C2000 real-time microcontroller platform.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "code_composer_studio",
+   "label": "Code Composer Studio",
+   "type": "Software",
+   "description": "TI integrated development environment supporting TI's microcontroller and embedded processor portfolio; a suite of tools to develop and debug embedded applications.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    },
+    {
+     "doc": "spruio7a",
+     "page": 4
+    }
+   ],
+   "aliases": [
+    "CCS",
+    "CCSTUDIO"
+   ]
+  },
+  {
+   "id": "industrial_drives",
+   "label": "Industrial drives",
+   "type": "Application",
+   "description": "",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "robotics",
+   "label": "Robotics",
+   "type": "Application",
+   "description": "",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "appliances",
+   "label": "Appliances",
+   "type": "Application",
+   "description": "",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "automotive",
+   "label": "Automotive",
+   "type": "Application",
+   "description": "",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "three_phase_motor_control",
+   "label": "Three-phase motor control",
+   "type": "Application",
+   "description": "Three-phase motor control applications.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ],
+   "aliases": [
+    "Industrial 3-phase motor control"
+   ]
+  },
+  {
+   "id": "sdk_metadata_directory",
+   "label": ".metadata (MotorControl SDK directory)",
+   "type": "Software",
+   "description": "Contains the MotorControl SDK Resource Explorer GUI files (do not modify).",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ],
+   "aliases": [
+    ".metadata"
+   ]
+  },
+  {
+   "id": "sdk_c2000ware_directory",
+   "label": "c2000ware (MotorControl SDK directory)",
+   "type": "Software",
+   "description": "Contains the C2000Ware development software and documentation.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ],
+   "aliases": [
+    "c2000ware"
+   ]
+  },
+  {
+   "id": "sdk_docs_directory",
+   "label": "docs (MotorControl SDK directory)",
+   "type": "Software",
+   "description": "Contains the MotorControl SDK package user's guides and a documentation index HTML page.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ],
+   "aliases": [
+    "docs"
+   ]
+  },
+  {
+   "id": "sdk_libraries_directory",
+   "label": "libraries (MotorControl SDK directory)",
+   "type": "Software",
+   "description": "Contains libraries with algorithm modules specific to motor control applications, with documentation and examples when applicable.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ],
+   "aliases": [
+    "libraries"
+   ]
+  },
+  {
+   "id": "sdk_solutions_directory",
+   "label": "solutions (MotorControl SDK directory)",
+   "type": "Software",
+   "description": "Contains the development kits and solutions for C2000 devices targeting different application areas; demo code, source code and CCS projects.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ],
+   "aliases": [
+    "solutions"
+   ]
+  },
+  {
+   "id": "sdk_uninstallers_directory",
+   "label": "uninstallers (MotorControl SDK directory)",
+   "type": "Software",
+   "description": "Contains the MotorControl SDK uninstaller.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ],
+   "aliases": [
+    "uninstallers"
+   ]
+  },
+  {
+   "id": "c2000ware",
+   "label": "C2000Ware",
+   "type": "Software",
+   "description": "Cohesive set of development software and documentation for C2000: device-specific drivers, bit fields, libraries, peripheral examples, utilities, hardware files and documentation.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    },
+    {
+     "doc": "sszt496",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ],
+   "aliases": [
+    "C2000WARE"
+   ]
+  },
+  {
+   "id": "motorcontrol_sdk_documentation_html",
+   "label": "C2000Ware_MotorControl_SDK_Documentation.html",
+   "type": "Software",
+   "description": "HTML page in the docs directory listing all docs in the MotorControl SDK package.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "angle_generator",
+   "label": "Angle generator library",
+   "type": "Software",
+   "description": "MotorControl SDK library module for angle generation.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "datalog",
+   "label": "DATALOG library",
+   "type": "Software",
+   "description": "MotorControl SDK datalog library.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ],
+   "aliases": [
+    "datalog"
+   ]
+  },
+  {
+   "id": "fast_estimator",
+   "label": "FAST Software Encoder",
+   "type": "Algorithm",
+   "description": "TI FAST software encoder/observer; its library symbols enable InstaSPIN-FOC software.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    },
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ],
+   "aliases": [
+    "FAST",
+    "FAST software encoder"
+   ]
+  },
+  {
+   "id": "instaspin_foc",
+   "label": "InstaSPIN-FOC",
+   "type": "Software",
+   "description": "Sensorless FOC solution using TI's FAST software encoder, with motor identification and automatic current-loop tuning.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    },
+    {
+     "doc": "spruio7a",
+     "page": 3
+    },
+    {
+     "doc": "sszt496",
+     "page": 1
+    },
+    {
+     "doc": "sszt496",
+     "page": 2
+    }
+   ],
+   "aliases": [
+    "InstaSPIN-FOC solutions"
+   ]
+  },
+  {
+   "id": "release_notes_html",
+   "label": "release_notes.html",
+   "type": "Software",
+   "description": "SDK release notes at the MotorControl SDK installation root; contains the Hardware Support table listing device families, EVMs, features and solution locations.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "resource_explorer",
+   "label": "TI Resource Explorer",
+   "type": "Software",
+   "description": "Resource Explorer view in Code Composer Studio (and online) used to navigate and import MotorControl SDK content.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    },
+    {
+     "doc": "spruio7a",
+     "page": 3
+    }
+   ],
+   "aliases": [
+    "Resource Explorer"
+   ]
+  },
+  {
+   "id": "motorcontrol_sdk_gui",
+   "label": "MotorControl SDK GUI",
+   "type": "Software",
+   "description": "Graphical user interface for navigating MotorControl SDK software, libraries, and user's guides; integrated into Code Composer Studio Resource Explorer upon installation.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "universal_gui",
+   "label": "C2000 InstaSPIN Universal GUI",
+   "type": "Software",
+   "description": "Online GUI in the TI Cloud Tools Gallery providing a dashboard for viewing and updating variables in the F28004x InstaSPIN-FOC lab projects; can be customized in GUI Composer.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 3
+    },
+    {
+     "doc": "spruio7a",
+     "page": 4
+    }
+   ],
+   "aliases": [
+    "InstaSPIN Universal GUI"
+   ]
+  },
+  {
+   "id": "f28004x",
+   "label": "F28004x",
+   "type": "Device",
+   "description": "C2000 device series; InstaSPIN-FOC library rewritten in floating point and placed in on-chip ROM for it.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 3
+    },
+    {
+     "doc": "sszt496",
+     "page": 2
+    },
+    {
+     "doc": "sszt496",
+     "page": 3
+    },
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ],
+   "properties": {
+    "mips": "200 MIPS",
+    "flash": "256 KB"
+   }
+  },
+  {
+   "id": "instaspin_foc_labs_f28004x",
+   "label": "F28004x InstaSPIN-FOC labs",
+   "type": "Software",
+   "description": "InstaSPIN-FOC lab projects for F28004x located under solutions/boostxl_drv8320rs and solutions/tmdshvmtrinspin.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 3
+    },
+    {
+     "doc": "spruio7a",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "gui_composer",
+   "label": "GUI Composer",
+   "type": "Software",
+   "description": "TI tool into which the InstaSPIN Universal GUI can be imported and customized.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "gui_quick_start_guide",
+   "label": "GUI Quick Start Guide",
+   "type": "Document",
+   "description": "gui_quick_start_guide.pdf at <SDK install>/solutions/common/sensorless_foc/docs.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "boostxl_drv8320rs",
+   "label": "BOOSTXL-DRV8320RS",
+   "type": "EvaluationKit",
+   "description": "Kit whose MotorControl SDK solution folder (solutions/boostxl_drv8320rs) holds F28004x InstaSPIN-FOC labs.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "tmdshvmtrinspin",
+   "label": "TMDSHVMTRINSPIN",
+   "type": "EvaluationKit",
+   "description": "Kit whose MotorControl SDK solution folder (solutions/tmdshvmtrinspin) holds F28004x InstaSPIN-FOC labs.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "motorcontrolsdkupdater",
+   "label": "MotorControlSDKUpdater.exe",
+   "type": "Software",
+   "description": "Update checking application in the SDK install directory that checks for, downloads and runs a newer MotorControl SDK installer.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "f280013x",
+   "label": "F280013x",
+   "type": "Device",
+   "description": "TMS320F280013x series in the Entry-Performance line of C2000 real-time MCUs, built for efficient control of power electronics; extension of the Generation 3 C2000 MCU portfolio.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 2
+    },
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ],
+   "aliases": [
+    "TMS320F280013x"
+   ],
+   "properties": {
+    "cpu": "C28x 32-bit DSP CPU",
+    "cpu_freq": "120 MHz (120 or 100 MHz variants)",
+    "performance_equivalent": "240-MHz Arm Cortex-M7 on signal chain benchmark",
+    "mips": "120 MIPS",
+    "flash": "up to 256 KB (128 KW), ECC, 1 bank",
+    "sram": "36 KB (ECC, parity)",
+    "flash_efficiency": "averages 92% efficiency for effective 110 MHz",
+    "adc": "2x 12-bit, 4 MSPS, up to 21 channels",
+    "pwm": "14 channels (7 ePWM modules, 2 high-resolution)",
+    "comparators": "4 windowed comparators with reference DACs (3x CMPSS_LITE, 1x 12b DAC)",
+    "comms": "CAN 2.0B, 3x UART, 1x SPI, 2x I2C",
+    "qep_cap": "1 eQEP, 2 eCAP",
+    "clb": "0",
+    "clock": "2x 10-MHz INTOSC (+/-1% with precision resistor), APLL, DCC, 4-20 MHz external oscillator input",
+    "vreg": "1.2 V VREG, POR/BOR",
+    "timers": "3x 32-bit CPU timers, NMI watchdog",
+    "interrupts": "96 interrupt PIE",
+    "security": "AES tables, secure boot, JTAG lock, DCSM (2x 128-bit dual security zones), unique ID",
+    "safety_level": "Functional Safety Quality Managed",
+    "packages": "48 (9x9) / 64 (12x12) LQFP, 32 (5x5) / 48 (7x7) QFN",
+    "temperature": "TA = 125 C",
+    "starting_price_1ku": "$0.79",
+    "hwbist": "No",
+    "erad": "No",
+    "debug": "cJTAG / real-time JTAG"
+   }
+  },
+  {
+   "id": "f2800137",
+   "label": "F2800137",
+   "type": "Device",
+   "description": "TMS320F2800137 device of the F280013x series, with product folder, LaunchPad and controlCARD evaluation modules.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ],
+   "aliases": [
+    "TMS320F2800137"
+   ]
+  },
+  {
+   "id": "c2000_generation_3",
+   "label": "C2000 Generation 3 MCU portfolio",
+   "type": "Concept",
+   "description": "Generation 3 C2000 MCU portfolio; all devices compatible with C2000Ware, with pin-to-pin compatibility between many devices.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "entry_performance_line",
+   "label": "C2000 Entry-Performance line",
+   "type": "Concept",
+   "description": "C2000 MCUs with up to 150 MIPS real-time control performance; new focus on application-tailored series.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "adc",
+   "label": "ADC",
+   "type": "Peripheral",
+   "description": "Analog-to-digital converter.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 4
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "epwm",
+   "label": "ePWM",
+   "type": "Peripheral",
+   "description": "Enhanced pulse-width modulator.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 4
+    },
+    {
+     "doc": "sszt350",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "hrpwm",
+   "label": "HRPWM",
+   "type": "Peripheral",
+   "description": "High-resolution PWM.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 4
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "cmpss",
+   "label": "CMPSS",
+   "type": "Peripheral",
+   "description": "Comparator subsystem.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 4
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "dac",
+   "label": "DAC",
+   "type": "Peripheral",
+   "description": "Digital-to-analog converter.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "eqep",
+   "label": "eQEP",
+   "type": "Peripheral",
+   "description": "Enhanced quadrature encoder pulse module.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 4
+    },
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "ecap",
+   "label": "eCAP",
+   "type": "Peripheral",
+   "description": "Enhanced capture module.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 4
+    },
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "uart",
+   "label": "UART",
+   "type": "Peripheral",
+   "description": "Universal asynchronous receiver/transmitter.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "spi",
+   "label": "SPI",
+   "type": "Peripheral",
+   "description": "Serial peripheral interface.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "i2c",
+   "label": "I2C",
+   "type": "Peripheral",
+   "description": "Inter-integrated circuit interface.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "can",
+   "label": "CAN",
+   "type": "Peripheral",
+   "description": "Controller area network (CAN 2.0B).",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "fpu",
+   "label": "FPU",
+   "type": "Peripheral",
+   "description": "Floating-point unit for more precise mathematical calculations.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "tmu",
+   "label": "TMU",
+   "type": "Peripheral",
+   "description": "Trigonometric Math Unit; speeds up algorithms key to real-time control (arctan, sin, cos).",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "cpu_timer",
+   "label": "CPU Timer",
+   "type": "Peripheral",
+   "description": "32-bit CPU timer.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "watchdog",
+   "label": "Watchdog Timer",
+   "type": "Peripheral",
+   "description": "NMI watchdog timer.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "pie",
+   "label": "PIE",
+   "type": "Peripheral",
+   "description": "Peripheral interrupt expansion.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "dcc",
+   "label": "DCC",
+   "type": "Peripheral",
+   "description": "Dual-clock comparator for missing clock detection.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "dcsm",
+   "label": "DCSM",
+   "type": "Peripheral",
+   "description": "Dual-code security module.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "intosc",
+   "label": "INTOSC",
+   "type": "Peripheral",
+   "description": "Internal 10-MHz oscillator.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "temperature_sensor",
+   "label": "Temperature Sensor",
+   "type": "Peripheral",
+   "description": "On-chip temperature sensor.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "aes",
+   "label": "AES tables",
+   "type": "Peripheral",
+   "description": "AES tables for security.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "trip_zone",
+   "label": "Trip Zone",
+   "type": "Peripheral",
+   "description": "PWM fault trip zones.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sszt350",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "c28x_cpu",
+   "label": "C28x DSP core",
+   "type": "Component",
+   "description": "TI C28x 32-bit DSP CPU core used in C2000 MCUs.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ],
+   "aliases": [
+    "C28x"
+   ]
+  },
+  {
+   "id": "f28002x",
+   "label": "F28002x",
+   "type": "Device",
+   "description": "C2000 Entry-Performance series compared with F280013x.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    },
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ],
+   "properties": {
+    "mips": "100 MHz maximum",
+    "flash": "128 KB (1 bank)",
+    "ram": "24 KB",
+    "adc": "2x 12b",
+    "cmpss": "4x 12b DAC",
+    "clb": "2",
+    "hwbist": "Yes",
+    "pwm": "14x ePWM (8 HRPWM)",
+    "qep_cap": "2 eQEP, 3 eCAP, 1 HRCAP",
+    "comms": "3 UART, 2 SPI, 1 I2C, 1 CAN, 1 FSI, 1 PMBus",
+    "erad": "Yes",
+    "security": "DCSM",
+    "packages": "48/64/80 QFP 125 C, Q100",
+    "starting_price_1ku": "$1.43",
+    "safety_level": "Functional Safety Quality Managed"
+   }
+  },
+  {
+   "id": "clb",
+   "label": "CLB",
+   "type": "Peripheral",
+   "description": "Configurable logic block: high-speed programmable logic integrated into a C2000 MCU with I/O routing to ePWM, eCAP, eQEP and GPIO.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    },
+    {
+     "doc": "sszt350",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ],
+   "properties": {
+    "tiles": "2, 4 or 8",
+    "per_tile": "3x LUT4, 3x Ctr32, 3x FSM, 8x L3 output LUTs, 1x HLC"
+   },
+   "aliases": [
+    "Configurable Logic Block"
+   ]
+  },
+  {
+   "id": "hwbist",
+   "label": "HWBIST",
+   "type": "Peripheral",
+   "description": "Hardware built-in self-test.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "hrcap",
+   "label": "HRCAP",
+   "type": "Peripheral",
+   "description": "High-resolution capture.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "fsi",
+   "label": "FSI",
+   "type": "Peripheral",
+   "description": "Fast serial interface.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "pmbus",
+   "label": "PMBus",
+   "type": "Peripheral",
+   "description": "Power management bus.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "erad",
+   "label": "ERAD",
+   "type": "Peripheral",
+   "description": "Embedded real-time analysis and diagnostic.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "id": "motor_drives",
+   "label": "Motor drives",
+   "type": "Application",
+   "description": "",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "industrial_power",
+   "label": "Industrial power",
+   "type": "Application",
+   "description": "",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "solar",
+   "label": "Solar",
+   "type": "Application",
+   "description": "",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "digital_power",
+   "label": "Digital power control",
+   "type": "Application",
+   "description": "",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "launchxl_f2800137",
+   "label": "TMS320F2800137 LaunchPad",
+   "type": "EvaluationKit",
+   "description": "TMS320F2800137 LaunchPad Evaluation Module listed as an F280013x resource.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ],
+   "aliases": [
+    "TMS320F2800137 LaunchPad Evaluation Module"
+   ]
+  },
+  {
+   "id": "tmdscncd2800137",
+   "label": "TMS320F2800137 controlCARD",
+   "type": "EvaluationKit",
+   "description": "TMS320F2800137 controlCARD Evaluation Module listed as an F280013x resource.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ],
+   "aliases": [
+    "TMS320F2800137 controlCARD Evaluation Module"
+   ]
+  },
+  {
+   "id": "hvac_reference_design",
+   "label": "HVAC Reference Design",
+   "type": "EvaluationKit",
+   "description": "HVAC reference design listed as an F280013x resource.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "hvac",
+   "label": "HVAC",
+   "type": "Application",
+   "description": "Heating, ventilation and air conditioning.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "digitalpower_sdk",
+   "label": "C2000Ware DigitalPower SDK",
+   "type": "Software",
+   "description": "DigitalPower software development kit for C2000 MCUs.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 3
+    }
+   ],
+   "aliases": [
+    "C2000WARE-DIGITALPOWER-SDK"
+   ]
+  },
+  {
+   "id": "sysconfig",
+   "label": "SysConfig",
+   "type": "Software",
+   "description": "C2000 MCU SysConfig graphical device configuration: peripheral configuration, application calculators, PinMux, DCSM security, dependency detection, library setup, memory configuration, board components, ePWM support, FreeRTOS configuration.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 3
+    }
+   ],
+   "aliases": [
+    "C2000 MCU SysConfig"
+   ]
+  },
+  {
+   "id": "c2000_academy",
+   "label": "C2000 Academy",
+   "type": "Software",
+   "description": "C2000 MCU Academy training resources: getting started resources, interactive classes, advanced workshops, videos.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 3
+    }
+   ],
+   "aliases": [
+    "C2000 MCU Academy"
+   ]
+  },
+  {
+   "id": "freertos",
+   "label": "FreeRTOS",
+   "type": "Software",
+   "description": "Real-time OS configurable through C2000 SysConfig.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "f2838xd",
+   "label": "F2838xD",
+   "type": "Device",
+   "description": "C2000 MCU series in the portfolio figure (High-Performance).",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ],
+   "properties": {
+    "mips": "925 MIPS",
+    "flash": "1.5 MB",
+    "performance_line": "High-Performance"
+   }
+  },
+  {
+   "id": "f2838xs",
+   "label": "F2838xS",
+   "type": "Device",
+   "description": "C2000 MCU series in the portfolio figure (Mid-Performance).",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ],
+   "properties": {
+    "mips": "525 MIPS",
+    "flash": "1.5 MB",
+    "performance_line": "Mid-Performance"
+   }
+  },
+  {
+   "id": "f2837xd",
+   "label": "F2837xD",
+   "type": "Device",
+   "description": "C2000 MCU series in the portfolio figure (High-Performance).",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ],
+   "properties": {
+    "mips": "800 MIPS",
+    "flash": "1 MB",
+    "performance_line": "High-Performance"
+   }
+  },
+  {
+   "id": "f2837xs",
+   "label": "F2837xS",
+   "type": "Device",
+   "description": "C2000 MCU series in the portfolio figure (Mid-Performance).",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ],
+   "properties": {
+    "mips": "400 MIPS",
+    "flash": "1 MB",
+    "performance_line": "Mid-Performance"
+   }
+  },
+  {
+   "id": "f28003x",
+   "label": "F28003x",
+   "type": "Device",
+   "description": "C2000 MCU series in the portfolio figure (Mid-Performance).",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ],
+   "properties": {
+    "mips": "240 MIPS",
+    "flash": "384 KB",
+    "performance_line": "Mid-Performance"
+   }
+  },
+  {
+   "id": "f2807x",
+   "label": "F2807x",
+   "type": "Device",
+   "description": "C2000 MCU series in the portfolio figure (Mid-Performance).",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ],
+   "properties": {
+    "mips": "240 MIPS",
+    "flash": "512 KB",
+    "performance_line": "Mid-Performance"
+   }
+  },
+  {
+   "id": "f2806x",
+   "label": "F2806x",
+   "type": "Device",
+   "description": "C2000 MCU series in the portfolio figure (Mid-Performance).",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ],
+   "properties": {
+    "mips": "180 MIPS",
+    "flash": "256 KB",
+    "performance_line": "Mid-Performance"
+   }
+  },
+  {
+   "id": "f2833x",
+   "label": "F2833x",
+   "type": "Device",
+   "description": "C2000 MCU series in the portfolio figure (Entry/Mid (Gen 2)).",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ],
+   "properties": {
+    "mips": "150 MIPS",
+    "flash": "512 KB",
+    "performance_line": "Entry/Mid (Gen 2)"
+   }
+  },
+  {
+   "id": "f2803x",
+   "label": "F2803x",
+   "type": "Device",
+   "description": "C2000 MCU series in the portfolio figure (Entry-Performance).",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ],
+   "properties": {
+    "mips": "60 MIPS",
+    "flash": "128 KB",
+    "performance_line": "Entry-Performance"
+   }
+  },
+  {
+   "id": "f2802x",
+   "label": "F2802x",
+   "type": "Device",
+   "description": "C2000 MCU series in the portfolio figure (Entry-Performance).",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ],
+   "properties": {
+    "mips": "60 MIPS",
+    "flash": "64 KB",
+    "performance_line": "Entry-Performance"
+   }
+  },
+  {
+   "id": "f2838x",
+   "label": "F2838x",
+   "type": "Device",
+   "description": "C2000 real-time controller series: an F2837x device with performance enhancements and an Arm Cortex-M4 based connectivity manager; near single-chip solution for connected drives and industrial power.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    },
+    {
+     "doc": "sszt464",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    },
+    {
+     "doc": "sszt464",
+     "page": 3
+    }
+   ],
+   "properties": {
+    "configurations": "6",
+    "flash": "1.0 MB (single C28x+CLA) or 1.5 MB (dual C28x+CLA)",
+    "package": "16 mm x 16 mm 337-ball fine-pitch BGA",
+    "junction_temperature": "-40 C to 125 C",
+    "epwm_channels": "up to 32",
+    "adc": "four independent 16-bit ADCs with post processing, new single-ended mode",
+    "fsi_rate": "up to 200 Mbps",
+    "fcl_loop_time": "< 500 ns"
+   }
+  },
+  {
+   "id": "f2837x",
+   "label": "F2837x",
+   "type": "Device",
+   "description": "C2000 series; F2838x is described as an F2837x device with performance enhancements and a connectivity manager.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "gpio",
+   "label": "GPIO",
+   "type": "Peripheral",
+   "description": "General-purpose I/O.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "clb_tile",
+   "label": "CLB tile",
+   "type": "Component",
+   "description": "CLB tile containing an optimized group of programmable logic cell blocks.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "clb_lut4",
+   "label": "LUT4",
+   "type": "Component",
+   "description": "4-input look-up table (three per tile).",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "clb_counter",
+   "label": "Ctr32",
+   "type": "Component",
+   "description": "32-bit counter (three per tile).",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "clb_fsm",
+   "label": "FSM",
+   "type": "Component",
+   "description": "4-state finite state machine (three per tile).",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "clb_output_lut",
+   "label": "L3 output LUT",
+   "type": "Component",
+   "description": "3-input output look-up table (eight per tile).",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "clb_hlc",
+   "label": "HLC",
+   "type": "Component",
+   "description": "High-level controller (one per tile).",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "clb_tool",
+   "label": "CLB configuration tool",
+   "type": "Software",
+   "description": "Graphical CLB configuration tool integrated into Code Composer Studio; build output is a *.h header describing the CLB configuration.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 2
+    },
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "clb_config_header",
+   "label": "CLB configuration header (*.h)",
+   "type": "Software",
+   "description": "Header file generated by the project build describing the CLB tool configuration.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "driverlib",
+   "label": "C2000Ware DriverLib",
+   "type": "Software",
+   "description": "C2000Ware driver library APIs.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "encoder",
+   "label": "Encoder",
+   "type": "Concept",
+   "description": "Position encoder (quadrature or absolute).",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 2
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "dead_time",
+   "label": "Dead band",
+   "type": "Concept",
+   "description": "ePWM dead-band signal that can be intercepted by the CLB.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "clb_examples",
+   "label": "C2000Ware CLB examples",
+   "type": "Software",
+   "description": "15 CLB examples in the latest C2000Ware revision.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ],
+   "properties": {
+    "count": "15"
+   }
+  },
+  {
+   "id": "clb_encoder_examples",
+   "label": "CLB encoder examples",
+   "type": "Software",
+   "description": "CLB encoder examples located in the MotorControl SDK.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "lifestyle_audio",
+   "label": "Lifestyle audio",
+   "type": "Application",
+   "description": "Harman lifestyle audio products using CLB to offload control logic (400 kHz loop).",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "f28388d",
+   "label": "F28388D",
+   "type": "Device",
+   "description": "TMS320F28388D device of the F2838x series.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    },
+    {
+     "doc": "sszt464",
+     "page": 3
+    }
+   ],
+   "aliases": [
+    "TMS320F28388D"
+   ]
+  },
+  {
+   "id": "connectivity_manager",
+   "label": "Connectivity Manager",
+   "type": "Component",
+   "description": "Arm Cortex-M4-based subsystem in F2838x that offloads processing-intensive communications; included in all F2838x devices.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "arm_cortex_m4",
+   "label": "Arm Cortex-M4",
+   "type": "Component",
+   "description": "Arm Cortex-M4 processor core.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "ethercat",
+   "label": "EtherCAT",
+   "type": "Peripheral",
+   "description": "Integrated EtherCAT slave capability.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "ethernet",
+   "label": "Ethernet",
+   "type": "Peripheral",
+   "description": "10/100 Ethernet.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "mcan",
+   "label": "CAN FD",
+   "type": "Peripheral",
+   "description": "CAN with flexible data rate.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "usb",
+   "label": "USB",
+   "type": "Peripheral",
+   "description": "Universal serial bus.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "sdfm",
+   "label": "Sigma Delta Filter Module",
+   "type": "Peripheral",
+   "description": "Sigma-delta filter modules interfacing isolated delta-sigma converters.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "integer_division_unit",
+   "label": "Fast integer division hardware",
+   "type": "Peripheral",
+   "description": "Fast integer division hardware for efficient calculations.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "fpu64",
+   "label": "64-bit FPU",
+   "type": "Peripheral",
+   "description": "64-bit floating-point unit for extended precision.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "cla",
+   "label": "CLA",
+   "type": "Peripheral",
+   "description": "Control Law Accelerator co-processor for parallel control or signal processing.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "pulse_train_logic",
+   "label": "Specialized pulse train logic",
+   "type": "Feature",
+   "description": "CLB-implemented pulse train logic.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "inverter_protection",
+   "label": "Inverter protection",
+   "type": "Concept",
+   "description": "Protection schemes for inverters.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "fpga_cpld",
+   "label": "FPGA/CPLD",
+   "type": "Component",
+   "description": "External programmable logic whose typical functions F2838x capabilities replace.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "fast_current_loop",
+   "label": "Fast Current Loop (FCL)",
+   "type": "Software",
+   "description": "Optimized software library processing the servo drive FOC current loop (< 500 ns on F2838x; full FOC torque loop < 1 us) using hardware accelerators and cycle-scavenging.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    },
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ],
+   "aliases": [
+    "FCL"
+   ]
+  },
+  {
+   "id": "foc",
+   "label": "Field-oriented control (FOC)",
+   "type": "Algorithm",
+   "description": "Technique controlling three-phase motors for efficient torque production.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    },
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ],
+   "aliases": [
+    "FOC"
+   ]
+  },
+  {
+   "id": "servo_drives",
+   "label": "Servo drives",
+   "type": "Application",
+   "description": "",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "ac_drives",
+   "label": "AC drives",
+   "type": "Application",
+   "description": "",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "factory_automation",
+   "label": "Factory automation",
+   "type": "Application",
+   "description": "",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "industrial_power_equipment",
+   "label": "Industrial power equipment",
+   "type": "Application",
+   "description": "",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "grid",
+   "label": "High-power grid",
+   "type": "Application",
+   "description": "",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "tmdscncd28388d",
+   "label": "TMDSCNCD28388D",
+   "type": "EvaluationKit",
+   "description": "Tool folder for F28388D development tools (controlCARD).",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "can_fd_driver_simma",
+   "label": "Simma Software CAN FD driver",
+   "type": "Software",
+   "description": "CAN FD device driver from Simma Software compatible with the F2838x family.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "designdrive",
+   "label": "DesignDRIVE",
+   "type": "Software",
+   "description": "Sensored FOC solutions using DesignDRIVE components: multiple current-sense topologies, analog/digital position sensor interfaces, control techniques, real-time connectivity; released via controlSUITE, now in MotorControl SDK.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 3
+    },
+    {
+     "doc": "sszt496",
+     "page": 1
+    },
+    {
+     "doc": "sszt496",
+     "page": 2
+    }
+   ],
+   "aliases": [
+    "C2000 DesignDRIVE"
+   ]
+  },
+  {
+   "id": "designdrive_kit",
+   "label": "C2000 DesignDRIVE development kit",
+   "type": "EvaluationKit",
+   "description": "C2000 DesignDRIVE development kit for industrial motor control.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 3
+    },
+    {
+     "doc": "sszt496",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "motor_control_library",
+   "label": "Motor control library",
+   "type": "Software",
+   "description": "Common control and motor control specific functions usable as building blocks in a customized motor-control application.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "sensorless_control",
+   "label": "Sensorless mode",
+   "type": "Feature",
+   "description": "Sensorless motor control.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "sensored_control",
+   "label": "Sensored mode",
+   "type": "Feature",
+   "description": "Sensored motor control using position sensors.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "motor_identification",
+   "label": "Motor identification",
+   "type": "Feature",
+   "description": "Automatic motor parameter identification in InstaSPIN-FOC.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "current_loop_auto_tuning",
+   "label": "Automatic current-loop tuning",
+   "type": "Feature",
+   "description": "Automatic tuning of current loop in InstaSPIN-FOC.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "f28379d",
+   "label": "F28379D",
+   "type": "Device",
+   "description": "TMS320F28379D device supported by the MotorControl SDK.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ],
+   "aliases": [
+    "TMS320F28379D"
+   ]
+  },
+  {
+   "id": "f28076",
+   "label": "F28076",
+   "type": "Device",
+   "description": "TMS320F28076 device supported by the MotorControl SDK.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ],
+   "aliases": [
+    "TMS320F28076"
+   ]
+  },
+  {
+   "id": "f280049c",
+   "label": "F280049C",
+   "type": "Device",
+   "description": "TMS320F280049C device supported by the MotorControl SDK.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ],
+   "aliases": [
+    "TMS320F280049C"
+   ]
+  },
+  {
+   "id": "c2000ware_libraries",
+   "label": "C2000Ware libraries",
+   "type": "Software",
+   "description": "Math, digital signal processing, control and signal generation libraries in C2000Ware.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "motorware",
+   "label": "MotorWare",
+   "type": "Software",
+   "description": "Earlier TI motor control software package delivering InstaSPIN-FOC on-chip ROM library for F2806x, F2805x, F2802x.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "controlsuite",
+   "label": "controlSUITE",
+   "type": "Software",
+   "description": "Earlier TI software suite through which DesignDRIVE was released and updated.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    },
+    {
+     "doc": "sszt496",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "digital_motor_control_library",
+   "label": "Digital motor control library",
+   "type": "Software",
+   "description": "Earlier TI motor control library.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "instaspin_foc_rom_library",
+   "label": "InstaSPIN-FOC ROM library",
+   "type": "Software",
+   "description": "On-chip ROM library enabling InstaSPIN-FOC; fixed-point on F2806x/F2805x/F2802x via MotorWare, rewritten in floating point for F28004x.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    },
+    {
+     "doc": "sszt496",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "f2805x",
+   "label": "F2805x",
+   "type": "Device",
+   "description": "C2000 series with on-chip InstaSPIN-FOC ROM library.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "launchxl_f280049c",
+   "label": "LAUNCHXL-F280049C",
+   "type": "EvaluationKit",
+   "description": "C2000 Piccolo MCU F280049C LaunchPad development kit; a new BoosterPack works with it for the InstaSPIN-FOC solution.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 2
+    }
+   ],
+   "aliases": [
+    "F280049C LaunchPad"
+   ]
+  },
+  {
+   "id": "acim",
+   "label": "ACIM",
+   "type": "Motor",
+   "description": "Asynchronous induction motor.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 3
+    }
+   ],
+   "aliases": [
+    "asynchronous induction motor"
+   ]
+  },
+  {
+   "id": "pmsm",
+   "label": "PMSM",
+   "type": "Motor",
+   "description": "Three-phase synchronous motor.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "medical_tools",
+   "label": "Medical tools",
+   "type": "Application",
+   "description": "Sub-100-W medical tools.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "industrial_machinery",
+   "label": "Industrial machinery",
+   "type": "Application",
+   "description": "Industrial machinery up to hundreds of kilowatts.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  }
+ ],
+ "relations": [
+  {
+   "source": "motorcontrol_sdk",
+   "target": "code_composer_studio",
+   "type": "requires",
+   "evidence": "Code Composer Studio is required to use the software in the MotorControl SDK.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "c2000",
+   "type": "targets",
+   "evidence": "MotorControl SDK contains the necessary software and support for C2000 real-time microcontrollers.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "industrial_drives",
+   "type": "targets",
+   "evidence": "Firmware runs on C2000 EVMs and TIDs targeted for industrial drives, robotics, appliances, and automotive applications.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "robotics",
+   "type": "targets",
+   "evidence": "Firmware runs on C2000 EVMs and TIDs targeted for industrial drives, robotics, appliances, and automotive applications.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "appliances",
+   "type": "targets",
+   "evidence": "Firmware runs on C2000 EVMs and TIDs targeted for industrial drives, robotics, appliances, and automotive applications.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "automotive",
+   "type": "targets",
+   "evidence": "Firmware runs on C2000 EVMs and TIDs targeted for industrial drives, robotics, appliances, and automotive applications.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "three_phase_motor_control",
+   "type": "targets",
+   "evidence": "Targeted for various three-phase motor control applications.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "sdk_metadata_directory",
+   "type": "contains",
+   "evidence": "MotorControl SDK root directory '.metadata': Contains the MotorControl SDK Resource Explorer GUI files (do not modify).",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "sdk_c2000ware_directory",
+   "type": "contains",
+   "evidence": "MotorControl SDK root directory 'c2000ware': Contains the C2000Ware development software and documentation.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "sdk_docs_directory",
+   "type": "contains",
+   "evidence": "MotorControl SDK root directory 'docs': Contains the MotorControl SDK package user's guides and a documentation index HT",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "sdk_libraries_directory",
+   "type": "contains",
+   "evidence": "MotorControl SDK root directory 'libraries': Contains libraries with algorithm modules specific to motor control applications",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "sdk_solutions_directory",
+   "type": "contains",
+   "evidence": "MotorControl SDK root directory 'solutions': Contains the development kits and solutions for C2000 devices targeting differen",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "sdk_uninstallers_directory",
+   "type": "contains",
+   "evidence": "MotorControl SDK root directory 'uninstallers': Contains the MotorControl SDK uninstaller.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "sdk_c2000ware_directory",
+   "target": "c2000ware",
+   "type": "contains",
+   "evidence": "c2000ware directory contains the C2000Ware development software and documentation.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "c2000ware",
+   "type": "contains",
+   "evidence": "MotorControl SDK includes the foundational software provided by C2000Ware.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    },
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "sdk_docs_directory",
+   "target": "motorcontrol_sdk_documentation_html",
+   "type": "contains",
+   "evidence": "Locate the C2000Ware_MotorControl_SDK_Documentation.html page in the docs directory.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "sdk_libraries_directory",
+   "target": "angle_generator",
+   "type": "contains",
+   "evidence": "Libraries range from angle generator and datalog to the FAST Software Encoder symbols.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "sdk_libraries_directory",
+   "target": "datalog",
+   "type": "contains",
+   "evidence": "Libraries range from angle generator and datalog to the FAST Software Encoder symbols.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "sdk_libraries_directory",
+   "target": "fast_estimator",
+   "type": "contains",
+   "evidence": "Libraries range from angle generator and datalog to the FAST Software Encoder symbols.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "instaspin_foc",
+   "type": "enables",
+   "evidence": "FAST Software Encoder symbols for enabling InstaSPIN-FOC software.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "release_notes_html",
+   "type": "contains",
+   "evidence": "release_notes.html file at the root MotorControl SDK installation directory.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "release_notes_html",
+   "target": "sdk_solutions_directory",
+   "type": "related_to",
+   "evidence": "Hardware Support table lists supported device family, EVMs, features, and where to find them in solutions.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "sdk_solutions_directory",
+   "target": "code_composer_studio",
+   "type": "compatible_with",
+   "evidence": "Import solution examples via Project -> Import CCS Projects and specify the solution's location.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "motorcontrol_sdk_gui",
+   "type": "contains",
+   "evidence": "MotorControl SDK provides a GUI for intuitive navigation of software, libraries, user's guides.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk_gui",
+   "target": "resource_explorer",
+   "type": "part_of",
+   "evidence": "In CCS go to View -> Resource Explorer and locate the C2000Ware MotorControl SDK.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "resource_explorer",
+   "target": "code_composer_studio",
+   "type": "part_of",
+   "evidence": "Within Code Composer Studio, go to View -> Resource Explorer.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "sdk_metadata_directory",
+   "target": "motorcontrol_sdk_gui",
+   "type": "contains",
+   "evidence": ".metadata contains the MotorControl SDK Resource Explorer GUI files.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "universal_gui",
+   "target": "instaspin_foc_labs_f28004x",
+   "type": "configures",
+   "evidence": "The InstaSPIN Universal GUI provides a dashboard for viewing and updating variables in these lab projects.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc_labs_f28004x",
+   "target": "f28004x",
+   "type": "runs_on",
+   "evidence": "GUI specifically for the F28004x InstaSPIN-FOC labs.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc_labs_f28004x",
+   "target": "instaspin_foc",
+   "type": "implements",
+   "evidence": "F28004x InstaSPIN-FOC labs.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "sdk_solutions_directory",
+   "target": "instaspin_foc_labs_f28004x",
+   "type": "contains",
+   "evidence": "Labs under solutions/boostxl_drv8320rs and solutions/tmdshvmtrinspin.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "universal_gui",
+   "target": "gui_composer",
+   "type": "compatible_with",
+   "evidence": "The GUI can be imported from the Gallery into TI's GUI Composer tool and customized.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "universal_gui",
+   "target": "gui_quick_start_guide",
+   "type": "documented_in",
+   "evidence": "For more details, view the GUI Quick Start Guide.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "gui_quick_start_guide",
+   "target": "sdk_solutions_directory",
+   "type": "part_of",
+   "evidence": "Located at solutions/common/sensorless_foc/docs/gui_quick_start_guide.pdf.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc_labs_f28004x",
+   "target": "boostxl_drv8320rs",
+   "type": "supports",
+   "evidence": "F28004x InstaSPIN-FOC labs under solutions/boostxl_drv8320rs.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc_labs_f28004x",
+   "target": "tmdshvmtrinspin",
+   "type": "supports",
+   "evidence": "F28004x InstaSPIN-FOC labs under solutions/tmdshvmtrinspin.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "motorcontrolsdkupdater",
+   "type": "contains",
+   "evidence": "An update checking application, MotorControlSDKUpdater.exe, is provided.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "spruio7a",
+   "type": "documented_in",
+   "evidence": "C2000Ware MotorControl SDK Getting Started Guide.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "c2000ware",
+   "target": "spruio7a",
+   "type": "documented_in",
+   "evidence": "Described in the MotorControl SDK Getting Started Guide.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "code_composer_studio",
+   "target": "spruio7a",
+   "type": "documented_in",
+   "evidence": "Described in the MotorControl SDK Getting Started Guide.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "universal_gui",
+   "target": "spruio7a",
+   "type": "documented_in",
+   "evidence": "Described in the MotorControl SDK Getting Started Guide.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "motorcontrolsdkupdater",
+   "target": "spruio7a",
+   "type": "documented_in",
+   "evidence": "Described in the MotorControl SDK Getting Started Guide.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "resource_explorer",
+   "target": "spruio7a",
+   "type": "documented_in",
+   "evidence": "Described in the MotorControl SDK Getting Started Guide.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "sdk_solutions_directory",
+   "target": "spruio7a",
+   "type": "documented_in",
+   "evidence": "Described in the MotorControl SDK Getting Started Guide.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "sdk_libraries_directory",
+   "target": "spruio7a",
+   "type": "documented_in",
+   "evidence": "Described in the MotorControl SDK Getting Started Guide.",
+   "sources": [
+    {
+     "doc": "spruio7a",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2800137",
+   "target": "f280013x",
+   "type": "part_of",
+   "evidence": "TMS320F2800137 product folder listed under F280013x resources.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "Part of the Entry-Performance line of C2000 real-time MCU family.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "c2000_generation_3",
+   "type": "part_of",
+   "evidence": "F280013x real-time MCUs are an extension of the Generation 3 C2000 MCU portfolio.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "entry_performance_line",
+   "type": "part_of",
+   "evidence": "F280013x series in the Entry-Performance line.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    },
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "c2000_generation_3",
+   "target": "c2000ware",
+   "type": "compatible_with",
+   "evidence": "All Generation 3 devices are compatible with C2000WARE software.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "c2000_generation_3",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "Generation 3 C2000 MCU portfolio.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "entry_performance_line",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "Entry-Performance line of C2000 real-time microcontroller family.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "adc",
+   "type": "contains",
+   "evidence": "Two 12-bit ADCs, 4 MSPS, up to 21 channels",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "epwm",
+   "type": "contains",
+   "evidence": "7x ePWM modules, up to 14 PWM channels",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "hrpwm",
+   "type": "contains",
+   "evidence": "2-channel high-resolution PWMs",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "cmpss",
+   "type": "contains",
+   "evidence": "Four windowed comparators with reference DACs (3x CMPSS_LITE)",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "dac",
+   "type": "contains",
+   "evidence": "1x 12b DAC",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "eqep",
+   "type": "contains",
+   "evidence": "1x eQEP",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "ecap",
+   "type": "contains",
+   "evidence": "2x eCAP",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "uart",
+   "type": "contains",
+   "evidence": "3x UART",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "spi",
+   "type": "contains",
+   "evidence": "1x SPI",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "i2c",
+   "type": "contains",
+   "evidence": "2x I2C",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "can",
+   "type": "contains",
+   "evidence": "1x CAN 2.0B",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "fpu",
+   "type": "contains",
+   "evidence": "Floating Point Unit for more precise mathematical calculations",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "tmu",
+   "type": "contains",
+   "evidence": "TMU speeds up algorithms key to real-time control",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "cpu_timer",
+   "type": "contains",
+   "evidence": "3x 32-bit CPU Timers",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "watchdog",
+   "type": "contains",
+   "evidence": "NMI Watchdog Timer",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "pie",
+   "type": "contains",
+   "evidence": "96 Interrupt PIE",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "dcc",
+   "type": "contains",
+   "evidence": "2x 10 MHz OSC + APLL + DCC",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "dcsm",
+   "type": "contains",
+   "evidence": "dual-code security module, 2x 128-bit dual security zones",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "intosc",
+   "type": "contains",
+   "evidence": "10-MHz INTOSC, +/-1% with precision resistor",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "temperature_sensor",
+   "type": "contains",
+   "evidence": "Temperature Sensor",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "aes",
+   "type": "contains",
+   "evidence": "AES tables, secure boot, JTAG lock",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "trip_zone",
+   "type": "contains",
+   "evidence": "Fault Trip Zones",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "c28x_cpu",
+   "type": "contains",
+   "evidence": "120-MHz C28x 32-bit DSP CPU.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "clb",
+   "type": "contains",
+   "evidence": "CLB: 2",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "hwbist",
+   "type": "contains",
+   "evidence": "HWBIST: Yes",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "hrcap",
+   "type": "contains",
+   "evidence": "1 HRCAP",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "fsi",
+   "type": "contains",
+   "evidence": "1 FSI",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "pmbus",
+   "type": "contains",
+   "evidence": "1 PMBus",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "erad",
+   "type": "contains",
+   "evidence": "ERAD: Yes",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "eqep",
+   "type": "contains",
+   "evidence": "2 eQEP",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "ecap",
+   "type": "contains",
+   "evidence": "3 eCAP",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "epwm",
+   "type": "contains",
+   "evidence": "14x ePWM (8 HRPWM)",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "hrpwm",
+   "type": "contains",
+   "evidence": "8 HRPWM",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "adc",
+   "type": "contains",
+   "evidence": "2x 12b ADC",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "can",
+   "type": "contains",
+   "evidence": "1 CAN",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "spi",
+   "type": "contains",
+   "evidence": "2 SPI",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "i2c",
+   "type": "contains",
+   "evidence": "1 I2C",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "uart",
+   "type": "contains",
+   "evidence": "3 UART",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "cmpss",
+   "type": "contains",
+   "evidence": "CMPSS with 4x 12b DAC",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "dcsm",
+   "type": "contains",
+   "evidence": "Security: DCSM",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "f28002x",
+   "type": "alternative_to",
+   "evidence": "Compared to F28002x, F280013x offers increased performance, flash and RAM, more security, small QFN packages at lower prices.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "f28002x",
+   "type": "compatible_with",
+   "evidence": "Pin-to-pin compatibility is offered in the QFP packages.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "appliances",
+   "type": "targets",
+   "evidence": "Key applications: industrial 3-phase motor and digital power control, appliances, motor drives, industrial power, solar.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "motor_drives",
+   "type": "targets",
+   "evidence": "Key applications: industrial 3-phase motor and digital power control, appliances, motor drives, industrial power, solar.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "industrial_power",
+   "type": "targets",
+   "evidence": "Key applications: industrial 3-phase motor and digital power control, appliances, motor drives, industrial power, solar.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "solar",
+   "type": "targets",
+   "evidence": "Key applications: industrial 3-phase motor and digital power control, appliances, motor drives, industrial power, solar.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "digital_power",
+   "type": "targets",
+   "evidence": "Key applications: industrial 3-phase motor and digital power control, appliances, motor drives, industrial power, solar.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "three_phase_motor_control",
+   "type": "targets",
+   "evidence": "Key applications: Industrial 3-phase motor and digital power control.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "f2800137",
+   "type": "based_on",
+   "evidence": "TMS320F2800137 evaluation module listed under resources.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "sprt755",
+   "type": "documented_in",
+   "evidence": "Listed in F280013x product overview resources.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd2800137",
+   "target": "f2800137",
+   "type": "based_on",
+   "evidence": "TMS320F2800137 evaluation module listed under resources.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd2800137",
+   "target": "sprt755",
+   "type": "documented_in",
+   "evidence": "Listed in F280013x product overview resources.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "hvac_reference_design",
+   "target": "f280013x",
+   "type": "based_on",
+   "evidence": "HVAC Reference Design listed in F280013x resources.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "hvac_reference_design",
+   "target": "hvac",
+   "type": "targets",
+   "evidence": "HVAC Reference Design.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "c2000ware",
+   "target": "f280013x",
+   "type": "supports",
+   "evidence": "F280013x resources list C2000WARE Software Development Kit.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "f280013x",
+   "type": "supports",
+   "evidence": "F280013x resources list C2000WARE-MOTORCONTROL-SDK.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "digitalpower_sdk",
+   "target": "f280013x",
+   "type": "supports",
+   "evidence": "F280013x resources list C2000WARE-DIGITALPOWER-SDK.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "sysconfig",
+   "target": "f280013x",
+   "type": "supports",
+   "evidence": "F280013x resources list SysConfig Graphical Device Configuration.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "code_composer_studio",
+   "target": "f280013x",
+   "type": "supports",
+   "evidence": "F280013x resources list Code Composer Studio Free IDE.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "c2000_academy",
+   "target": "f280013x",
+   "type": "related_to",
+   "evidence": "C2000 Academy Training Workshops listed in F280013x resources.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "sysconfig",
+   "target": "epwm",
+   "type": "configures",
+   "evidence": "NEW ePWM support.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "sysconfig",
+   "target": "dcsm",
+   "type": "configures",
+   "evidence": "Integrated tool support: PinMux, Security (DCSM).",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "sysconfig",
+   "target": "freertos",
+   "type": "configures",
+   "evidence": "NEW FreeRTOS configuration.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "f2838xd",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "Shown in C2000 MCU portfolio figure.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838xs",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "Shown in C2000 MCU portfolio figure.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2837xd",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "Shown in C2000 MCU portfolio figure.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2837xs",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "Shown in C2000 MCU portfolio figure.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f28003x",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "Shown in C2000 MCU portfolio figure.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2807x",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "Shown in C2000 MCU portfolio figure.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2806x",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "Shown in C2000 MCU portfolio figure.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2833x",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "Shown in C2000 MCU portfolio figure.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2803x",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "Shown in C2000 MCU portfolio figure.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2802x",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "Shown in C2000 MCU portfolio figure.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f28004x",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "Shown in C2000 MCU portfolio figure.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838xd",
+   "target": "f2838x",
+   "type": "part_of",
+   "evidence": "F2838xD in portfolio.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838xs",
+   "target": "f2838x",
+   "type": "part_of",
+   "evidence": "F2838xS in portfolio.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2837xd",
+   "target": "f2837x",
+   "type": "part_of",
+   "evidence": "F2837xD in portfolio.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2837xs",
+   "target": "f2837x",
+   "type": "part_of",
+   "evidence": "F2837xS in portfolio.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "entry_performance_line",
+   "type": "part_of",
+   "evidence": "F28002x in Entry-Performance line.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "sprt755",
+   "type": "documented_in",
+   "evidence": "Described in the F280013x product overview.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f2800137",
+   "target": "sprt755",
+   "type": "documented_in",
+   "evidence": "Described in the F280013x product overview.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "sprt755",
+   "type": "documented_in",
+   "evidence": "Described in the F280013x product overview.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "c2000_generation_3",
+   "target": "sprt755",
+   "type": "documented_in",
+   "evidence": "Described in the F280013x product overview.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "sysconfig",
+   "target": "sprt755",
+   "type": "documented_in",
+   "evidence": "Described in the F280013x product overview.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "The configurable logic block (CLB) for C2000 MCUs.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "epwm",
+   "type": "connects_to",
+   "evidence": "CLB provides intelligent I/O routing to ePWMs, enhanced capture, enhanced QEP and GPIO.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "ecap",
+   "type": "connects_to",
+   "evidence": "CLB provides intelligent I/O routing to ePWMs, enhanced capture, enhanced QEP and GPIO.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "eqep",
+   "type": "connects_to",
+   "evidence": "CLB provides intelligent I/O routing to ePWMs, enhanced capture, enhanced QEP and GPIO.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "gpio",
+   "type": "connects_to",
+   "evidence": "CLB provides intelligent I/O routing to ePWMs, enhanced capture, enhanced QEP and GPIO.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "clb_tile",
+   "type": "contains",
+   "evidence": "The CLB tool comprises either two, four or eight tiles.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb_tile",
+   "target": "clb_lut4",
+   "type": "contains",
+   "evidence": "Each tile contains 4-input look-up table (three per tile).",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb_tile",
+   "target": "clb_counter",
+   "type": "contains",
+   "evidence": "Each tile contains 32-bit counter (three per tile).",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb_tile",
+   "target": "clb_fsm",
+   "type": "contains",
+   "evidence": "Each tile contains 4-state finite state machine (three per tile).",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb_tile",
+   "target": "clb_output_lut",
+   "type": "contains",
+   "evidence": "Each tile contains 3-input output look-up table (eight per tile).",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb_tile",
+   "target": "clb_hlc",
+   "type": "contains",
+   "evidence": "Each tile contains High-level controller (one per tile).",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb_tool",
+   "target": "code_composer_studio",
+   "type": "part_of",
+   "evidence": "Graphical CLB configuration tool integrated directly into TI's Code Composer Studio IDE.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "clb_tool",
+   "target": "clb",
+   "type": "configures",
+   "evidence": "Configuring and wiring cell blocks generates a custom logic scheme.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "clb_tool",
+   "target": "clb_config_header",
+   "type": "produces",
+   "evidence": "The project build output is a *.h header file describing the CLB tool configuration.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "driverlib",
+   "target": "c2000ware",
+   "type": "part_of",
+   "evidence": "C2000Ware DriverLib application programming interfaces.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "clb_config_header",
+   "target": "driverlib",
+   "type": "input_to",
+   "evidence": "At run-time init, header descriptors configure the tiles using C2000Ware DriverLib APIs.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "driverlib",
+   "target": "clb_tile",
+   "type": "configures",
+   "evidence": "Header file descriptors configure the tiles using DriverLib APIs.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "encoder",
+   "type": "enables",
+   "evidence": "Implementing condition-based quadrature encoder position capture.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "trip_zone",
+   "type": "extends",
+   "evidence": "Programming application-specific logic for trip zones.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "epwm",
+   "type": "extends",
+   "evidence": "Designers can intercept internal ePWM signals such as action qualifiers and dead band and create their own submodule.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "dead_time",
+   "type": "uses",
+   "evidence": "Intercept internal ePWM signals such as action qualifiers and dead band.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "c2000ware",
+   "target": "clb_examples",
+   "type": "contains",
+   "evidence": "The latest C2000Ware revision includes 15 CLB examples.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "clb_examples",
+   "target": "clb",
+   "type": "uses",
+   "evidence": "CLB examples.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "clb_encoder_examples",
+   "type": "contains",
+   "evidence": "Encoder examples are in the MotorControl software development kit.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "clb_encoder_examples",
+   "target": "clb",
+   "type": "uses",
+   "evidence": "CLB encoder examples.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "clb_encoder_examples",
+   "target": "encoder",
+   "type": "implements",
+   "evidence": "Encoder examples.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "lifestyle_audio",
+   "type": "targets",
+   "evidence": "Harman principal hardware engineer for lifestyle audio uses CLB to offload custom control logic and diagnostics.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "sszt350",
+   "type": "documented_in",
+   "evidence": "Described in the CLB technical article.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb_tool",
+   "target": "sszt350",
+   "type": "documented_in",
+   "evidence": "Described in the CLB technical article.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb_tile",
+   "target": "sszt350",
+   "type": "documented_in",
+   "evidence": "Described in the CLB technical article.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "f2837x",
+   "type": "extends",
+   "evidence": "F2838x is an F2837x device with performance enhancements and a new connectivity manager.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "A new series of C2000 real-time controllers, F2838x.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f28388d",
+   "target": "f2838x",
+   "type": "part_of",
+   "evidence": "Figure 1: TMS320F28388D block diagram (F2838x series).",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "connectivity_manager",
+   "target": "arm_cortex_m4",
+   "type": "based_on",
+   "evidence": "Connectivity manager, an Arm Cortex-M4-based subsystem.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "connectivity_manager",
+   "type": "contains",
+   "evidence": "All of the devices include the connectivity manager and Ethernet as standard.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "ethercat",
+   "type": "contains",
+   "evidence": "With EtherCAT capability integrated there is no need for an external ASIC.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "ethernet",
+   "type": "contains",
+   "evidence": "10/100 Ethernet ... supported; Ethernet standard on all devices.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "mcan",
+   "type": "contains",
+   "evidence": "CAN FD ... supported.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "usb",
+   "type": "contains",
+   "evidence": "USB ... supported.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "fsi",
+   "type": "contains",
+   "evidence": "FSI enables up to 200 Mbps communication and a low cost path across an isolation barrier.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "clb",
+   "type": "contains",
+   "evidence": "Configurable Logic Block addresses typical FPGA/CPLD functions.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "sdfm",
+   "type": "contains",
+   "evidence": "Sigma Delta Filter modules interface to isolated Delta Sigma converters.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "epwm",
+   "type": "contains",
+   "evidence": "up to 32 ePWM channels",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "hrpwm",
+   "type": "contains",
+   "evidence": "class-leading high-resolution PWMs",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "cmpss",
+   "type": "contains",
+   "evidence": "Premium comparator sub-system for inverter protection.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "tmu",
+   "type": "contains",
+   "evidence": "C28x cores enhanced with TMU to accelerate arctan, sin and cos.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "integer_division_unit",
+   "type": "contains",
+   "evidence": "New fast integer division hardware.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "fpu64",
+   "type": "contains",
+   "evidence": "64-bit floating-point unit for extended precision.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "cla",
+   "type": "contains",
+   "evidence": "Control Law Accelerators for added parallel control or signal processing.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "adc",
+   "type": "contains",
+   "evidence": "Four independent 16-bit ADCs with post processing hardware.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "c28x_cpu",
+   "type": "contains",
+   "evidence": "Class leading C28x DSP cores.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "connectivity_manager",
+   "target": "ethercat",
+   "type": "supports",
+   "evidence": "Real-time communications enabled by Connectivity Manager; EtherCAT, Ethernet, CAN FD, USB supported.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "connectivity_manager",
+   "target": "ethernet",
+   "type": "supports",
+   "evidence": "Real-time communications enabled by Connectivity Manager; EtherCAT, Ethernet, CAN FD, USB supported.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "connectivity_manager",
+   "target": "mcan",
+   "type": "supports",
+   "evidence": "Real-time communications enabled by Connectivity Manager; EtherCAT, Ethernet, CAN FD, USB supported.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "connectivity_manager",
+   "target": "usb",
+   "type": "supports",
+   "evidence": "Real-time communications enabled by Connectivity Manager; EtherCAT, Ethernet, CAN FD, USB supported.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "tmu",
+   "target": "c28x_cpu",
+   "type": "part_of",
+   "evidence": "C28x DSP cores enhanced with the Trigonometric Math Unit.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "encoder",
+   "type": "enables",
+   "evidence": "CLB allows creation of absolute encoder interfaces.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "pulse_train_logic",
+   "type": "enables",
+   "evidence": "CLB allows specialized pulse train logic.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "inverter_protection",
+   "type": "enables",
+   "evidence": "Customized timers, serial interfaces and inverter protection schemes.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "cmpss",
+   "target": "inverter_protection",
+   "type": "protects",
+   "evidence": "Premium comparator sub-system for inverter protection.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "fpga_cpld",
+   "type": "alternative_to",
+   "evidence": "Typical FPGA/CPLD functions are addressed by multiple F2838x capabilities. The CLB allows...",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "fast_current_loop",
+   "target": "foc",
+   "type": "implements",
+   "evidence": "FCL can process the critical servo drive field oriented control loop in less than 500 ns.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "fast_current_loop",
+   "target": "f2838x",
+   "type": "runs_on",
+   "evidence": "FCL technology on F2838x processes the FOC loop in less than 500 ns.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "servo_drives",
+   "type": "targets",
+   "evidence": "Near single-chip solution for connected servo drives, AC drives, factory automation and industrial power equipment; high-power grid.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "ac_drives",
+   "type": "targets",
+   "evidence": "Near single-chip solution for connected servo drives, AC drives, factory automation and industrial power equipment; high-power grid.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "factory_automation",
+   "type": "targets",
+   "evidence": "Near single-chip solution for connected servo drives, AC drives, factory automation and industrial power equipment; high-power grid.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "industrial_power_equipment",
+   "type": "targets",
+   "evidence": "Near single-chip solution for connected servo drives, AC drives, factory automation and industrial power equipment; high-power grid.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "grid",
+   "type": "targets",
+   "evidence": "Near single-chip solution for connected servo drives, AC drives, factory automation and industrial power equipment; high-power grid.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    },
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd28388d",
+   "target": "f28388d",
+   "type": "based_on",
+   "evidence": "Explore the latest tools in the TMDSCNCD28388D tool folder.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "can_fd_driver_simma",
+   "target": "f2838x",
+   "type": "compatible_with",
+   "evidence": "CAN FD device driver compatible with the F2838x family.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "can_fd_driver_simma",
+   "target": "mcan",
+   "type": "uses",
+   "evidence": "CAN FD device driver.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "designdrive_kit",
+   "target": "industrial_drives",
+   "type": "targets",
+   "evidence": "DesignDRIVE development kit for industrial motor control.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "designdrive_kit",
+   "target": "designdrive",
+   "type": "uses",
+   "evidence": "C2000 DesignDRIVE development kit.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "f2838x",
+   "type": "supports",
+   "evidence": "Additional resources for F2838x: C2000Ware, DigitalPower SDK, MotorControl SDK.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "digitalpower_sdk",
+   "target": "f2838x",
+   "type": "supports",
+   "evidence": "Additional resources for F2838x: C2000Ware, DigitalPower SDK, MotorControl SDK.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "c2000ware",
+   "target": "f2838x",
+   "type": "supports",
+   "evidence": "Additional resources for F2838x: C2000Ware, DigitalPower SDK, MotorControl SDK.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "f2838x",
+   "target": "sszt464",
+   "type": "documented_in",
+   "evidence": "Described in the F2838x connectivity article.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f28388d",
+   "target": "sszt464",
+   "type": "documented_in",
+   "evidence": "Described in the F2838x connectivity article.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "connectivity_manager",
+   "target": "sszt464",
+   "type": "documented_in",
+   "evidence": "Described in the F2838x connectivity article.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "fast_current_loop",
+   "target": "sszt464",
+   "type": "documented_in",
+   "evidence": "Described in the F2838x connectivity article.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb",
+   "target": "sszt464",
+   "type": "documented_in",
+   "evidence": "CLB capabilities on F2838x.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "foc",
+   "type": "implements",
+   "evidence": "Motors typically controlled using FOC; SDK unifies TI motor-control developments.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "motor_control_library",
+   "type": "contains",
+   "evidence": "Components of the SDK include: Motor control library.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "instaspin_foc",
+   "type": "contains",
+   "evidence": "Components include InstaSPIN-FOC solutions.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "designdrive",
+   "type": "contains",
+   "evidence": "Components include DesignDRIVE solutions; DesignDRIVE now included in the MotorControl SDK.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    },
+    {
+     "doc": "sszt496",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc",
+   "target": "fast_estimator",
+   "type": "uses",
+   "evidence": "Sensorless FOC solutions that use TI's FAST software encoder.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc",
+   "target": "foc",
+   "type": "implements",
+   "evidence": "InstaSPIN-FOC: sensorless FOC solutions.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc",
+   "target": "sensorless_control",
+   "type": "supports",
+   "evidence": "Sensorless FOC solutions.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "designdrive",
+   "target": "sensored_control",
+   "type": "supports",
+   "evidence": "Sensored FOC solutions.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc",
+   "target": "motor_identification",
+   "type": "supports",
+   "evidence": "Motor identification and automatic current-loop tuning enable rapid development.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc",
+   "target": "current_loop_auto_tuning",
+   "type": "supports",
+   "evidence": "Motor identification and automatic current-loop tuning enable rapid development.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "designdrive",
+   "target": "foc",
+   "type": "implements",
+   "evidence": "Sensored FOC solutions.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "designdrive",
+   "target": "fast_current_loop",
+   "type": "contains",
+   "evidence": "FCL is a unique, optimized software library (DesignDRIVE).",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "fast_current_loop",
+   "target": "foc",
+   "type": "implements",
+   "evidence": "Implement the entire FOC torque control loop in less than 1 us.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "fast_current_loop",
+   "target": "servo_drives",
+   "type": "targets",
+   "evidence": "Enables higher-frequency torque and position control, resulting in servo drives with premium performance.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "fast_current_loop",
+   "target": "tmu",
+   "type": "uses",
+   "evidence": "Takes advantage of all hardware features, accelerators and cycle-scavenging techniques.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "f28379d",
+   "type": "supports",
+   "evidence": "SDK supports the TMS320F28379D, TMS320F28076 and TMS320F280049C series.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "f28076",
+   "type": "supports",
+   "evidence": "SDK supports the TMS320F28379D, TMS320F28076 and TMS320F280049C series.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "f280049c",
+   "type": "supports",
+   "evidence": "SDK supports the TMS320F28379D, TMS320F28076 and TMS320F280049C series.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f28379d",
+   "target": "f2837xd",
+   "type": "part_of",
+   "evidence": "F28379D in the F2837x series.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f280049c",
+   "target": "f28004x",
+   "type": "part_of",
+   "evidence": "F280049C of the F28004x series.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "f28076",
+   "target": "f2807x",
+   "type": "part_of",
+   "evidence": "F28076 in F2807x series.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "c2000ware",
+   "target": "driverlib",
+   "type": "contains",
+   "evidence": "C2000Ware: device-specific drivers, bit fields, libraries.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "c2000ware",
+   "target": "c2000ware_libraries",
+   "type": "contains",
+   "evidence": "Libraries (math, digital signal processing, control, signal generation).",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "motorware",
+   "type": "extends",
+   "evidence": "Unifying latest motor-control developments previously provided through digital motor control library, controlSUITE and MotorWare.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "controlsuite",
+   "type": "extends",
+   "evidence": "Unifying latest motor-control developments previously provided through digital motor control library, controlSUITE and MotorWare.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "digital_motor_control_library",
+   "type": "extends",
+   "evidence": "Unifying latest motor-control developments previously provided through digital motor control library, controlSUITE and MotorWare.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc_rom_library",
+   "target": "instaspin_foc",
+   "type": "enables",
+   "evidence": "InstaSPIN-FOC is enabled by an on-chip ROM library.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorware",
+   "target": "instaspin_foc_rom_library",
+   "type": "contains",
+   "evidence": "ROM library on F2806x, F2805x and F2802x through the MotorWare package.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc_rom_library",
+   "target": "f2806x",
+   "type": "runs_on",
+   "evidence": "On-chip ROM library on F2806x, F2805x, F2802x; updated in on-chip ROM for F28004x.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    },
+    {
+     "doc": "sszt496",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc_rom_library",
+   "target": "f2805x",
+   "type": "runs_on",
+   "evidence": "On-chip ROM library on F2806x, F2805x, F2802x; updated in on-chip ROM for F28004x.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    },
+    {
+     "doc": "sszt496",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc_rom_library",
+   "target": "f2802x",
+   "type": "runs_on",
+   "evidence": "On-chip ROM library on F2806x, F2805x, F2802x; updated in on-chip ROM for F28004x.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    },
+    {
+     "doc": "sszt496",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc_rom_library",
+   "target": "f28004x",
+   "type": "runs_on",
+   "evidence": "On-chip ROM library on F2806x, F2805x, F2802x; updated in on-chip ROM for F28004x.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    },
+    {
+     "doc": "sszt496",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "f2805x",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "C2000 series.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280049c",
+   "target": "f280049c",
+   "type": "based_on",
+   "evidence": "C2000 Piccolo MCU F280049C LaunchPad development kit.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc",
+   "target": "launchxl_f280049c",
+   "type": "supports",
+   "evidence": "New BoosterPack works specifically for InstaSPIN-FOC with F280049C LaunchPad.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "designdrive",
+   "target": "c2000ware",
+   "type": "compatible_with",
+   "evidence": "Inclusion in MotorControl SDK adds support for C2000Ware, easing porting onto other C2000 series.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "source": "designdrive",
+   "target": "sszt496",
+   "type": "documented_in",
+   "evidence": "DesignDRIVE described in SDK article.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "cla",
+   "target": "instaspin_foc",
+   "type": "related_to",
+   "evidence": "Future: InstaSPIN-FOC labs running entirely on the F28004x CLA co-processor.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "f28004x",
+   "target": "cla",
+   "type": "contains",
+   "evidence": "F28004x control law accelerator (CLA) co-processor.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc",
+   "target": "acim",
+   "type": "controls",
+   "evidence": "Future releases plan InstaSPIN-FOC support for asynchronous induction motors.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "pmsm",
+   "type": "controls",
+   "evidence": "Three-phase synchronous or asynchronous motors typically controlled using FOC.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "foc",
+   "target": "acim",
+   "type": "controls",
+   "evidence": "Three-phase synchronous or asynchronous motors controlled using FOC.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "c2000",
+   "target": "medical_tools",
+   "type": "targets",
+   "evidence": "Products ranging from sub-100-W medical tools up to hundreds of kilowatts industrial machinery.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "c2000",
+   "target": "industrial_machinery",
+   "type": "targets",
+   "evidence": "Up to hundreds of kilowatts industrial machinery.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "clb_encoder_examples",
+   "target": "designdrive",
+   "type": "related_to",
+   "evidence": "Future: enhanced DesignDRIVE FCL examples incl. absolute encoder feedback.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "designdrive",
+   "target": "encoder",
+   "type": "uses",
+   "evidence": "Analog and digital position sensor interfaces; absolute encoder feedback techniques planned.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    },
+    {
+     "doc": "sszt496",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "sszt496",
+   "type": "documented_in",
+   "evidence": "Described in the MotorControl SDK article.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc",
+   "target": "sszt496",
+   "type": "documented_in",
+   "evidence": "Described in the MotorControl SDK article.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "sszt496",
+   "type": "documented_in",
+   "evidence": "Described in the MotorControl SDK article.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motor_control_library",
+   "target": "sszt496",
+   "type": "documented_in",
+   "evidence": "Described in the MotorControl SDK article.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "fast_current_loop",
+   "target": "sszt496",
+   "type": "documented_in",
+   "evidence": "Described in the MotorControl SDK article.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorware",
+   "target": "sszt496",
+   "type": "documented_in",
+   "evidence": "Described in the MotorControl SDK article.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "controlsuite",
+   "target": "sszt496",
+   "type": "documented_in",
+   "evidence": "Described in the MotorControl SDK article.",
+   "sources": [
+    {
+     "doc": "sszt496",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "sprt755",
+   "type": "documented_in",
+   "evidence": "C2000WARE-MOTORCONTROL-SDK listed as resource.",
+   "sources": [
+    {
+     "doc": "sprt755",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "sszt350",
+   "type": "documented_in",
+   "evidence": "Encoder examples are in the MotorControl SDK.",
+   "sources": [
+    {
+     "doc": "sszt350",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "sszt464",
+   "type": "documented_in",
+   "evidence": "MotorControl SDK listed in resources.",
+   "sources": [
+    {
+     "doc": "sszt464",
+     "page": 3
+    }
+   ]
+  }
+ ]
+}

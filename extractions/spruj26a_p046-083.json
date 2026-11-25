@@ -1,0 +1,6634 @@
+{
+ "entities": [
+  {
+   "id": "spruj26a",
+   "label": "SPRUJ26A",
+   "type": "Document",
+   "description": "Motor Control SDK Universal Project and Lab User's Guide, Rev. A (September 2021, revised April 2024).",
+   "aliases": [
+    "Universal Motor Control Project and Lab User's Guide"
+   ],
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "universal_motor_control_lab",
+   "label": "Universal Motor Control Lab",
+   "type": "Software",
+   "description": "Universal example lab project in the C2000Ware MotorControl SDK supporting various TI EVM motor driver kits with F280025C, F280039C or F2800137 devices.",
+   "aliases": [
+    "universal_motorcontrol_lab"
+   ],
+   "properties": {
+    "path": "<install_location>\\solutions\\universal_motorcontrol_lab"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "motorcontrol_sdk",
+   "label": "C2000Ware MotorControl SDK",
+   "type": "Software",
+   "description": "C2000WARE-MOTORCONTROL-SDK software package; installable from its tools folder or via CCS Resource Explorer.",
+   "aliases": [
+    "C2000WARE-MOTORCONTROL-SDK"
+   ],
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "code_composer_studio",
+   "label": "Code Composer Studio",
+   "type": "Software",
+   "description": "TI IDE used to import, build, load and debug the lab; version 10.4 or above recommended.",
+   "aliases": [
+    "CCS"
+   ],
+   "properties": {
+    "recommended_version": ">=10.4"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "ccs_resource_explorer",
+   "label": "TI Resource Explorer",
+   "type": "Software",
+   "description": "CCS view (View -> Resource Explorer) from which the C2000Ware MotorControl SDK can be installed.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "ccs_graph_tool",
+   "label": "CCS Graph Tool",
+   "type": "Software",
+   "description": "Graph tool in CCS that displays arrays of data in device memory in various graphical types; used with DATALOG.",
+   "aliases": [
+    "DualTime graph"
+   ],
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 56
+    }
+   ]
+  },
+  {
+   "id": "ccs_expressions_window",
+   "label": "CCS Expressions Window",
+   "type": "Software",
+   "description": "CCS watch view (View -> Expressions) used to watch and set variables; variable groups can be imported from universal_lab_levelN.txt files.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 61
+    }
+   ]
+  },
+  {
+   "id": "c2000ware",
+   "label": "C2000Ware",
+   "type": "Software",
+   "description": "C2000Ware driverlib on which the device peripheral configuration of the project is based.",
+   "aliases": [
+    "C2000Ware driverlib"
+   ],
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "id": "f280025c",
+   "label": "F280025C",
+   "type": "Device",
+   "description": "C2000 MCU device supported by the universal lab.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "f280039c",
+   "label": "F280039C",
+   "type": "Device",
+   "description": "C2000 MCU device supported by the universal lab.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "f2800137",
+   "label": "F2800137",
+   "type": "Device",
+   "description": "C2000 MCU device supported by the universal lab.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "f28002x",
+   "label": "F28002x",
+   "type": "Device",
+   "description": "Device family with project universal_motorcontrol_lab_f28002x.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "f28003x",
+   "label": "F28003x",
+   "type": "Device",
+   "description": "Device family with project universal_motorcontrol_lab_f28003x.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "f280013x",
+   "label": "F280013x",
+   "type": "Device",
+   "description": "Device family with project universal_motorcontrol_lab_f280013x; has only one SPI module shared between BoosterPack sites 1 and 2.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "c2000",
+   "label": "C2000",
+   "type": "Device",
+   "description": "TI C2000 MCU platform.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "boostxl_drv8323rs",
+   "label": "BOOSTXL-DRV8323RS",
+   "type": "EvaluationKit",
+   "description": "Motor driver BoosterPack used with the LaunchPads to show how to import and run the lab.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "launchxl_f280025c",
+   "label": "LAUNCHXL-F280025C",
+   "type": "EvaluationKit",
+   "description": "LaunchPad used with BOOSTXL-DRV8323RS to demonstrate the example lab.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "launchxl_f280039c",
+   "label": "LAUNCHXL-F280039C",
+   "type": "EvaluationKit",
+   "description": "LaunchPad used with BOOSTXL-DRV8323RS to demonstrate the example lab.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "launchxl_f2800137",
+   "label": "LAUNCHXL-F2800137",
+   "type": "EvaluationKit",
+   "description": "LaunchPad used with BOOSTXL-DRV8323RS to demonstrate the example lab.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "tmdscncd280025c",
+   "label": "TMDSCNCD280025C",
+   "type": "EvaluationKit",
+   "description": "controlCARD; TMS320F280025C.ccxml is its target configuration.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "drv8329aevm",
+   "label": "DRV8329AEVM",
+   "type": "EvaluationKit",
+   "description": "Motor driver kit listed in the supporting algorithms/functions matrix (Table 3-4).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "boostxl_drv8323rh",
+   "label": "BOOSTXL-DRV8323RH",
+   "type": "EvaluationKit",
+   "description": "Motor driver kit listed in the supporting algorithms/functions matrix (Table 3-4).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "drv8353rs_evm",
+   "label": "DRV8353RS-EVM",
+   "type": "EvaluationKit",
+   "description": "Motor driver kit listed in the supporting algorithms/functions matrix (Table 3-4).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "boostxl_3phganinv",
+   "label": "BOOSTXL-3PHGANINV",
+   "type": "EvaluationKit",
+   "description": "Motor driver kit listed in the supporting algorithms/functions matrix (Table 3-4).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "drv8316revm",
+   "label": "DRV8316REVM",
+   "type": "EvaluationKit",
+   "description": "Motor driver kit listed in the supporting algorithms/functions matrix (Table 3-4).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "tmdshvmtrinspin",
+   "label": "TMDSHVMTRINSPIN",
+   "type": "EvaluationKit",
+   "description": "High voltage motor kit; the only kit supporting PWMDAC since it has extra PWM outputs with RC filters on board; does not support external DAC128S.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "dac128s085evm",
+   "label": "DAC128S085EVM",
+   "type": "EvaluationKit",
+   "description": "External 8-channel, 12-bit DAC evaluation board driven over SPI to view software variables on an oscilloscope.",
+   "aliases": [
+    "DAC128S085"
+   ],
+   "properties": {
+    "channels": "8",
+    "resolution": "12-bit"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 58
+    }
+   ]
+  },
+  {
+   "id": "spi",
+   "label": "SPI",
+   "type": "Peripheral",
+   "description": "Serial peripheral used to transmit DAC128S data to the DAC128S085EVM.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 58
+    }
+   ]
+  },
+  {
+   "id": "lvservomtr",
+   "label": "LVSERVOMTR",
+   "type": "Motor",
+   "description": "Low-voltage servo motor supported by FAST, eSMO, encoder and Hall based FOC in Table 3-4.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "lvbldcmtr",
+   "label": "LVBLDCMTR",
+   "type": "Motor",
+   "description": "Low-voltage BLDC motor supported on DRV8329AEVM and with Hall sensored FOC (Table 3-4).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "hvpmsmmtr",
+   "label": "HVPMSMMTR",
+   "type": "Motor",
+   "description": "High-voltage PMSM used with TMDSHVMTRINSPIN for FAST, eSMO and encoder FOC (Table 3-4).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "hvbldcmtr",
+   "label": "HVBLDCMTR",
+   "type": "Motor",
+   "description": "High-voltage BLDC motor used with TMDSHVMTRINSPIN for Hall sensored FOC (Table 3-4).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "foc",
+   "label": "FOC",
+   "type": "Algorithm",
+   "description": "Field-oriented control; the lab supports FAST/eSMO sensorless and encoder/Hall sensored FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "fast_estimator",
+   "label": "FAST",
+   "type": "Algorithm",
+   "description": "InstaSPIN-FOC FAST estimator for sensorless FOC; outputs flux, angle, speed and torque and supports motor identification.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "esmo",
+   "label": "eSMO",
+   "type": "Algorithm",
+   "description": "Enhanced Sliding Mode Observer with PLL for sensorless FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "pll",
+   "label": "PLL",
+   "type": "Algorithm",
+   "description": "Phase-locked loop used with eSMO.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "id": "instaspin_foc",
+   "label": "InstaSPIN-FOC",
+   "type": "Software",
+   "description": "Library in src_lib containing FAST.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "id": "instaspin_bldc",
+   "label": "InstaSPIN-BLDC",
+   "type": "Software",
+   "description": "Trapezoidal BLDC control library (MOTOR1_ISBLDC); cannot be combined with other estimators.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "clarke_transform",
+   "label": "Clarke transform",
+   "type": "Algorithm",
+   "description": "Clarke transformation for current or voltage (CLARKE_run).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "park_transform",
+   "label": "Park transform",
+   "type": "Algorithm",
+   "description": "Park transformation (PARK_run).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "inverse_park_transform",
+   "label": "Inverse Park transform",
+   "type": "Algorithm",
+   "description": "Inverse Park transformation (IPARK_run).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "svpwm",
+   "label": "SVPWM",
+   "type": "Algorithm",
+   "description": "Space vector PWM with quadrature control (SVGEN_run); common or minimum SVM mode selectable.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "pi_controller",
+   "label": "PI controller",
+   "type": "Algorithm",
+   "description": "PI regulators for current and speed (PI_run).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "mtpa",
+   "label": "MTPA",
+   "type": "Algorithm",
+   "description": "Maximum torque per ampere, run in the ISR and evaluated in level 4.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "id": "field_weakening",
+   "label": "Field weakening control",
+   "type": "Algorithm",
+   "description": "Field weakening control (FWC), enabled by MOTOR1_FWC symbol.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "vf_control",
+   "label": "V/f control",
+   "type": "Algorithm",
+   "description": "Scalar open-loop voltage/frequency control used in build level 2.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 64
+    }
+   ]
+  },
+  {
+   "id": "if_control",
+   "label": "I/f control",
+   "type": "Algorithm",
+   "description": "Current closed-loop control with the rotor angle from the ramp generator, used in build level 3.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 73
+    }
+   ]
+  },
+  {
+   "id": "encoder",
+   "label": "Encoder",
+   "type": "Concept",
+   "description": "QEP encoder used for sensored FOC (ENC_run, SPDCALC_run).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "hall_sensor",
+   "label": "Hall sensor",
+   "type": "Concept",
+   "description": "Hall sensors used for sensored FOC (HALL_run).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "ipd",
+   "label": "IPD",
+   "type": "Algorithm",
+   "description": "Initial position detection, run in the motor control ISR.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "id": "rotor_angle",
+   "label": "Rotor angle",
+   "type": "Concept",
+   "description": "Rotor flux angle estimated by FAST/eSMO or measured by encoder/Hall.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "id": "motor_speed",
+   "label": "Motor speed",
+   "type": "Concept",
+   "description": "Motor speed feedback.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "predefined_symbols",
+   "label": "Predefined symbols",
+   "type": "Feature",
+   "description": "Project property pre-define symbols that enable/disable functions; a symbol is disabled by appending _N (e.g. MOTOR1_FWC_N).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "motor1_fast",
+   "label": "MOTOR1_FAST",
+   "type": "Parameter",
+   "description": "Enables FAST based sensorless FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "motor1_esmo",
+   "label": "MOTOR1_ESMO",
+   "type": "Parameter",
+   "description": "Enables eSMO based sensorless FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "motor1_enc",
+   "label": "MOTOR1_ENC",
+   "type": "Parameter",
+   "description": "Enables QEP encoder based sensored FOC (with QEP_ENABLE).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "qep_enable",
+   "label": "QEP_ENABLE",
+   "type": "Parameter",
+   "description": "Symbol for QEP encoder based sensored FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "motor1_hall",
+   "label": "MOTOR1_HALL",
+   "type": "Parameter",
+   "description": "Enables Hall sensors based sensored FOC (with HALL_ENABLE, HALL_CAL).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "hall_enable",
+   "label": "HALL_ENABLE",
+   "type": "Parameter",
+   "description": "Symbol for Hall sensor based sensored FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "hall_cal",
+   "label": "HALL_CAL",
+   "type": "Parameter",
+   "description": "Symbol for Hall sensor calibration in Hall sensored FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "motor1_isbldc",
+   "label": "MOTOR1_ISBLDC",
+   "type": "Parameter",
+   "description": "Enables trapezoidal InstaSPIN-BLDC; supported only on DRV8329AEVM per Table 3-4.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "motor1_fwc",
+   "label": "MOTOR1_FWC",
+   "type": "Parameter",
+   "description": "Enables field weakening control for motor 1; MOTOR1_FWC_N disables it.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ],
+   "aliases": [
+    "MOTOR1_FWC_N"
+   ]
+  },
+  {
+   "id": "motor1_dclink_ss",
+   "label": "MOTOR1_DCLINK_SS",
+   "type": "Parameter",
+   "description": "Enables single-shunt current sensing; supported only on DRV8329AEVM per Table 3-4.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "datalogf2_en",
+   "label": "DATALOGF2_EN",
+   "type": "Parameter",
+   "description": "Enables Datalog with graph tool; requires DMA.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "epwmdac_mode",
+   "label": "EPWMDAC_MODE",
+   "type": "Parameter",
+   "description": "Enables PWMDAC function; supported only on TMDSHVMTRINSPIN.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "dac_128s_enable",
+   "label": "DAC_128S_ENABLE",
+   "type": "Parameter",
+   "description": "Enables external DAC128S functionality (written DAC128S_ENABLE in Table 3-4).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    },
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ],
+   "aliases": [
+    "DAC128S_ENABLE"
+   ]
+  },
+  {
+   "id": "sfra_enable",
+   "label": "SFRA_ENABLE",
+   "type": "Parameter",
+   "description": "Enables SFRA tool.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "step_rp_en",
+   "label": "STEP_RP_EN",
+   "type": "Parameter",
+   "description": "Enables step response with graph tool.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "test_enable",
+   "label": "TEST_ENABLE",
+   "type": "Parameter",
+   "description": "Predefine required for ISRCount to increment.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "id": "single_shunt_current_sensing",
+   "label": "Single-shunt current sensing",
+   "type": "Feature",
+   "description": "Single-shunt current sense; supported on DRV8329AEVM.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "datalog",
+   "label": "DATALOG",
+   "type": "Feature",
+   "description": "Module storing real-time values of two user-selectable variables in C2000 data RAM via DMA for display with the graph tool.",
+   "properties": {
+    "default_prescaler": "10",
+    "channels": "2"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "id": "pwmdac",
+   "label": "PWMDAC",
+   "type": "Feature",
+   "description": "Converts software variables into PWM signals on ePWM6A/6B/7A/7B, viewed through external RC low-pass filters.",
+   "properties": {
+    "outputs": "EPWM6A, EPWM6B, EPWM7A, EPWM7B",
+    "example_rc": "470 ohm, 0.47 uF"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 57
+    }
+   ]
+  },
+  {
+   "id": "dac128s_module",
+   "label": "DAC128S module",
+   "type": "Software",
+   "description": "Converts up to 8 software variables to 12-bit values and sends them over SPI to the DAC128S085EVM.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 58
+    }
+   ]
+  },
+  {
+   "id": "sfra",
+   "label": "SFRA",
+   "type": "Software",
+   "description": "Software frequency response analyzer tool; SFRA specific files are in the project.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "step_response",
+   "label": "Step response with graph tool",
+   "type": "Feature",
+   "description": "Step response function shown with the graph tool.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "id": "dma",
+   "label": "DMA",
+   "type": "Peripheral",
+   "description": "Direct Memory Access; used to transfer selected variables to the datalog buffers in RAM.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "id": "epwm",
+   "label": "ePWM",
+   "type": "Peripheral",
+   "description": "PWM peripheral; drives the motor and the PWMDAC outputs.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 57
+    }
+   ]
+  },
+  {
+   "id": "rc_low_pass_filter",
+   "label": "RC low-pass filter",
+   "type": "Component",
+   "description": "First-order RC filter required to view PWMDAC signals; time constant tau = RC = 1/(2*pi*fc).",
+   "properties": {
+    "example": "470 ohm, 0.47 uF"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 57
+    }
+   ]
+  },
+  {
+   "id": "data_log_scale_factor",
+   "label": "DATA_LOG_SCALE_FACTOR",
+   "type": "Parameter",
+   "description": "Datalog prescaler define in datalogIF.h; default 10 (logs one of every N samples).",
+   "properties": {
+    "default": "10"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "id": "datalogobj_iptr",
+   "label": "datalogObj->iptr[0..1]",
+   "type": "Parameter",
+   "description": "Datalog module inputs pointed to addresses of the two logged variables; set in sys_main.c and vary by build level.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 56
+    }
+   ]
+  },
+  {
+   "id": "datalogbuff1",
+   "label": "datalogBuff1",
+   "type": "Parameter",
+   "description": "Datalog RAM buffer arrays (with datalogBuff2) holding logged data for display.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ],
+   "aliases": [
+    "datalogBuff2"
+   ]
+  },
+  {
+   "id": "dac_en_ch_num",
+   "label": "DAC_EN_CH_NUM",
+   "type": "Parameter",
+   "description": "Define in dac128s085.h setting number of DAC128S outputs (1-8); default 4.",
+   "properties": {
+    "default": "4",
+    "range": "1-8"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "id": "dac128s_ptrdata",
+   "label": "dac128s.ptrData[0..7]",
+   "type": "Parameter",
+   "description": "DAC128S module inputs pointing to variables (angles, currents, voltages), with gain[] and offset[]; set in sys_main.c by build level.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "id": "pwmdacdata_ptrdata",
+   "label": "pwmDACData.ptrData[0..3]",
+   "type": "Parameter",
+   "description": "PWMDAC module inputs pointing to four variables, with offset[] and gain[]; set in sys_main.c.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 57
+    }
+   ]
+  },
+  {
+   "id": "sys_main_c",
+   "label": "sys_main.c",
+   "type": "Software",
+   "description": "System main file; initializes DATALOG, PWMDAC and DAC128S objects and their input pointers; holds userParams_M1.flag_bypassMotorId.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "id": "sys_settings_h",
+   "label": "sys_settings.h",
+   "type": "Software",
+   "description": "Build level setting file; DMC_BUILDLEVEL is set here.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "id": "motor1_drive_c",
+   "label": "motor1_drive.c",
+   "type": "Software",
+   "description": "Motor drive control specific file containing motor1ctrlISR() which updates datalog, PWMDAC and DAC128S.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "id": "motor_comm_c",
+   "label": "motor_comm.c",
+   "type": "Software",
+   "description": "Motor drive common functions file.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "id": "hal_c",
+   "label": "hal.c",
+   "type": "Software",
+   "description": "Board-specific hardware abstraction layer drivers; with hal.h, the files to change when migrating to a custom board or other C2000 device.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "id": "hal_h",
+   "label": "hal.h",
+   "type": "Software",
+   "description": "HAL header with board-specific definitions.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "id": "user_mtr1_h",
+   "label": "user_mtr1.h",
+   "type": "Software",
+   "description": "Board and motor parameters definition file in src_board; motor defines section begins on line 921.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 47
+    }
+   ]
+  },
+  {
+   "id": "user_mtr1_c",
+   "label": "user_mtr1.c",
+   "type": "Software",
+   "description": "Board and motor specific parameters source file.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "id": "user_common_h",
+   "label": "user_common.h",
+   "type": "Software",
+   "description": "Common user definitions file used with user_mtr1.h to select or define the motor model.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 47
+    }
+   ]
+  },
+  {
+   "id": "drv83xx_c",
+   "label": "drv83xx.c",
+   "type": "Software",
+   "description": "Inverter gate driver file.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "id": "datalogif_h",
+   "label": "datalogIF.h",
+   "type": "Software",
+   "description": "Datalog interface header defining DATA_LOG_SCALE_FACTOR.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "id": "datalogif_c",
+   "label": "datalogIF.c",
+   "type": "Software",
+   "description": "Datalog interface source declaring DATALOG_Obj datalog and handle.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "id": "dac128s085_h",
+   "label": "dac128s085.h",
+   "type": "Software",
+   "description": "DAC128S085 driver header defining DAC_EN_CH_NUM.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "id": "motor_datalog_fp2_graphprop",
+   "label": "motor_datalog_fp2.graphProp",
+   "type": "Software",
+   "description": "Graph configuration file in common\\debug importable via Tools -> Graph -> DualTime.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 56
+    }
+   ]
+  },
+  {
+   "id": "universal_lab_level_txt",
+   "label": "universal_lab_levelN.txt",
+   "type": "Software",
+   "description": "Expression variable lists (universal_lab_level1..4.txt) in common\\debug imported into the Expressions window per build level.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 61
+    }
+   ],
+   "aliases": [
+    "universal_lab_level1.txt",
+    "universal_lab_level2.txt",
+    "universal_lab_level3.txt",
+    "universal_lab_level4.txt"
+   ]
+  },
+  {
+   "id": "ccxml_target_config",
+   "label": "Target configuration file (.ccxml)",
+   "type": "Software",
+   "description": "Debugger target configuration, e.g. TMS320F280025C_LaunchPad.ccxml for LAUNCHXL-F280025C and TMS320F280025C.ccxml for TMDSCNCD280025C.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "id": "src_foc",
+   "label": "src_foc",
+   "type": "Software",
+   "description": "Folder with FOC modules (Park, Clarke, inverse transforms, PID, estimators) independent of device/board.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "id": "src_lib",
+   "label": "src_lib",
+   "type": "Software",
+   "description": "Folder with the InstaSPIN-FOC library and math library.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "id": "src_control",
+   "label": "src_control",
+   "type": "Software",
+   "description": "Folder with motor drive control files calling core algorithm functions within ISRs and background tasks.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "id": "src_sys",
+   "label": "src_sys",
+   "type": "Software",
+   "description": "Folder reserved for user system control, communication, etc.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "id": "src_board",
+   "label": "src_board",
+   "type": "Software",
+   "description": "Folder with board-, motor- and device-specific files (hal.c, hal.h, user_mtr1.h).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 51
+    }
+   ]
+  },
+  {
+   "id": "motor1ctrlisr",
+   "label": "motor1ctrlISR()",
+   "type": "Software",
+   "description": "Motor control ISR triggered by ADC end of conversion; reads ADC, runs Clarke, estimators, speed/current loops, IPD/FWC/MTPA, I-Park, SVGEN and PWM.",
+   "aliases": [
+    "Motor Control ISR"
+   ],
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "id": "adc",
+   "label": "ADC",
+   "type": "Peripheral",
+   "description": "ADC; its end of conversion (EOC) triggers the motor control ISR.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "id": "cmpss",
+   "label": "CMPSS",
+   "type": "Peripheral",
+   "description": "Comparator subsystem implementing over current protection.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 68
+    }
+   ]
+  },
+  {
+   "id": "overcurrent_protection",
+   "label": "Over current protection",
+   "type": "Feature",
+   "description": "Over current fault disables PWM, clears flagEnableRunAndIdentify and sets faultMtrUse.all to 0x10.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 68
+    }
+   ]
+  },
+  {
+   "id": "motor_identification",
+   "label": "Motor parameter identification",
+   "type": "Feature",
+   "description": "FAST-based identification of Rs, Ls_d, Ls_q and rated flux; takes about 150 s; can also run online without reloading code.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "id": "angle_gen_run",
+   "label": "ANGLE_GEN_run",
+   "type": "Software",
+   "description": "Ramp angle generator for open-loop running.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "clarke_run",
+   "label": "CLARKE_run",
+   "type": "Software",
+   "description": "Clarke transformation for current or voltage.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "dac128s_writedata",
+   "label": "DAC128S_writeData",
+   "type": "Software",
+   "description": "Converts and sends software variables to external DAC with SPI.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "datalogif_update",
+   "label": "DATALOGIF_update",
+   "type": "Software",
+   "description": "Stores real-time values for displaying with graph tool.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "enc_run",
+   "label": "ENC_run",
+   "type": "Software",
+   "description": "Calculates rotor angle based on encoder.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "esmo_run",
+   "label": "ESMO_run",
+   "type": "Software",
+   "description": "Enhanced Sliding Mode Observer for sensorless FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "est_run",
+   "label": "EST_run",
+   "type": "Software",
+   "description": "FAST estimator for sensorless FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "est_runtraj",
+   "label": "EST_runTraj",
+   "type": "Software",
+   "description": "Trajectory generator for current and speed for motor identification (FAST).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "est_setuptrajstate",
+   "label": "EST_setupTrajState",
+   "type": "Software",
+   "description": "Trajectory generator setup for current and speed for motor identification (FAST).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "hal_readadcdata",
+   "label": "HAL_readADCData",
+   "type": "Software",
+   "description": "Returns ADC conversion values in floating-point format.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "hal_writepwmdacdata",
+   "label": "HAL_writePWMDACData",
+   "type": "Software",
+   "description": "Converts software variables into PWM signals.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "hal_writepwmdata",
+   "label": "HAL_writePWMData",
+   "type": "Software",
+   "description": "PWM drives for motor.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "hall_run",
+   "label": "HALL_run",
+   "type": "Software",
+   "description": "Calculates rotor angle and speed based on Hall sensors.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "ipark_run",
+   "label": "IPARK_run",
+   "type": "Software",
+   "description": "Inverse Park transformation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "park_run",
+   "label": "PARK_run",
+   "type": "Software",
+   "description": "Park transformation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "pi_run",
+   "label": "PI_run",
+   "type": "Software",
+   "description": "PI regulators for current and speed.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "spdcalc_run",
+   "label": "SPDCALC_run",
+   "type": "Software",
+   "description": "Speed measurement based on encoder angle.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "spdfr_run",
+   "label": "SPDFR_run",
+   "type": "Software",
+   "description": "Speed measurement based on observer angle (eSMO).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "svgen_run",
+   "label": "SVGEN_run",
+   "type": "Software",
+   "description": "Space vector PWM with quadrature control.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "traj_run",
+   "label": "TRAJ_run",
+   "type": "Software",
+   "description": "Trajectory for setting speed reference.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "vs_freq_run",
+   "label": "VS_FREQ_run",
+   "type": "Software",
+   "description": "Generates vector voltage with v/f profile.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "id": "dmc_buildlevel",
+   "label": "DMC_BUILDLEVEL",
+   "type": "Parameter",
+   "description": "Define in sys_settings.h selecting DMC_LEVEL_1..DMC_LEVEL_4; rebuild project after change.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 60
+    }
+   ]
+  },
+  {
+   "id": "build_level_1",
+   "label": "Build Level 1",
+   "type": "BuildLevel",
+   "description": "DMC_LEVEL_1: open-loop 50% PWM duty with motor disconnected; verifies HAL peripheral init, PWM and ADC drivers, ADC offset calibration.",
+   "aliases": [
+    "DMC_LEVEL_1"
+   ],
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 60
+    }
+   ]
+  },
+  {
+   "id": "build_level_2",
+   "label": "Build Level 2",
+   "type": "BuildLevel",
+   "description": "DMC_LEVEL_2: open-loop scalar v/f control validating current/voltage sensing, gate driver, and FAST or eSMO estimators.",
+   "aliases": [
+    "DMC_LEVEL_2"
+   ],
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 64
+    }
+   ]
+  },
+  {
+   "id": "build_level_3",
+   "label": "Build Level 3",
+   "type": "BuildLevel",
+   "description": "DMC_LEVEL_3: closed current loop (i/f) with angle from ramp generator; verifies current sensing parameters.",
+   "aliases": [
+    "DMC_LEVEL_3"
+   ],
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 73
+    }
+   ]
+  },
+  {
+   "id": "build_level_4",
+   "label": "Build Level 4",
+   "type": "BuildLevel",
+   "description": "DMC_LEVEL_4: speed and current closed loop with FAST/eSMO/encoder/Hall angle; motor identification with FAST and features such as FWC, flying start, MTPA, braking.",
+   "aliases": [
+    "DMC_LEVEL_4"
+   ],
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 75
+    }
+   ]
+  },
+  {
+   "id": "adc_offset_calibration",
+   "label": "ADC offset calibration",
+   "type": "Feature",
+   "description": "Calibration of phase current/voltage offsets; current offsets near 2048 (half 12-bit scale), voltage offset coefficients about 0.5.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "id": "flying_start",
+   "label": "Flying start",
+   "type": "Feature",
+   "description": "Additional feature evaluated in build level 4.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 75
+    }
+   ]
+  },
+  {
+   "id": "braking",
+   "label": "Braking",
+   "type": "Feature",
+   "description": "Additional feature evaluated in build level 4.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 75
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_flagenablerunandidentify",
+   "label": "motorVars_M1.flagEnableRunAndIdentify",
+   "type": "Parameter",
+   "description": "Set to 1 to run the motor / identification, 0 to stop and disable PWMs.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "id": "systemvars_flagenablesystem",
+   "label": "systemVars.flagEnableSystem",
+   "type": "Parameter",
+   "description": "Set to 1 automatically after offset calibration completes.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_flagrunidentandonline",
+   "label": "motorVars_M1.flagRunIdentAndOnLine",
+   "type": "Parameter",
+   "description": "Set to 1 automatically if there are no faults.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "id": "isrcount",
+   "label": "ISRCount",
+   "type": "Parameter",
+   "description": "Increments continuously when TEST_ENABLE is defined.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_faultmtrprev",
+   "label": "motorVars_M1.faultMtrPrev.bit",
+   "type": "Parameter",
+   "description": "Fault flag structure checked for no faults.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_faultmtruse",
+   "label": "motorVars_M1.faultMtrUse.all",
+   "type": "Parameter",
+   "description": "Fault flags; should be 0; set to 0x10 on over current fault.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_speedref_hz",
+   "label": "motorVars_M1.speedRef_Hz",
+   "type": "Parameter",
+   "description": "Speed reference for the motor; negative value for reverse rotation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_speed_hz",
+   "label": "motorVars_M1.speed_Hz",
+   "type": "Parameter",
+   "description": "Motor speed; should be close to speedRef_Hz.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_overcurrent_a",
+   "label": "motorVars_M1.overCurrent_A",
+   "type": "Parameter",
+   "description": "Over current protection threshold; decreasing below phase current triggers fault.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 68
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_svmmode",
+   "label": "motorVars_M1.svmMode",
+   "type": "Parameter",
+   "description": "SVM mode selection: SVM_COM_C (common) or SVM_MIN_C (minimum).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 66
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_idq_set_a",
+   "label": "motorVars_M1.Idq_set_A.value[1]",
+   "type": "Parameter",
+   "description": "Reference torque current set in build level 3.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 74
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_adcdata_current_sf",
+   "label": "motorVars_M1.adcData.current_sf",
+   "type": "Parameter",
+   "description": "Current scale factor whose sign must match hardware board; related to USER_M1_ADC_FULL_SCALE_CURRENT_A.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 74
+    }
+   ]
+  },
+  {
+   "id": "userparams_m1_current_sf",
+   "label": "userParams_M1.current_sf",
+   "type": "Parameter",
+   "description": "User current scale factor related to USER_M1_ADC_FULL_SCALE_CURRENT_A.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 74
+    }
+   ]
+  },
+  {
+   "id": "userparams_m1_flag_bypassmotorid",
+   "label": "userParams_M1.flag_bypassMotorId",
+   "type": "Parameter",
+   "description": "In sys_main.c; false enables motor identification, true disables it.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_flagenablemotoridentify",
+   "label": "motorVars_M1.flagEnableMotorIdentify",
+   "type": "Parameter",
+   "description": "Set to 1 to enable online identification without reloading code.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 77
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_accelerationmax_hzps",
+   "label": "motorVars_M1.accelerationMax_Hzps",
+   "type": "Parameter",
+   "description": "Sets the acceleration.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 77
+    }
+   ]
+  },
+  {
+   "id": "motorsetvars_m1_kp_id",
+   "label": "motorSetVars_M1.Kp_Id",
+   "type": "Parameter",
+   "description": "Current controller gains (also Ki_Id, Kp_Iq, Ki_Iq) calculated in setupControllers() and tunable.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 77
+    }
+   ],
+   "aliases": [
+    "motorSetVars_M1.Ki_Id",
+    "motorSetVars_M1.Kp_Iq",
+    "motorSetVars_M1.Ki_Iq"
+   ]
+  },
+  {
+   "id": "motorsetvars_m1_kp_spd",
+   "label": "motorSetVars_M1.Kp_spd",
+   "type": "Parameter",
+   "description": "Speed controller gains (also Ki_spd) calculated in setupControllers(); a starting reference for tuning.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 77
+    }
+   ],
+   "aliases": [
+    "motorSetVars_M1.Ki_spd"
+   ]
+  },
+  {
+   "id": "systemvars_esttype",
+   "label": "systemVars.estType",
+   "type": "Parameter",
+   "description": "Indicates enabled estimator combination: EST_TYPE_FAST_ESMO, EST_TYPE_FAST_ENC, EST_TYPE_FAST_HALL, EST_TYPE_ESMO_ENC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 79
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_estimatormode",
+   "label": "motorVars_M1.estimatorMode",
+   "type": "Parameter",
+   "description": "Selects estimator in use (ESTIMATOR_MODE_FAST/ESMO/ENC/HALL); can be switched on the fly.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 79
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_anglegen_rad",
+   "label": "motorVars_M1.angleGen_rad",
+   "type": "Parameter",
+   "description": "Angle from the force angle generator; monitored vs estimator angle.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_angleest_rad",
+   "label": "motorVars_M1.angleEST_rad",
+   "type": "Parameter",
+   "description": "Estimated rotor angle from FAST or eSMO.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_adcdata_i_a",
+   "label": "motorVars_M1.adcData.I_A.value[]",
+   "type": "Parameter",
+   "description": "Phase current samples; default datalog inputs.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 56
+    }
+   ]
+  },
+  {
+   "id": "motorvars_m1_adcdata_v_v",
+   "label": "motorVars_M1.adcData.V_V.value[]",
+   "type": "Parameter",
+   "description": "Phase voltage samples.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "id": "setupcontrollers",
+   "label": "setupControllers()",
+   "type": "Software",
+   "description": "Function calculating default Kp and Ki for current and speed controllers.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 77
+    }
+   ]
+  },
+  {
+   "id": "dual_estimator",
+   "label": "Simultaneous dual estimators",
+   "type": "Feature",
+   "description": "Two FOC algorithms can be used simultaneously (FAST+eSMO, FAST+ENC, FAST+HALL, eSMO+ENC) and switched smoothly on the fly; ISBLDC cannot be combined.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_freq_low_hz",
+   "label": "USER_MOTOR1_FREQ_LOW_HZ",
+   "type": "Parameter",
+   "description": "v/f profile low frequency.",
+   "properties": {
+    "example_value": "5.0 Hz"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_freq_high_hz",
+   "label": "USER_MOTOR1_FREQ_HIGH_HZ",
+   "type": "Parameter",
+   "description": "v/f profile high frequency.",
+   "properties": {
+    "example_value": "400.0 Hz"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_volt_min_v",
+   "label": "USER_MOTOR1_VOLT_MIN_V",
+   "type": "Parameter",
+   "description": "v/f profile minimum voltage.",
+   "properties": {
+    "example_value": "1.0 V"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_volt_max_v",
+   "label": "USER_MOTOR1_VOLT_MAX_V",
+   "type": "Parameter",
+   "description": "v/f profile maximum voltage.",
+   "properties": {
+    "example_value": "24.0 V"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "id": "user_m1_pwm_freq_khz",
+   "label": "USER_M1_PWM_FREQ_kHz",
+   "type": "Parameter",
+   "description": "PWM switching frequency define.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "id": "user_m1_adc_full_scale_current_a",
+   "label": "USER_M1_ADC_FULL_SCALE_CURRENT_A",
+   "type": "Parameter",
+   "description": "ADC full-scale current; used in DAC gains and current scale factors.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 74
+    }
+   ]
+  },
+  {
+   "id": "user_m1_adc_full_scale_voltage_v",
+   "label": "USER_M1_ADC_FULL_SCALE_VOLTAGE_V",
+   "type": "Parameter",
+   "description": "ADC full-scale voltage; used in DAC128S gains.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 60
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_over_current_a",
+   "label": "USER_MOTOR1_OVER_CURRENT_A",
+   "type": "Parameter",
+   "description": "Motor over current value; used in PWMDAC gain scaling.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 58
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_type",
+   "label": "USER_MOTOR1_TYPE",
+   "type": "Parameter",
+   "description": "Motor type.",
+   "properties": {
+    "example_value": "MOTOR_TYPE_PM"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_num_pole_pairs",
+   "label": "USER_MOTOR1_NUM_POLE_PAIRS",
+   "type": "Parameter",
+   "description": "Number of pole pairs.",
+   "properties": {
+    "example_value": "4"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_rr_ohm",
+   "label": "USER_MOTOR1_Rr_Ohm",
+   "type": "Parameter",
+   "description": "Rotor resistance.",
+   "properties": {
+    "example_value": "NULL"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_rs_ohm",
+   "label": "USER_MOTOR1_Rs_Ohm",
+   "type": "Parameter",
+   "description": "Stator resistance; replaced with identified motorSetVars_M1.Rs_Ohm.",
+   "properties": {
+    "example_value": "0.38157931"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_ls_d_h",
+   "label": "USER_MOTOR1_Ls_d_H",
+   "type": "Parameter",
+   "description": "d-axis inductance; replaced with identified motorSetVars_M1.Ls_d_H.",
+   "properties": {
+    "example_value": "0.000188295482"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_ls_q_h",
+   "label": "USER_MOTOR1_Ls_q_H",
+   "type": "Parameter",
+   "description": "q-axis inductance; replaced with identified motorSetVars_M1.Ls_q_H.",
+   "properties": {
+    "example_value": "0.000188295482"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_rated_flux_vphz",
+   "label": "USER_MOTOR1_RATED_FLUX_VpHz",
+   "type": "Parameter",
+   "description": "Rated flux; replaced with identified motorSetVars_M1.flux_VpHz.",
+   "properties": {
+    "example_value": "0.0396642499"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_res_est_current_a",
+   "label": "USER_MOTOR1_RES_EST_CURRENT_A",
+   "type": "Parameter",
+   "description": "Identification current for resistance estimation, 10~30% of rated current.",
+   "properties": {
+    "example_value": "1.5 A"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_ind_est_current_a",
+   "label": "USER_MOTOR1_IND_EST_CURRENT_A",
+   "type": "Parameter",
+   "description": "Identification current for inductance estimation, 10~30% of rated current, enough to rotate.",
+   "properties": {
+    "example_value": "-1.0 A"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_max_current_a",
+   "label": "USER_MOTOR1_MAX_CURRENT_A",
+   "type": "Parameter",
+   "description": "Max current, 30~150% of rated current.",
+   "properties": {
+    "example_value": "4.5 A"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "id": "user_motor1_flux_exc_freq_hz",
+   "label": "USER_MOTOR1_FLUX_EXC_FREQ_Hz",
+   "type": "Parameter",
+   "description": "Flux excitation frequency for identification, 10~30% of rated frequency.",
+   "properties": {
+    "example_value": "40.0 Hz"
+   },
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  }
+ ],
+ "relations": [
+  {
+   "source": "universal_motor_control_lab",
+   "target": "f280025c",
+   "type": "runs_on",
+   "evidence": "universal project ... used in conjunction with the F280025C, F280039C, or F2800137 C2000 MCU devices",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "f280039c",
+   "type": "runs_on",
+   "evidence": "universal project ... used in conjunction with the F280025C, F280039C, or F2800137 C2000 MCU devices",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "f2800137",
+   "type": "runs_on",
+   "evidence": "universal project ... used in conjunction with the F280025C, F280039C, or F2800137 C2000 MCU devices",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "f28002x",
+   "type": "supports",
+   "evidence": "F28002x based lab project universal_motorcontrol_lab_f28002x imported from ccs\\motor_control folder",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "f28002x",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "C2000 MCU devices",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "f28003x",
+   "type": "supports",
+   "evidence": "F28003x based lab project universal_motorcontrol_lab_f28003x imported from ccs\\motor_control folder",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "f28003x",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "C2000 MCU devices",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "f280013x",
+   "type": "supports",
+   "evidence": "F280013x based lab project universal_motorcontrol_lab_f280013x imported from ccs\\motor_control folder",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "f280013x",
+   "target": "c2000",
+   "type": "part_of",
+   "evidence": "C2000 MCU devices",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "f280025c",
+   "target": "f28002x",
+   "type": "part_of",
+   "evidence": "F28002x based lab selects universal_motorcontrol_lab_f28002x",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "f280039c",
+   "target": "f28003x",
+   "type": "part_of",
+   "evidence": "F28003x based lab selects universal_motorcontrol_lab_f28003x",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "f2800137",
+   "target": "f280013x",
+   "type": "part_of",
+   "evidence": "F280013x based lab ... LAUNCHXL-F2800137",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "motorcontrol_sdk",
+   "type": "part_of",
+   "evidence": "project of this example lab is inside the C2000Ware Motor Control SDK folder",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "code_composer_studio",
+   "type": "uses",
+   "evidence": "Import the project within CCS by clicking Project -> Import CCS Projects",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "ccs_resource_explorer",
+   "target": "code_composer_studio",
+   "type": "part_of",
+   "evidence": "Go to CCS and under View -> Resource Explorer",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "motorcontrol_sdk",
+   "target": "ccs_resource_explorer",
+   "type": "related_to",
+   "evidence": "Under the TI Resource Explorer, go to Software->C2000Ware_MotorControl_SDK, and click install",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "c2000ware",
+   "type": "uses",
+   "evidence": "device peripherals configuration is based on C2000Ware driverlib",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "ccs_graph_tool",
+   "target": "code_composer_studio",
+   "type": "part_of",
+   "evidence": "The graph tool is available in CCS",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 56
+    }
+   ]
+  },
+  {
+   "source": "ccs_expressions_window",
+   "target": "code_composer_studio",
+   "type": "part_of",
+   "evidence": "Click View -> Expressions on the menu bar to open an Expressions watch window",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 61
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280025c",
+   "target": "f280025c",
+   "type": "based_on",
+   "evidence": "LAUNCHXL-F280025C ... used in combination with the BOOSTXL-DRV8323RS",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280025c",
+   "target": "boostxl_drv8323rs",
+   "type": "compatible_with",
+   "evidence": "LAUNCHXL-F280025C ... used in combination with the BOOSTXL-DRV8323RS lab",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280039c",
+   "target": "f280039c",
+   "type": "based_on",
+   "evidence": "LAUNCHXL-F280039C ... used in combination with the BOOSTXL-DRV8323RS",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f280039c",
+   "target": "boostxl_drv8323rs",
+   "type": "compatible_with",
+   "evidence": "LAUNCHXL-F280039C ... used in combination with the BOOSTXL-DRV8323RS lab",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "f2800137",
+   "type": "based_on",
+   "evidence": "LAUNCHXL-F2800137 ... used in combination with the BOOSTXL-DRV8323RS",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "launchxl_f2800137",
+   "target": "boostxl_drv8323rs",
+   "type": "compatible_with",
+   "evidence": "LAUNCHXL-F2800137 ... used in combination with the BOOSTXL-DRV8323RS lab",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "tmdscncd280025c",
+   "target": "f280025c",
+   "type": "based_on",
+   "evidence": "TMS320F280025C.ccxml is for the TMDSCNCD280025C based hardware kits",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "drv8329aevm",
+   "type": "supports",
+   "evidence": "Table 3-4 supporting algorithms, functions and motors matrix",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "boostxl_drv8323rh",
+   "type": "supports",
+   "evidence": "Table 3-4 supporting algorithms, functions and motors matrix",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "drv8353rs_evm",
+   "type": "supports",
+   "evidence": "Table 3-4 supporting algorithms, functions and motors matrix",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "boostxl_3phganinv",
+   "type": "supports",
+   "evidence": "Table 3-4 supporting algorithms, functions and motors matrix",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "drv8316revm",
+   "type": "supports",
+   "evidence": "Table 3-4 supporting algorithms, functions and motors matrix",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "tmdshvmtrinspin",
+   "type": "supports",
+   "evidence": "Table 3-4 supporting algorithms, functions and motors matrix",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "boostxl_drv8323rs",
+   "type": "supports",
+   "evidence": "Table 3-4 lists BOOSTXL-DRV8323RS",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "dac128s085evm",
+   "target": "launchxl_f280025c",
+   "type": "connects_to",
+   "evidence": "DAC128S085EVM can be connected to the LaunchPad; jumper SPI_STE pin JB-2 to SYNC pin JA-2",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "source": "dac128s085evm",
+   "target": "launchxl_f2800137",
+   "type": "connects_to",
+   "evidence": "F280013x requires populating 0 ohm resistors to route SPI to BoosterPack site 2, plus jumper SPI_STE to SYNC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "source": "dac128s085evm",
+   "target": "spi",
+   "type": "uses",
+   "evidence": "transmits the data through SPI to the DAC on the DAC128S085EVM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 58
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "hvpmsmmtr",
+   "type": "compatible_with",
+   "evidence": "TMDSHVMTRINSPIN: FAST/eSMO/ENC with HVPMSMMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "hvbldcmtr",
+   "type": "compatible_with",
+   "evidence": "TMDSHVMTRINSPIN: Hall Sensors based Sensored FOC with HVBLDCMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "lvbldcmtr",
+   "type": "compatible_with",
+   "evidence": "DRV8329AEVM: LVSERVOMTR, LVBLDCMTR",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "boostxl_drv8323rs",
+   "target": "lvservomtr",
+   "type": "compatible_with",
+   "evidence": "BOOSTXL-DRV8323RS column lists LVSERVOMTR for FAST, eSMO, ENC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "instaspin_foc",
+   "target": "fast_estimator",
+   "type": "contains",
+   "evidence": "src_lib folder includes the InstaSPIN-FOC library",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "foc",
+   "type": "input_to",
+   "evidence": "FAST based Sensorless FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "esmo",
+   "target": "foc",
+   "type": "input_to",
+   "evidence": "eSMO based Sensorless FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "encoder",
+   "target": "foc",
+   "type": "input_to",
+   "evidence": "QEP Encoder based Sensored FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "hall_sensor",
+   "target": "foc",
+   "type": "input_to",
+   "evidence": "Hall Sensors based Sensored FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "esmo",
+   "target": "pll",
+   "type": "uses",
+   "evidence": "eSMO with PLL",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "rotor_angle",
+   "type": "estimates",
+   "evidence": "Run FAST/eSMO estimators or Encoder",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "esmo",
+   "target": "rotor_angle",
+   "type": "estimates",
+   "evidence": "Run FAST/eSMO estimators or Encoder",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "motor_speed",
+   "type": "estimates",
+   "evidence": "FAST outputs Flux, Angle, Speed, Torque",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 64
+    }
+   ]
+  },
+  {
+   "source": "encoder",
+   "target": "rotor_angle",
+   "type": "measures",
+   "evidence": "ENC_run: Calculate rotor angle based on encoder",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "hall_sensor",
+   "target": "rotor_angle",
+   "type": "measures",
+   "evidence": "HALL_run: Calculate rotor angle and speed based on Hall sensors",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "foc",
+   "type": "implements",
+   "evidence": "one ISR for real time motor control",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "fast_estimator",
+   "type": "supports",
+   "evidence": "FAST based Sensorless FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "esmo",
+   "type": "supports",
+   "evidence": "eSMO based Sensorless FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "instaspin_bldc",
+   "type": "supports",
+   "evidence": "Trapezoidal InstaSPIN-BLDC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "mtpa",
+   "type": "supports",
+   "evidence": "Run IPD, FWC and MTPA",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "ipd",
+   "type": "supports",
+   "evidence": "Run IPD, FWC and MTPA",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "field_weakening",
+   "type": "supports",
+   "evidence": "field weakening control is enabled by MOTOR1_FWC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "predefined_symbols",
+   "target": "universal_motor_control_lab",
+   "type": "configures",
+   "evidence": "set the pre-define symbols for the project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "motor1_fast",
+   "target": "fast_estimator",
+   "type": "enables",
+   "evidence": "MOTOR1_FAST pre-define symbol selects this algorithm (Table 3-4)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "motor1_fast",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "motor1_esmo",
+   "target": "esmo",
+   "type": "enables",
+   "evidence": "MOTOR1_ESMO pre-define symbol selects this algorithm (Table 3-4)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "motor1_esmo",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "motor1_enc",
+   "target": "encoder",
+   "type": "enables",
+   "evidence": "MOTOR1_ENC pre-define symbol selects this algorithm (Table 3-4)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "motor1_enc",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "qep_enable",
+   "target": "encoder",
+   "type": "enables",
+   "evidence": "QEP_ENABLE pre-define symbol selects this algorithm (Table 3-4)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "qep_enable",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "motor1_hall",
+   "target": "hall_sensor",
+   "type": "enables",
+   "evidence": "MOTOR1_HALL pre-define symbol selects this algorithm (Table 3-4)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "motor1_hall",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "hall_enable",
+   "target": "hall_sensor",
+   "type": "enables",
+   "evidence": "HALL_ENABLE pre-define symbol selects this algorithm (Table 3-4)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "hall_enable",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "hall_cal",
+   "target": "hall_sensor",
+   "type": "enables",
+   "evidence": "HALL_CAL pre-define symbol selects this algorithm (Table 3-4)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "hall_cal",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "motor1_isbldc",
+   "target": "instaspin_bldc",
+   "type": "enables",
+   "evidence": "MOTOR1_ISBLDC pre-define symbol selects this algorithm (Table 3-4)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "motor1_isbldc",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "motor1_fwc",
+   "target": "field_weakening",
+   "type": "enables",
+   "evidence": "MOTOR1_FWC pre-define symbol selects this algorithm (Table 3-4)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "motor1_fwc",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "motor1_dclink_ss",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "datalogf2_en",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "epwmdac_mode",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "dac_128s_enable",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "source": "sfra_enable",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "step_rp_en",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "test_enable",
+   "target": "predefined_symbols",
+   "type": "part_of",
+   "evidence": "pre-define symbols in project properties",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "source": "motor1_dclink_ss",
+   "target": "single_shunt_current_sensing",
+   "type": "enables",
+   "evidence": "Single-Shunt Current Sense: MOTOR1_DCLINK_SS",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "single_shunt_current_sensing",
+   "type": "supports",
+   "evidence": "DRV8329AEVM is the only kit with ✔ for single-shunt",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "drv8329aevm",
+   "target": "instaspin_bldc",
+   "type": "supports",
+   "evidence": "Trapezoidal InstaSPIN-BLDC ✔ only on DRV8329AEVM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "datalogf2_en",
+   "target": "datalog",
+   "type": "enables",
+   "evidence": "to enable the datalog functionality, the predefine symbol DATALOGF2_EN must be added",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "source": "epwmdac_mode",
+   "target": "pwmdac",
+   "type": "enables",
+   "evidence": "to enable the ePWM DAC functionality, EPWMDAC_MODE must be added",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 57
+    }
+   ]
+  },
+  {
+   "source": "dac_128s_enable",
+   "target": "dac128s_module",
+   "type": "enables",
+   "evidence": "to enable the DAC128S functionality, DAC_128S_ENABLE must be added",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "source": "sfra_enable",
+   "target": "sfra",
+   "type": "enables",
+   "evidence": "SFRA Tool: SFRA_ENABLE",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "step_rp_en",
+   "target": "step_response",
+   "type": "enables",
+   "evidence": "Step Response with Graph Tool: STEP_RP_EN",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "datalog",
+   "target": "dma",
+   "type": "requires",
+   "evidence": "Datalog implementation requires DMA. Not all C2000 devices have DMA",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "datalog",
+   "target": "ccs_graph_tool",
+   "type": "input_to",
+   "evidence": "datalog module is used with the graph tool to visually inspect the variables",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 56
+    }
+   ]
+  },
+  {
+   "source": "pwmdac",
+   "target": "epwm",
+   "type": "uses",
+   "evidence": "converts the software variables into PWM signals using ePWM 6A, 6B, 7A, and 7B",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 57
+    }
+   ]
+  },
+  {
+   "source": "pwmdac",
+   "target": "tmdshvmtrinspin",
+   "type": "runs_on",
+   "evidence": "PWMDAC module is only supported on the high voltage kit (TMDSHVMTRINSPIN)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 57
+    }
+   ]
+  },
+  {
+   "source": "dac128s_module",
+   "target": "dac128s085evm",
+   "type": "connects_to",
+   "evidence": "transmits the data through SPI to the DAC on the DAC128S085EVM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 58
+    }
+   ]
+  },
+  {
+   "source": "dac128s_module",
+   "target": "spi",
+   "type": "uses",
+   "evidence": "DAC128S_setupSPI(dac128sHandle)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "source": "pwmdac",
+   "target": "rc_low_pass_filter",
+   "type": "requires",
+   "evidence": "external low-pass filters are necessary to view the actual signal waveforms",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 57
+    }
+   ]
+  },
+  {
+   "source": "tmdshvmtrinspin",
+   "target": "rc_low_pass_filter",
+   "type": "contains",
+   "evidence": "extra PWM outputs with RC filters available on the board",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 57
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "datalog",
+   "type": "supports",
+   "evidence": "monitored by datalog with graph tool, PWMDAC or external DAC with an oscilloscope",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "pwmdac",
+   "type": "supports",
+   "evidence": "monitored by datalog with graph tool, PWMDAC or external DAC with an oscilloscope",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "dac128s_module",
+   "type": "supports",
+   "evidence": "monitored by datalog with graph tool, PWMDAC or external DAC with an oscilloscope",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "sfra",
+   "type": "supports",
+   "evidence": "SFRA Tool ✔ on all kits",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 48
+    }
+   ]
+  },
+  {
+   "source": "data_log_scale_factor",
+   "target": "datalog",
+   "type": "configures",
+   "evidence": "Datalog prescaler define in datalogIF.h; default 10 (logs one of every N samples).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "source": "datalogobj_iptr",
+   "target": "datalog",
+   "type": "configures",
+   "evidence": "Datalog module inputs pointed to addresses of the two logged variables; set in sys_main.c and vary by build level.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 56
+    }
+   ]
+  },
+  {
+   "source": "datalogbuff1",
+   "target": "datalog",
+   "type": "part_of",
+   "evidence": "Datalog RAM buffer arrays (with datalogBuff2) holding logged data for display.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "source": "dac_en_ch_num",
+   "target": "dac128s_module",
+   "type": "configures",
+   "evidence": "Define in dac128s085.h setting number of DAC128S outputs (1-8); default 4.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "source": "dac128s_ptrdata",
+   "target": "dac128s_module",
+   "type": "configures",
+   "evidence": "DAC128S module inputs pointing to variables (angles, currents, voltages), with gain[] and offset[]; set in sys_main.c by",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "source": "pwmdacdata_ptrdata",
+   "target": "pwmdac",
+   "type": "configures",
+   "evidence": "PWMDAC module inputs pointing to four variables, with offset[] and gain[]; set in sys_main.c.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 57
+    }
+   ]
+  },
+  {
+   "source": "sys_main_c",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "sys_main.c in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "sys_settings_h",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "sys_settings.h in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "motor1_drive_c",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "motor1_drive.c in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "motor_comm_c",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "motor_comm.c in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "hal_c",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "hal.c in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "hal_h",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "hal.h in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "user_mtr1.h in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 47
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_c",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "user_mtr1.c in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "user_common_h",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "user_common.h in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 47
+    }
+   ]
+  },
+  {
+   "source": "drv83xx_c",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "drv83xx.c in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "datalogif_h",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "datalogIF.h in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "source": "datalogif_c",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "datalogIF.c in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "source": "dac128s085_h",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "dac128s085.h in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "source": "motor_datalog_fp2_graphprop",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "motor_datalog_fp2.graphProp in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 56
+    }
+   ]
+  },
+  {
+   "source": "universal_lab_level_txt",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "universal_lab_levelN.txt in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 61
+    }
+   ]
+  },
+  {
+   "source": "ccxml_target_config",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Target configuration file (.ccxml) in the lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "ccxml_target_config",
+   "target": "launchxl_f280025c",
+   "type": "configures",
+   "evidence": "TMS320F280025C_LaunchPad.ccxml is for the LAUNCHXL-F280025C based hardware kits",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "ccxml_target_config",
+   "target": "tmdscncd280025c",
+   "type": "configures",
+   "evidence": "TMS320F280025C.ccxml is for the TMDSCNCD280025C based hardware kits",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "datalogif_h",
+   "target": "data_log_scale_factor",
+   "type": "contains",
+   "evidence": "DATA_LOG_SCALE_FACTOR define in the datalogIF.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "source": "datalogif_c",
+   "target": "datalog",
+   "type": "contains",
+   "evidence": "declaration of one DATALOG object and handle ... in datalogIF.c",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "source": "dac128s085_h",
+   "target": "dac_en_ch_num",
+   "type": "contains",
+   "evidence": "DAC_EN_CH_NUM define in the dac128s085.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "source": "sys_main_c",
+   "target": "datalogobj_iptr",
+   "type": "contains",
+   "evidence": "iptr[0] and iptr[1] ... This code is located in the sys_main.c file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 56
+    }
+   ]
+  },
+  {
+   "source": "sys_main_c",
+   "target": "dac128s_ptrdata",
+   "type": "contains",
+   "evidence": "dac128s data points ... This code can be found in the sys_main.c file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "source": "sys_main_c",
+   "target": "pwmdacdata_ptrdata",
+   "type": "contains",
+   "evidence": "PWMDAC initialization ... located in the sys_main.c file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 57
+    }
+   ]
+  },
+  {
+   "source": "motor_datalog_fp2_graphprop",
+   "target": "ccs_graph_tool",
+   "type": "configures",
+   "evidence": "import graph configurations ... select motor_datalog_fp2.graphProp file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 56
+    }
+   ]
+  },
+  {
+   "source": "universal_lab_level_txt",
+   "target": "ccs_expressions_window",
+   "type": "configures",
+   "evidence": "select the universal_lab_level1.txt file, and click OK to import the variables",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 61
+    }
+   ]
+  },
+  {
+   "source": "hal_c",
+   "target": "c2000ware",
+   "type": "uses",
+   "evidence": "Board specific drivers configuration ... C2000Ware Driverlib",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "src_foc",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Folder with FOC modules (Park, Clarke, inverse transforms, PID, estimators) independent of device/bo",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "src_lib",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Folder with the InstaSPIN-FOC library and math library.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "src_control",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Folder with motor drive control files calling core algorithm functions within ISRs and background ta",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "src_sys",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Folder reserved for user system control, communication, etc.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "src_board",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Folder with board-, motor- and device-specific files (hal.c, hal.h, user_mtr1.h).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 51
+    }
+   ]
+  },
+  {
+   "source": "src_lib",
+   "target": "instaspin_foc",
+   "type": "contains",
+   "evidence": "src_lib folder includes the InstaSPIN-FOC library and math library",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "src_foc",
+   "target": "park_transform",
+   "type": "contains",
+   "evidence": "src_foc folder includes the typical FOC modules including Park, Clark",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "src_foc",
+   "target": "clarke_transform",
+   "type": "contains",
+   "evidence": "src_foc folder includes ... Park, Clark, and inverse Park and Clark transforms",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "src_board",
+   "target": "hal_c",
+   "type": "contains",
+   "evidence": "Board-specific ... files are in the src_board folder ... hal.c, hal.h",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 51
+    }
+   ]
+  },
+  {
+   "source": "src_board",
+   "target": "user_mtr1_h",
+   "type": "contains",
+   "evidence": "user_mtr1.h ... located under the src_board folder",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 47
+    }
+   ]
+  },
+  {
+   "source": "src_control",
+   "target": "motor1_drive_c",
+   "type": "contains",
+   "evidence": "src_control folder includes motor drive control files",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "adc",
+   "target": "motor1ctrlisr",
+   "type": "input_to",
+   "evidence": "The ISR will be triggered by ADC End of Conversion (EOC)",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "motor1_drive_c",
+   "target": "motor1ctrlisr",
+   "type": "contains",
+   "evidence": "motor1ctrlISR() interrupt. This code is located in the motor1_drive.c file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 56
+    }
+   ]
+  },
+  {
+   "source": "motor1ctrlisr",
+   "target": "clarke_transform",
+   "type": "uses",
+   "evidence": "ISR: Clarke, FAST/eSMO, speed loop, IPD/FWC/MTPA, Id/Iq loops, I-Park, SVGEN, PWM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "motor1ctrlisr",
+   "target": "fast_estimator",
+   "type": "uses",
+   "evidence": "ISR: Clarke, FAST/eSMO, speed loop, IPD/FWC/MTPA, Id/Iq loops, I-Park, SVGEN, PWM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "motor1ctrlisr",
+   "target": "esmo",
+   "type": "uses",
+   "evidence": "ISR: Clarke, FAST/eSMO, speed loop, IPD/FWC/MTPA, Id/Iq loops, I-Park, SVGEN, PWM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "motor1ctrlisr",
+   "target": "pi_controller",
+   "type": "uses",
+   "evidence": "ISR: Clarke, FAST/eSMO, speed loop, IPD/FWC/MTPA, Id/Iq loops, I-Park, SVGEN, PWM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "motor1ctrlisr",
+   "target": "inverse_park_transform",
+   "type": "uses",
+   "evidence": "ISR: Clarke, FAST/eSMO, speed loop, IPD/FWC/MTPA, Id/Iq loops, I-Park, SVGEN, PWM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "motor1ctrlisr",
+   "target": "svpwm",
+   "type": "uses",
+   "evidence": "ISR: Clarke, FAST/eSMO, speed loop, IPD/FWC/MTPA, Id/Iq loops, I-Park, SVGEN, PWM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "motor1ctrlisr",
+   "target": "mtpa",
+   "type": "uses",
+   "evidence": "ISR: Clarke, FAST/eSMO, speed loop, IPD/FWC/MTPA, Id/Iq loops, I-Park, SVGEN, PWM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "motor1ctrlisr",
+   "target": "field_weakening",
+   "type": "uses",
+   "evidence": "ISR: Clarke, FAST/eSMO, speed loop, IPD/FWC/MTPA, Id/Iq loops, I-Park, SVGEN, PWM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "motor1ctrlisr",
+   "target": "ipd",
+   "type": "uses",
+   "evidence": "ISR: Clarke, FAST/eSMO, speed loop, IPD/FWC/MTPA, Id/Iq loops, I-Park, SVGEN, PWM",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "motor1ctrlisr",
+   "target": "datalog",
+   "type": "uses",
+   "evidence": "DATALOGIF_updateWithDMA during the execution of motor1ctrlISR()",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 56
+    }
+   ]
+  },
+  {
+   "source": "motor1ctrlisr",
+   "target": "dac128s_module",
+   "type": "uses",
+   "evidence": "DAC128S_writeData updated periodically during motor1ctrlISR()",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 60
+    }
+   ]
+  },
+  {
+   "source": "cmpss",
+   "target": "overcurrent_protection",
+   "type": "implements",
+   "evidence": "the over current protection is implemented by the CMPSS modules",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 68
+    }
+   ]
+  },
+  {
+   "source": "angle_gen_run",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "clarke_run",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "clarke_run",
+   "target": "clarke_transform",
+   "type": "implements",
+   "evidence": "CLARKE_run: Clarke transformation for current or voltage.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "dac128s_writedata",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "dac128s_writedata",
+   "target": "dac128s_module",
+   "type": "implements",
+   "evidence": "DAC128S_writeData: Converts and sends software variables to external DAC with SPI.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "datalogif_update",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "datalogif_update",
+   "target": "datalog",
+   "type": "implements",
+   "evidence": "DATALOGIF_update: Stores real-time values for displaying with graph tool.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "enc_run",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "enc_run",
+   "target": "encoder",
+   "type": "implements",
+   "evidence": "ENC_run: Calculates rotor angle based on encoder.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "esmo_run",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "esmo_run",
+   "target": "esmo",
+   "type": "implements",
+   "evidence": "ESMO_run: Enhanced Sliding Mode Observer for sensorless FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "est_run",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "est_run",
+   "target": "fast_estimator",
+   "type": "implements",
+   "evidence": "EST_run: FAST estimator for sensorless FOC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "est_runtraj",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "est_runtraj",
+   "target": "motor_identification",
+   "type": "implements",
+   "evidence": "EST_runTraj: Trajectory generator for current and speed for motor identification (FAST).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "est_setuptrajstate",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "est_setuptrajstate",
+   "target": "motor_identification",
+   "type": "implements",
+   "evidence": "EST_setupTrajState: Trajectory generator setup for current and speed for motor identification (FAST).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "hal_readadcdata",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "hal_readadcdata",
+   "target": "adc",
+   "type": "implements",
+   "evidence": "HAL_readADCData: Returns ADC conversion values in floating-point format.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "hal_writepwmdacdata",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "hal_writepwmdacdata",
+   "target": "pwmdac",
+   "type": "implements",
+   "evidence": "HAL_writePWMDACData: Converts software variables into PWM signals.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "hal_writepwmdata",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "hal_writepwmdata",
+   "target": "epwm",
+   "type": "implements",
+   "evidence": "HAL_writePWMData: PWM drives for motor.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "hall_run",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "hall_run",
+   "target": "hall_sensor",
+   "type": "implements",
+   "evidence": "HALL_run: Calculates rotor angle and speed based on Hall sensors.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "ipark_run",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "ipark_run",
+   "target": "inverse_park_transform",
+   "type": "implements",
+   "evidence": "IPARK_run: Inverse Park transformation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "park_run",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "park_run",
+   "target": "park_transform",
+   "type": "implements",
+   "evidence": "PARK_run: Park transformation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "pi_run",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "pi_run",
+   "target": "pi_controller",
+   "type": "implements",
+   "evidence": "PI_run: PI regulators for current and speed.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "spdcalc_run",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "spdcalc_run",
+   "target": "encoder",
+   "type": "implements",
+   "evidence": "SPDCALC_run: Speed measurement based on encoder angle.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "spdfr_run",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "spdfr_run",
+   "target": "esmo",
+   "type": "implements",
+   "evidence": "SPDFR_run: Speed measurement based on observer angle (eSMO).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "svgen_run",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "svgen_run",
+   "target": "svpwm",
+   "type": "implements",
+   "evidence": "SVGEN_run: Space vector PWM with quadrature control.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "traj_run",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "vs_freq_run",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "Table 3-5 framework modules used in this lab project",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "vs_freq_run",
+   "target": "vf_control",
+   "type": "implements",
+   "evidence": "VS_FREQ_run: Generates vector voltage with v/f profile.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 53
+    }
+   ]
+  },
+  {
+   "source": "est_run",
+   "target": "motor_identification",
+   "type": "uses",
+   "evidence": "EST_run, EST_setupTrajState, EST_runTraj tested in level 4 with FAST",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 54
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "motor_identification",
+   "type": "enables",
+   "evidence": "motor identification can be used ... if the FAST estimator is implemented",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "sys_settings_h",
+   "target": "dmc_buildlevel",
+   "type": "contains",
+   "evidence": "change the value of the DMC_BUILDLEVEL define ... in the sys_settings.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 60
+    }
+   ]
+  },
+  {
+   "source": "dmc_buildlevel",
+   "target": "build_level_1",
+   "type": "configures",
+   "evidence": "set DMC_BUILDLEVEL to DMC_LEVEL_1",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 60
+    }
+   ]
+  },
+  {
+   "source": "build_level_1",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "software is organized in four incremental builds",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "dmc_buildlevel",
+   "target": "build_level_2",
+   "type": "configures",
+   "evidence": "set DMC_BUILDLEVEL to DMC_LEVEL_2",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "software is organized in four incremental builds",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "dmc_buildlevel",
+   "target": "build_level_3",
+   "type": "configures",
+   "evidence": "set DMC_BUILDLEVEL to DMC_LEVEL_3",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 73
+    }
+   ]
+  },
+  {
+   "source": "build_level_3",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "software is organized in four incremental builds",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "dmc_buildlevel",
+   "target": "build_level_4",
+   "type": "configures",
+   "evidence": "set DMC_BUILDLEVEL to DMC_LEVEL_4",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 75
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "software is organized in four incremental builds",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "build_level_1",
+   "target": "build_level_2",
+   "type": "precedes",
+   "evidence": "system is gradually tested and verified in multiple stages",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 54
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "build_level_3",
+   "type": "precedes",
+   "evidence": "system is gradually tested and verified in multiple stages",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 54
+    }
+   ]
+  },
+  {
+   "source": "build_level_3",
+   "target": "build_level_4",
+   "type": "precedes",
+   "evidence": "system is gradually tested and verified in multiple stages",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 54
+    }
+   ]
+  },
+  {
+   "source": "build_level_1",
+   "target": "adc",
+   "type": "uses",
+   "evidence": "Verify the PWM and ADC driver modules",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 60
+    }
+   ]
+  },
+  {
+   "source": "build_level_1",
+   "target": "epwm",
+   "type": "uses",
+   "evidence": "Verify the PWM and ADC driver modules; duty cycles set to 50%",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 60
+    }
+   ]
+  },
+  {
+   "source": "build_level_1",
+   "target": "adc_offset_calibration",
+   "type": "requires",
+   "evidence": "Verify the ADC Offset validation",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 60
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "vf_control",
+   "type": "uses",
+   "evidence": "Implements a simple scalar v/f control of motor",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 64
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "fast_estimator",
+   "type": "uses",
+   "evidence": "Test InstaSPIN-FOC FAST or eSMO modules",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 64
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "esmo",
+   "type": "uses",
+   "evidence": "Test InstaSPIN-FOC FAST or eSMO modules",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 64
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "overcurrent_protection",
+   "type": "requires",
+   "evidence": "Verify the over current fault protection by decreasing motorVars_M1.overCurrent_A",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 68
+    }
+   ]
+  },
+  {
+   "source": "build_level_3",
+   "target": "if_control",
+   "type": "uses",
+   "evidence": "motor is controlled by using i/f control",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 73
+    }
+   ]
+  },
+  {
+   "source": "build_level_3",
+   "target": "pi_controller",
+   "type": "uses",
+   "evidence": "PI_run (Id), PI_run (Iq) tested in DMC_LEVEL_3",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 54
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "motor_identification",
+   "type": "uses",
+   "evidence": "Evaluate motor identification with FAST estimators",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 75
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "foc",
+   "type": "uses",
+   "evidence": "Evaluate the complete motor drive with FAST/eSMO/encoder/Hall FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 75
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "field_weakening",
+   "type": "uses",
+   "evidence": "Evaluate additional features, such as field weakening control, flying start, MTPA, braking",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 75
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "mtpa",
+   "type": "uses",
+   "evidence": "Evaluate additional features ... MTPA",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 75
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "flying_start",
+   "type": "uses",
+   "evidence": "additional features, such as ... flying start",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 75
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "braking",
+   "type": "uses",
+   "evidence": "additional features, such as ... braking",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 75
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "dac128s_module",
+   "type": "uses",
+   "evidence": "validated using either the PWMDAC or the DAC128S module with an oscilloscope",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "datalog",
+   "type": "uses",
+   "evidence": "DATALOG module can be used to view these sensing waveforms",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "svpwm",
+   "type": "uses",
+   "evidence": "select SVM_COM_C or SVM_MIN_C from motorVars_M1.svmMode",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 66
+    }
+   ]
+  },
+  {
+   "source": "build_level_1",
+   "target": "motorvars_m1_flagenablerunandidentify",
+   "type": "uses",
+   "evidence": "motorVars_M1.flagEnableRunAndIdentify: Set to 1 to run the motor / identification, 0 to stop and disable PWMs.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "motorvars_m1_flagenablerunandidentify",
+   "type": "uses",
+   "evidence": "motorVars_M1.flagEnableRunAndIdentify: Set to 1 to run the motor / identification, 0 to stop and disable PWMs.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "source": "build_level_3",
+   "target": "motorvars_m1_flagenablerunandidentify",
+   "type": "uses",
+   "evidence": "motorVars_M1.flagEnableRunAndIdentify: Set to 1 to run the motor / identification, 0 to stop and disable PWMs.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "motorvars_m1_flagenablerunandidentify",
+   "type": "uses",
+   "evidence": "motorVars_M1.flagEnableRunAndIdentify: Set to 1 to run the motor / identification, 0 to stop and disable PWMs.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "source": "build_level_1",
+   "target": "systemvars_flagenablesystem",
+   "type": "uses",
+   "evidence": "systemVars.flagEnableSystem: Set to 1 automatically after offset calibration completes.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "systemvars_flagenablesystem",
+   "type": "uses",
+   "evidence": "systemVars.flagEnableSystem: Set to 1 automatically after offset calibration completes.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "source": "build_level_3",
+   "target": "systemvars_flagenablesystem",
+   "type": "uses",
+   "evidence": "systemVars.flagEnableSystem: Set to 1 automatically after offset calibration completes.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "systemvars_flagenablesystem",
+   "type": "uses",
+   "evidence": "systemVars.flagEnableSystem: Set to 1 automatically after offset calibration completes.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "source": "build_level_1",
+   "target": "motorvars_m1_flagrunidentandonline",
+   "type": "uses",
+   "evidence": "motorVars_M1.flagRunIdentAndOnLine: Set to 1 automatically if there are no faults.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "source": "build_level_1",
+   "target": "isrcount",
+   "type": "uses",
+   "evidence": "ISRCount: Increments continuously when TEST_ENABLE is defined.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "source": "build_level_1",
+   "target": "motorvars_m1_faultmtrprev",
+   "type": "uses",
+   "evidence": "motorVars_M1.faultMtrPrev.bit: Fault flag structure checked for no faults.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "motorvars_m1_faultmtruse",
+   "type": "uses",
+   "evidence": "motorVars_M1.faultMtrUse.all: Fault flags; should be 0; set to 0x10 on over current fault.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "build_level_3",
+   "target": "motorvars_m1_faultmtruse",
+   "type": "uses",
+   "evidence": "motorVars_M1.faultMtrUse.all: Fault flags; should be 0; set to 0x10 on over current fault.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "motorvars_m1_faultmtruse",
+   "type": "uses",
+   "evidence": "motorVars_M1.faultMtrUse.all: Fault flags; should be 0; set to 0x10 on over current fault.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "motorvars_m1_speedref_hz",
+   "type": "uses",
+   "evidence": "motorVars_M1.speedRef_Hz: Speed reference for the motor; negative value for reverse rotation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "build_level_3",
+   "target": "motorvars_m1_speedref_hz",
+   "type": "uses",
+   "evidence": "motorVars_M1.speedRef_Hz: Speed reference for the motor; negative value for reverse rotation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "motorvars_m1_speedref_hz",
+   "type": "uses",
+   "evidence": "motorVars_M1.speedRef_Hz: Speed reference for the motor; negative value for reverse rotation.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "motorvars_m1_speed_hz",
+   "type": "uses",
+   "evidence": "motorVars_M1.speed_Hz: Motor speed; should be close to speedRef_Hz.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "build_level_3",
+   "target": "motorvars_m1_speed_hz",
+   "type": "uses",
+   "evidence": "motorVars_M1.speed_Hz: Motor speed; should be close to speedRef_Hz.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "motorvars_m1_overcurrent_a",
+   "type": "uses",
+   "evidence": "motorVars_M1.overCurrent_A: Over current protection threshold; decreasing below phase current triggers fault.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 68
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "motorvars_m1_svmmode",
+   "type": "uses",
+   "evidence": "motorVars_M1.svmMode: SVM mode selection: SVM_COM_C (common) or SVM_MIN_C (minimum).",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 66
+    }
+   ]
+  },
+  {
+   "source": "build_level_3",
+   "target": "motorvars_m1_idq_set_a",
+   "type": "uses",
+   "evidence": "motorVars_M1.Idq_set_A.value[1]: Reference torque current set in build level 3.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 74
+    }
+   ]
+  },
+  {
+   "source": "build_level_3",
+   "target": "motorvars_m1_adcdata_current_sf",
+   "type": "uses",
+   "evidence": "motorVars_M1.adcData.current_sf: Current scale factor whose sign must match hardware board; related to USER_M1_ADC_FULL_SCALE_CURRENT_A.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 74
+    }
+   ]
+  },
+  {
+   "source": "build_level_3",
+   "target": "userparams_m1_current_sf",
+   "type": "uses",
+   "evidence": "userParams_M1.current_sf: User current scale factor related to USER_M1_ADC_FULL_SCALE_CURRENT_A.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 74
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "userparams_m1_flag_bypassmotorid",
+   "type": "uses",
+   "evidence": "userParams_M1.flag_bypassMotorId: In sys_main.c; false enables motor identification, true disables it.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "motorvars_m1_flagenablemotoridentify",
+   "type": "uses",
+   "evidence": "motorVars_M1.flagEnableMotorIdentify: Set to 1 to enable online identification without reloading code.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 77
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "motorvars_m1_accelerationmax_hzps",
+   "type": "uses",
+   "evidence": "motorVars_M1.accelerationMax_Hzps: Sets the acceleration.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 77
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "motorsetvars_m1_kp_id",
+   "type": "uses",
+   "evidence": "motorSetVars_M1.Kp_Id: Current controller gains (also Ki_Id, Kp_Iq, Ki_Iq) calculated in setupControllers() and tunable.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 77
+    }
+   ]
+  },
+  {
+   "source": "build_level_3",
+   "target": "motorsetvars_m1_kp_id",
+   "type": "uses",
+   "evidence": "motorSetVars_M1.Kp_Id: Current controller gains (also Ki_Id, Kp_Iq, Ki_Iq) calculated in setupControllers() and tunable.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 77
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "motorsetvars_m1_kp_spd",
+   "type": "uses",
+   "evidence": "motorSetVars_M1.Kp_spd: Speed controller gains (also Ki_spd) calculated in setupControllers(); a starting reference for tuning.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 77
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "systemvars_esttype",
+   "type": "uses",
+   "evidence": "systemVars.estType: Indicates enabled estimator combination: EST_TYPE_FAST_ESMO, EST_TYPE_FAST_ENC, EST_TYPE_FAST_HALL, EST_TYPE_ESMO_ENC.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 79
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "motorvars_m1_estimatormode",
+   "type": "uses",
+   "evidence": "motorVars_M1.estimatorMode: Selects estimator in use (ESTIMATOR_MODE_FAST/ESMO/ENC/HALL); can be switched on the fly.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 79
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "motorvars_m1_anglegen_rad",
+   "type": "uses",
+   "evidence": "motorVars_M1.angleGen_rad: Angle from the force angle generator; monitored vs estimator angle.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "motorvars_m1_angleest_rad",
+   "type": "uses",
+   "evidence": "motorVars_M1.angleEST_rad: Estimated rotor angle from FAST or eSMO.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "source": "build_level_1",
+   "target": "motorvars_m1_adcdata_i_a",
+   "type": "uses",
+   "evidence": "motorVars_M1.adcData.I_A.value[]: Phase current samples; default datalog inputs.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 56
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "motorvars_m1_adcdata_i_a",
+   "type": "uses",
+   "evidence": "motorVars_M1.adcData.I_A.value[]: Phase current samples; default datalog inputs.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 56
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "motorvars_m1_adcdata_v_v",
+   "type": "uses",
+   "evidence": "motorVars_M1.adcData.V_V.value[]: Phase voltage samples.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "source": "test_enable",
+   "target": "isrcount",
+   "type": "enables",
+   "evidence": "If this predefine is not defined, then the ISRCount will not increment",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "source": "motorvars_m1_overcurrent_a",
+   "target": "overcurrent_protection",
+   "type": "configures",
+   "evidence": "over current fault will be triggered if overCurrent_A is less than the phase current",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 68
+    }
+   ]
+  },
+  {
+   "source": "motorvars_m1_svmmode",
+   "target": "svpwm",
+   "type": "configures",
+   "evidence": "To change the SVM mode, select SVM_COM_C or SVM_MIN_C",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 66
+    }
+   ]
+  },
+  {
+   "source": "userparams_m1_flag_bypassmotorid",
+   "target": "motor_identification",
+   "type": "configures",
+   "evidence": "false->enable identification, true->disable identification",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "motorvars_m1_flagenablemotoridentify",
+   "target": "motor_identification",
+   "type": "enables",
+   "evidence": "Set flagEnableMotorIdentify to 1 to enable identification",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 77
+    }
+   ]
+  },
+  {
+   "source": "sys_main_c",
+   "target": "userparams_m1_flag_bypassmotorid",
+   "type": "contains",
+   "evidence": "userParams.flag_bypassMotorId value ... in the sys_main.c file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "motorsetvars_m1_kp_id",
+   "target": "pi_controller",
+   "type": "configures",
+   "evidence": "Tune the Kp and Ki ... for the current controllers",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 77
+    }
+   ]
+  },
+  {
+   "source": "motorsetvars_m1_kp_spd",
+   "target": "pi_controller",
+   "type": "configures",
+   "evidence": "Tune the Kp and Ki ... for the speed controllers",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 77
+    }
+   ]
+  },
+  {
+   "source": "setupcontrollers",
+   "target": "motorsetvars_m1_kp_id",
+   "type": "produces",
+   "evidence": "After setupControllers() is called ... Kp_Id, Ki_Id, Kp_Iq, Ki_Iq are initialized",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 77
+    }
+   ]
+  },
+  {
+   "source": "setupcontrollers",
+   "target": "motorsetvars_m1_kp_spd",
+   "type": "produces",
+   "evidence": "Kp_spd and Ki_spd are initialized with the newly calculated gains",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 77
+    }
+   ]
+  },
+  {
+   "source": "motorvars_m1_estimatormode",
+   "target": "fast_estimator",
+   "type": "configures",
+   "evidence": "ESTIMATOR_MODE_FAST means the FAST estimator is used for sensorless-FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 79
+    }
+   ]
+  },
+  {
+   "source": "motorvars_m1_estimatormode",
+   "target": "esmo",
+   "type": "configures",
+   "evidence": "ESTIMATOR_MODE_ESMO means the eSMO estimator is used",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 79
+    }
+   ]
+  },
+  {
+   "source": "motorvars_m1_estimatormode",
+   "target": "encoder",
+   "type": "configures",
+   "evidence": "ESTIMATOR_MODE_ENC means the encoder estimator is used for sensored-FOC",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 81
+    }
+   ]
+  },
+  {
+   "source": "motorvars_m1_estimatormode",
+   "target": "hall_sensor",
+   "type": "configures",
+   "evidence": "ESTIMATOR_MODE_HALL means the Hall sensor estimator is used",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 81
+    }
+   ]
+  },
+  {
+   "source": "fast_estimator",
+   "target": "motorvars_m1_angleest_rad",
+   "type": "produces",
+   "evidence": "estimated rotor angle of the FAST or eSMO estimator",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 67
+    }
+   ]
+  },
+  {
+   "source": "angle_gen_run",
+   "target": "motorvars_m1_anglegen_rad",
+   "type": "produces",
+   "evidence": "angle of the force angle generator",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 67
+    }
+   ]
+  },
+  {
+   "source": "motor1_fast",
+   "target": "motor1_esmo",
+   "type": "compatible_with",
+   "evidence": "implement both estimators simultaneously by adding 'MOTOR1_FAST' and 'MOTOR1_ESMO'",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 79
+    }
+   ]
+  },
+  {
+   "source": "motor1_fast",
+   "target": "motor1_enc",
+   "type": "compatible_with",
+   "evidence": "implement both estimators simultaneously by adding 'MOTOR1_FAST' and 'MOTOR1_ENC'",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 81
+    }
+   ]
+  },
+  {
+   "source": "motor1_fast",
+   "target": "motor1_hall",
+   "type": "compatible_with",
+   "evidence": "implement both estimators simultaneously by adding 'MOTOR1_FAST' and 'MOTOR1_HALL'",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 81
+    }
+   ]
+  },
+  {
+   "source": "motor1_esmo",
+   "target": "motor1_enc",
+   "type": "compatible_with",
+   "evidence": "implement both estimators simultaneously by adding 'MOTOR1_ESMO' and 'MOTOR1_ENC'",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 83
+    }
+   ]
+  },
+  {
+   "source": "dual_estimator",
+   "target": "universal_motor_control_lab",
+   "type": "part_of",
+   "evidence": "use two of the FOC algorithms simultaneously",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "source": "systemvars_esttype",
+   "target": "dual_estimator",
+   "type": "related_to",
+   "evidence": "estType EST_TYPE_FAST_ESMO means FAST and eSMO estimators are enabled",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 79
+    }
+   ]
+  },
+  {
+   "source": "motorvars_m1_estimatormode",
+   "target": "dual_estimator",
+   "type": "enables",
+   "evidence": "change the value to switch the using estimator on the fly",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 79
+    }
+   ]
+  },
+  {
+   "source": "motor1_isbldc",
+   "target": "dual_estimator",
+   "type": "related_to",
+   "evidence": "ISBLDC cannot be used simultaneously with other algorithms",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_freq_low_hz",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_FREQ_LOW_HZ in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_freq_low_hz",
+   "target": "vf_control",
+   "type": "configures",
+   "evidence": "USER_MOTOR1_FREQ_LOW_HZ: v/f profile low frequency.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_freq_high_hz",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_FREQ_HIGH_HZ in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_freq_high_hz",
+   "target": "vf_control",
+   "type": "configures",
+   "evidence": "USER_MOTOR1_FREQ_HIGH_HZ: v/f profile high frequency.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_volt_min_v",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_VOLT_MIN_V in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_volt_min_v",
+   "target": "vf_control",
+   "type": "configures",
+   "evidence": "USER_MOTOR1_VOLT_MIN_V: v/f profile minimum voltage.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_volt_max_v",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_VOLT_MAX_V in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_volt_max_v",
+   "target": "vf_control",
+   "type": "configures",
+   "evidence": "USER_MOTOR1_VOLT_MAX_V: v/f profile maximum voltage.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_m1_pwm_freq_khz",
+   "type": "contains",
+   "evidence": "#define USER_M1_PWM_FREQ_kHz in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "source": "user_m1_pwm_freq_khz",
+   "target": "epwm",
+   "type": "configures",
+   "evidence": "USER_M1_PWM_FREQ_kHz: PWM switching frequency define.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 62
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_m1_adc_full_scale_current_a",
+   "type": "contains",
+   "evidence": "#define USER_M1_ADC_FULL_SCALE_CURRENT_A in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 74
+    }
+   ]
+  },
+  {
+   "source": "user_m1_adc_full_scale_current_a",
+   "target": "motorvars_m1_adcdata_current_sf",
+   "type": "configures",
+   "evidence": "USER_M1_ADC_FULL_SCALE_CURRENT_A: ADC full-scale current; used in DAC gains and current scale factors.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 74
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_m1_adc_full_scale_voltage_v",
+   "type": "contains",
+   "evidence": "#define USER_M1_ADC_FULL_SCALE_VOLTAGE_V in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 60
+    }
+   ]
+  },
+  {
+   "source": "user_m1_adc_full_scale_voltage_v",
+   "target": "dac128s_ptrdata",
+   "type": "configures",
+   "evidence": "USER_M1_ADC_FULL_SCALE_VOLTAGE_V: ADC full-scale voltage; used in DAC128S gains.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 60
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_over_current_a",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_OVER_CURRENT_A in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 58
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_over_current_a",
+   "target": "pwmdacdata_ptrdata",
+   "type": "configures",
+   "evidence": "USER_MOTOR1_OVER_CURRENT_A: Motor over current value; used in PWMDAC gain scaling.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 58
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_type",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_TYPE in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_type",
+   "target": "motor_identification",
+   "type": "input_to",
+   "evidence": "USER_MOTOR1_TYPE: Motor type.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_num_pole_pairs",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_NUM_POLE_PAIRS in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_num_pole_pairs",
+   "target": "motor_identification",
+   "type": "input_to",
+   "evidence": "USER_MOTOR1_NUM_POLE_PAIRS: Number of pole pairs.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_rr_ohm",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_Rr_Ohm in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_rr_ohm",
+   "target": "motor_identification",
+   "type": "input_to",
+   "evidence": "USER_MOTOR1_Rr_Ohm: Rotor resistance.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_rs_ohm",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_Rs_Ohm in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_rs_ohm",
+   "target": "motor_identification",
+   "type": "input_to",
+   "evidence": "USER_MOTOR1_Rs_Ohm: Stator resistance; replaced with identified motorSetVars_M1.Rs_Ohm.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_ls_d_h",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_Ls_d_H in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_ls_d_h",
+   "target": "motor_identification",
+   "type": "input_to",
+   "evidence": "USER_MOTOR1_Ls_d_H: d-axis inductance; replaced with identified motorSetVars_M1.Ls_d_H.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_ls_q_h",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_Ls_q_H in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_ls_q_h",
+   "target": "motor_identification",
+   "type": "input_to",
+   "evidence": "USER_MOTOR1_Ls_q_H: q-axis inductance; replaced with identified motorSetVars_M1.Ls_q_H.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_rated_flux_vphz",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_RATED_FLUX_VpHz in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_rated_flux_vphz",
+   "target": "motor_identification",
+   "type": "input_to",
+   "evidence": "USER_MOTOR1_RATED_FLUX_VpHz: Rated flux; replaced with identified motorSetVars_M1.flux_VpHz.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_res_est_current_a",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_RES_EST_CURRENT_A in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_res_est_current_a",
+   "target": "motor_identification",
+   "type": "configures",
+   "evidence": "USER_MOTOR1_RES_EST_CURRENT_A: Identification current for resistance estimation, 10~30% of rated current.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_ind_est_current_a",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_IND_EST_CURRENT_A in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_ind_est_current_a",
+   "target": "motor_identification",
+   "type": "configures",
+   "evidence": "USER_MOTOR1_IND_EST_CURRENT_A: Identification current for inductance estimation, 10~30% of rated current, enough to rotate.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_max_current_a",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_MAX_CURRENT_A in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_max_current_a",
+   "target": "motor_identification",
+   "type": "configures",
+   "evidence": "USER_MOTOR1_MAX_CURRENT_A: Max current, 30~150% of rated current.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "user_motor1_flux_exc_freq_hz",
+   "type": "contains",
+   "evidence": "#define USER_MOTOR1_FLUX_EXC_FREQ_Hz in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_flux_exc_freq_hz",
+   "target": "motor_identification",
+   "type": "configures",
+   "evidence": "USER_MOTOR1_FLUX_EXC_FREQ_Hz: Flux excitation frequency for identification, 10~30% of rated frequency.",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "user_motor1_freq_low_hz",
+   "type": "uses",
+   "evidence": "tune the v/f profile parameters in the user_mtr1.h file",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_rs_ohm",
+   "target": "fast_estimator",
+   "type": "input_to",
+   "evidence": "FAST or eSMO estimator works as expected with the motor parameters",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_ls_d_h",
+   "target": "fast_estimator",
+   "type": "input_to",
+   "evidence": "FAST or eSMO estimator works as expected with the motor parameters",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_ls_q_h",
+   "target": "fast_estimator",
+   "type": "input_to",
+   "evidence": "FAST or eSMO estimator works as expected with the motor parameters",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_motor1_rated_flux_vphz",
+   "target": "fast_estimator",
+   "type": "input_to",
+   "evidence": "FAST or eSMO estimator works as expected with the motor parameters",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "motor_identification",
+   "target": "user_motor1_rs_ohm",
+   "type": "produces",
+   "evidence": "USER_MOTOR1_Rs_Ohm = motorSetVars_M1.Rs_Ohm's value",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "universal_motor_control_lab",
+   "type": "configures",
+   "evidence": "Select or define the right motor model in the user_mtr1.h and user_common.h files",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 47
+    }
+   ]
+  },
+  {
+   "source": "universal_motor_control_lab",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "datalog",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "source": "pwmdac",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 57
+    }
+   ]
+  },
+  {
+   "source": "dac128s_module",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 58
+    }
+   ]
+  },
+  {
+   "source": "build_level_1",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 60
+    }
+   ]
+  },
+  {
+   "source": "build_level_2",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 64
+    }
+   ]
+  },
+  {
+   "source": "build_level_3",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 73
+    }
+   ]
+  },
+  {
+   "source": "build_level_4",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 75
+    }
+   ]
+  },
+  {
+   "source": "predefined_symbols",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "motor1ctrlisr",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 52
+    }
+   ]
+  },
+  {
+   "source": "motor_identification",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "source": "user_mtr1_h",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 47
+    }
+   ]
+  },
+  {
+   "source": "dual_estimator",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 55
+    }
+   ]
+  },
+  {
+   "source": "code_composer_studio",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "source": "dac128s085evm",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 58
+    }
+   ]
+  },
+  {
+   "source": "sys_main_c",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "source": "dmc_buildlevel",
+   "target": "spruj26a",
+   "type": "documented_in",
+   "evidence": "SPRUJ26A Section 3.3-3.5",
+   "sources": [
+    {
+     "doc": "spruj26a",
+     "page": 60
+    }
+   ]
+  }
+ ]
+}

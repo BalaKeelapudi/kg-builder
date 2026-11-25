@@ -1,0 +1,446 @@
+<title>C2000 Motor Control Graph</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap">
+<style>
+/* Layout: three-pane bench — filters | live graph | inspector; stacks on phones. Schematic, solder-mask green ground cues. */
+:root {
+  --bg: #f3f5f4;
+  --panel: #ffffff;
+  --ink: #14201b;
+  --muted: #5b6a63;
+  --line: #d6dedb;
+  --accent: #0f7a5a;
+  --accent-soft: #e0f0ea;
+  --canvas: #fafbfb;
+  --edge: #aab7b1;
+  --hl: #c2410c;
+  --f-display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  /* entity type hues */
+  --t-device: #0f7a5a; --t-kit: #2563a8; --t-component: #5b6cb0; --t-peripheral: #0e8a9a;
+  --t-software: #8a4fbf; --t-algorithm: #c2410c; --t-motor: #a8641a; --t-concept: #6b7a72;
+  --t-feature: #b8336a; --t-build: #7a8a1a; --t-param: #8c7a5b; --t-app: #3f7f2e; --t-doc: #475569;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e1513; --panel: #141d1a; --ink: #e4ece8; --muted: #93a39b; --line: #26332e;
+  --accent: #4cc49a; --accent-soft: #17302a; --canvas: #101816; --edge: #3b4a44; --hl: #fb923c;
+  --t-device: #4cc49a; --t-kit: #6aa5e8; --t-component: #9aa6e6; --t-peripheral: #4dc3d1;
+  --t-software: #bf8ae8; --t-algorithm: #f08a4b; --t-motor: #d9a14f; --t-concept: #9aa8a1;
+  --t-feature: #e879a8; --t-build: #b9c94a; --t-param: #c4b08a; --t-app: #7fc46a; --t-doc: #94a3b8;
+  color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0e1513; --panel: #141d1a; --ink: #e4ece8; --muted: #93a39b; --line: #26332e;
+  --accent: #4cc49a; --accent-soft: #17302a; --canvas: #101816; --edge: #3b4a44; --hl: #fb923c;
+  --t-device: #4cc49a; --t-kit: #6aa5e8; --t-component: #9aa6e6; --t-peripheral: #4dc3d1;
+  --t-software: #bf8ae8; --t-algorithm: #f08a4b; --t-motor: #d9a14f; --t-concept: #9aa8a1;
+  --t-feature: #e879a8; --t-build: #b9c94a; --t-param: #c4b08a; --t-app: #7fc46a; --t-doc: #94a3b8;
+  color-scheme: dark }
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 14px; line-height: 1.45; }
+.app { display: grid; grid-template-rows: auto 1fr; height: 100%; }
+header {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 18px;
+  padding-block: 12px 10px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  border-bottom: 1px solid var(--line); background: var(--panel);
+}
+h1 { font-family: var(--f-display); font-weight: 600; font-size: 1.25rem; margin: 0; letter-spacing: .01em; }
+.stats { font-family: var(--f-mono); font-size: .78rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.main { display: grid; grid-template-columns: 260px minmax(0,1fr) 360px; min-height: 0; }
+aside { background: var(--panel); overflow-y: auto; min-width: 0; }
+aside.left { border-right: 1px solid var(--line); padding: 14px 16px; display: flex; flex-direction: column; gap: 18px; }
+aside.right { border-left: 1px solid var(--line); padding: 16px 18px; }
+.label { font-family: var(--f-display); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 6px; font-weight: 600; }
+.search { position: relative; }
+input[type=search], select {
+  width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line);
+  border-radius: 6px; padding: 7px 9px;
+}
+input:focus-visible, select:focus-visible, button:focus-visible, .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.suggest { position: absolute; z-index: 5; left: 0; right: 0; top: 100%; margin-top: 4px; background: var(--panel);
+  border: 1px solid var(--line); border-radius: 6px; max-height: 280px; overflow-y: auto; box-shadow: 0 6px 20px rgba(0,0,0,.12); }
+.suggest button { display: flex; gap: 8px; align-items: center; width: 100%; text-align: left; background: none; border: 0;
+  padding: 6px 9px; font: inherit; color: var(--ink); cursor: pointer; }
+.suggest button:hover, .suggest button.on { background: var(--accent-soft); }
+.types { display: flex; flex-direction: column; gap: 2px; }
+.chip { display: grid; grid-template-columns: 12px 1fr auto; align-items: center; gap: 8px; padding: 4px 6px; border-radius: 5px;
+  cursor: pointer; user-select: none; border: 0; background: none; font: inherit; color: var(--ink); text-align: left; }
+.chip:hover { background: var(--bg); }
+.chip .dot { width: 10px; height: 10px; border-radius: 50%; }
+.chip .n { font-family: var(--f-mono); font-size: .75rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.chip.off { opacity: .38; }
+.row { display: flex; gap: 6px; flex-wrap: wrap; }
+button.btn { font: inherit; font-size: .82rem; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--line);
+  background: var(--bg); color: var(--ink); cursor: pointer; }
+button.btn:hover { border-color: var(--accent); }
+button.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--panel); }
+.hint { color: var(--muted); font-size: .8rem; margin: 0; }
+.stage { position: relative; min-width: 0; min-height: 0; background: var(--canvas);
+  background-image: radial-gradient(var(--line) 1px, transparent 1px); background-size: 22px 22px; }
+#cy { position: absolute; inset: 0; }
+.toolbar { position: absolute; top: 10px; right: 10px; display: flex; gap: 6px; z-index: 3; }
+.toolbar button { background: var(--panel); }
+.mode { position: absolute; left: 10px; top: 10px; z-index: 3; font-family: var(--f-mono); font-size: .75rem; color: var(--muted);
+  background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; max-width: calc(100% - 200px); }
+.loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); font-family: var(--f-mono); }
+/* inspector */
+.empty h2 { font-family: var(--f-display); font-size: 1.05rem; margin: 0 0 8px; }
+.empty ul { padding-left: 18px; margin: 8px 0; color: var(--muted); }
+.ent-type { display: inline-flex; align-items: center; gap: 6px; font-family: var(--f-display); font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
+.ent-type .dot { width: 9px; height: 9px; border-radius: 50%; }
+.ent-title { font-family: var(--f-display); font-weight: 600; font-size: 1.35rem; margin: 4px 0 2px; text-wrap: balance; overflow-wrap: anywhere; }
+.ent-id { font-family: var(--f-mono); font-size: .74rem; color: var(--muted); overflow-wrap: anywhere; }
+.desc { margin: 10px 0 12px; }
+.props { display: grid; grid-template-columns: max-content minmax(0,1fr); gap: 3px 12px; font-size: .82rem; margin: 0 0 12px; }
+.props dt { color: var(--muted); font-family: var(--f-mono); font-size: .76rem; }
+.props dd { margin: 0; overflow-wrap: anywhere; }
+.cites { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0 14px; }
+.cite { font-family: var(--f-mono); font-size: .72rem; padding: 2px 6px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); text-decoration: none; white-space: nowrap; }
+.cite:hover { text-decoration: underline; }
+.relgroup { margin: 14px 0 0; }
+.relgroup h3 { font-family: var(--f-mono); font-size: .76rem; font-weight: 500; color: var(--muted); margin: 0 0 4px; border-bottom: 1px solid var(--line); padding-bottom: 3px; }
+.rel { padding: 5px 0; border-bottom: 1px dashed var(--line); }
+.rel:last-child { border-bottom: 0; }
+.rel a.go { color: var(--ink); font-weight: 500; text-decoration: none; cursor: pointer; }
+.rel a.go:hover { color: var(--accent); text-decoration: underline; }
+.rel .dir { font-family: var(--f-mono); color: var(--muted); font-size: .75rem; }
+.rel .ev { color: var(--muted); font-size: .8rem; margin: 2px 0 0; }
+.path { margin-top: 8px; display: flex; flex-direction: column; gap: 6px; }
+.pathout { font-size: .8rem; }
+.pathout ol { padding-left: 18px; margin: 6px 0 0; }
+.pathout .rt { font-family: var(--f-mono); color: var(--hl); font-size: .74rem; }
+@media (max-width: 1000px) {
+  .main { grid-template-columns: 220px minmax(0,1fr); }
+  aside.right { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--line); max-height: 45vh; }
+  .main { grid-template-rows: minmax(0,1fr) auto; }
+}
+@media (max-width: 680px) {
+  .app { height: auto; }
+  .main { display: flex; flex-direction: column; }
+  aside.left { border-right: 0; border-bottom: 1px solid var(--line); }
+  .types { display: grid; grid-template-columns: 1fr 1fr; }
+  .stage { height: 62vh; }
+  aside.right { max-height: none; }
+  .mode { max-width: calc(100% - 20px); top: auto; bottom: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="app">
+  <header>
+    <h1>C2000 Motor Control Graph</h1>
+    <span class="stats" id="stats">loading&hellip;</span>
+  </header>
+  <div class="main">
+    <aside class="left">
+      <div class="search">
+        <p class="label"><label for="q">Find an entity</label></p>
+        <input id="q" type="search" placeholder="e.g. eSMO, F280025C, CMPSS" autocomplete="off">
+        <div class="suggest" id="suggest" hidden></div>
+      </div>
+      <div>
+        <p class="label">Entity types</p>
+        <div class="types" id="types"></div>
+        <div class="row" style="margin-top:6px">
+          <button class="btn" id="allTypes" type="button">All</button>
+          <button class="btn" id="noTypes" type="button">None</button>
+        </div>
+      </div>
+      <div>
+        <p class="label"><label for="docSel">Source document</label></p>
+        <select id="docSel"><option value="">All documents</option></select>
+      </div>
+      <div>
+        <p class="label">Path between two entities</p>
+        <div class="path">
+          <input id="pa" type="search" placeholder="From (e.g. LAUNCHXL-F280025C)" list="names" autocomplete="off">
+          <input id="pb" type="search" placeholder="To (e.g. eSMO)" list="names" autocomplete="off">
+          <button class="btn primary" id="findPath" type="button">Find path</button>
+          <div class="pathout" id="pathout"></div>
+        </div>
+        <datalist id="names"></datalist>
+      </div>
+    </aside>
+    <section class="stage">
+      <div id="cy" aria-label="Knowledge graph canvas"></div>
+      <div class="loading" id="loading">Laying out graph&hellip;</div>
+      <div class="mode" id="mode">Overview: all entities</div>
+      <div class="toolbar">
+        <button class="btn" id="hops" type="button" title="Neighbourhood depth">Depth: 1</button>
+        <button class="btn" id="reset" type="button">Overview</button>
+        <button class="btn" id="fit" type="button">Fit</button>
+      </div>
+    </section>
+    <aside class="right" id="inspector">
+      <div class="empty">
+        <h2>Pick an entity</h2>
+        <p class="hint">Click a node, or search on the left. The inspector shows what the TI documents say about it, every relationship with its evidence, and links to the cited PDF pages.</p>
+        <ul>
+          <li>Try <a href="#" data-go="esmo">eSMO</a>, <a href="#" data-go="launchxl_f280025c">LAUNCHXL-F280025C</a>, <a href="#" data-go="clb">CLB</a> or <a href="#" data-go="build_level_2">Build level 2</a>.</li>
+          <li>Depth sets how many hops of neighbours stay visible around the selection.</li>
+          <li>Node size follows how connected an entity is.</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+<script>
+const TYPES = [
+  ["Device","--t-device"],["EvaluationKit","--t-kit"],["Component","--t-component"],["Peripheral","--t-peripheral"],
+  ["Software","--t-software"],["Algorithm","--t-algorithm"],["Motor","--t-motor"],["Feature","--t-feature"],
+  ["BuildLevel","--t-build"],["Parameter","--t-param"],["Concept","--t-concept"],["Application","--t-app"],["Document","--t-doc"]];
+const TYPE_LABEL = {EvaluationKit:"Evaluation kit", BuildLevel:"Build level"};
+const DOC_URL = {spruj26a:"spruj26a", spruio7a:"spruio7", sprt755:"sprt755", sszt350:"sszt350", sszt464:"sszt464", sszt496:"sszt496"};
+const DOC_NAME = {spruj26a:"SPRUJ26A Universal Lab guide", spruio7a:"SPRUIO7A SDK getting started", sprt755:"SPRT755 F280013x overview",
+  sszt350:"SSZT350 CLB article", sszt464:"SSZT464 F2838x connectivity", sszt496:"SSZT496 Motor control SDK article"};
+const $ = s => document.querySelector(s);
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const citeUrl = s => `https://www.ti.com/lit/pdf/${DOC_URL[s.doc] || s.doc}#page=${s.page}`;
+let G, cy, byId = {}, adj = {}, hidden = new Set(), docFilter = "", selected = null, depth = 1;
+const typeOn = {}; TYPES.forEach(([t]) => typeOn[t] = true);
+try { const saved = JSON.parse(localStorage.getItem("kg-types") || "null"); if (saved) Object.assign(typeOn, saved); } catch (e) {}
+
+function typeColor(t) { const m = TYPES.find(x => x[0] === t); return css(m ? m[1] : "--t-concept"); }
+
+function styles() {
+  return [
+    { selector: "node", style: {
+      "background-color": n => typeColor(n.data("type")), "width": "data(size)", "height": "data(size)",
+      "label": "data(label)", "font-family": "IBM Plex Sans, system-ui, sans-serif", "font-size": 9,
+      "color": css("--ink"), "text-valign": "bottom", "text-margin-y": 3, "min-zoomed-font-size": 7,
+      "text-outline-color": css("--canvas"), "text-outline-width": 2, "border-width": 0 } },
+    { selector: "node[type='Document']", style: { "shape": "round-rectangle" } },
+    { selector: "node[type='BuildLevel']", style: { "shape": "round-tag" } },
+    { selector: "node[type='EvaluationKit']", style: { "shape": "round-rectangle" } },
+    { selector: "node[type='Device']", style: { "shape": "round-octagon" } },
+    { selector: "edge", style: { "width": 1, "line-color": css("--edge"), "curve-style": "bezier",
+      "target-arrow-shape": "triangle", "target-arrow-color": css("--edge"), "arrow-scale": .6, "opacity": .7 } },
+    { selector: ".faded", style: { "opacity": .08, "text-opacity": 0 } },
+    { selector: "node.focus", style: { "border-width": 3, "border-color": css("--hl"), "font-size": 12, "font-weight": 600, "z-index": 10 } },
+    { selector: "node.near", style: { "font-size": 10, "min-zoomed-font-size": 0 } },
+    { selector: "edge.near", style: { "line-color": css("--accent"), "target-arrow-color": css("--accent"), "opacity": 1, "width": 1.6,
+      "label": "data(type)", "font-family": "IBM Plex Mono, monospace", "font-size": 7, "color": css("--muted"),
+      "text-rotation": "autorotate", "text-background-color": css("--canvas"), "text-background-opacity": 1, "text-background-padding": 1 } },
+    { selector: ".path", style: { "line-color": css("--hl"), "target-arrow-color": css("--hl"), "border-width": 3, "border-color": css("--hl"),
+      "width": 3, "opacity": 1, "min-zoomed-font-size": 0, "z-index": 20 } },
+  ];
+}
+
+function nodeVisible(e) {
+  if (!typeOn[e.type]) return false;
+  if (docFilter && !e.sources.some(s => s.doc === docFilter)) return false;
+  return true;
+}
+
+function applyFilters() {
+  cy.batch(() => {
+    cy.nodes().forEach(n => n.style("display", nodeVisible(byId[n.id()]) ? "element" : "none"));
+  });
+  const vis = cy.nodes().filter(n => n.style("display") === "element").length;
+  $("#stats").textContent = `${G.meta.documents.length} TI documents \u00b7 ${G.entities.length} entities \u00b7 ${G.relations.length} relations` +
+    (vis < G.entities.length ? ` \u00b7 ${vis} shown` : "");
+  if (selected) focus(selected, false);
+}
+
+function renderTypes() {
+  const counts = {}; G.entities.forEach(e => counts[e.type] = (counts[e.type] || 0) + 1);
+  $("#types").innerHTML = TYPES.filter(([t]) => counts[t]).map(([t, v]) =>
+    `<button type="button" class="chip ${typeOn[t] ? "" : "off"}" data-t="${t}" aria-pressed="${typeOn[t]}">
+      <span class="dot" style="background:var(${v})"></span><span>${TYPE_LABEL[t] || t}</span><span class="n">${counts[t]}</span></button>`).join("");
+}
+function saveTypes() { try { localStorage.setItem("kg-types", JSON.stringify(typeOn)); } catch (e) {} }
+
+function neighborhood(id, d) {
+  let set = new Set([id]), frontier = [id];
+  for (let i = 0; i < d; i++) {
+    const next = [];
+    frontier.forEach(x => (adj[x] || []).forEach(y => { if (!set.has(y) && nodeVisible(byId[y])) { set.add(y); next.push(y); } }));
+    frontier = next;
+  }
+  return set;
+}
+
+function focus(id, animate = true) {
+  selected = id;
+  const keep = neighborhood(id, depth);
+  cy.batch(() => {
+    cy.elements().removeClass("faded focus near path");
+    cy.nodes().forEach(n => { if (!keep.has(n.id())) n.addClass("faded"); else n.addClass("near"); });
+    cy.edges().forEach(e => {
+      if (keep.has(e.source().id()) && keep.has(e.target().id()) && (e.source().id() === id || e.target().id() === id || depth > 1)) e.addClass("near");
+      else e.addClass("faded");
+    });
+    cy.$id(id).addClass("focus").removeClass("faded");
+  });
+  const els = cy.nodes().filter(n => keep.has(n.id()) && n.style("display") === "element");
+  restorePositions();
+  const c = cy.$id(id).position();
+  const dist = neighborDistances(id, keep);
+  const ring = els.layout({ name: "concentric", animate: !reduced(), animationDuration: 400, fit: false,
+    concentric: n => depth + 1 - (dist[n.id()] ?? depth), levelWidth: () => 1, minNodeSpacing: 26,
+    startAngle: -Math.PI / 2, boundingBox: { x1: c.x - 10, y1: c.y - 10, w: 20, h: 20 } });
+  ring.one("layoutstop", () => { if (animate) cy.animate({ fit: { eles: els, padding: 50 }, duration: reduced() ? 0 : 300 }); });
+  ring.run();
+  $("#mode").textContent = `${byId[id].label} \u00b7 ${keep.size - 1} neighbours within ${depth} hop${depth > 1 ? "s" : ""}`;
+  inspect(id);
+}
+
+function inspect(id) {
+  const e = byId[id];
+  const out = G.relations.filter(r => r.source === id), inc = G.relations.filter(r => r.target === id);
+  const groups = {};
+  out.forEach(r => (groups[r.type + " \u2192"] ||= []).push([r, r.target]));
+  inc.forEach(r => (groups["\u2190 " + r.type] ||= []).push([r, r.source]));
+  const cites = list => list.map(s => `<a class="cite" href="${citeUrl(s)}" target="_blank" rel="noopener" title="${esc(DOC_NAME[s.doc] || s.doc)}">${s.doc.toUpperCase()} p.${s.page}</a>`).join("");
+  const props = Object.entries(e.properties || {});
+  $("#inspector").innerHTML = `
+    <span class="ent-type" style="color:${typeColor(e.type)}"><span class="dot" style="background:${typeColor(e.type)}"></span>${TYPE_LABEL[e.type] || e.type}</span>
+    <h2 class="ent-title">${esc(e.label)}</h2>
+    <div class="ent-id">${esc(e.id)}${e.aliases.length ? " \u00b7 also " + e.aliases.map(esc).join(", ") : ""}</div>
+    ${e.description ? `<p class="desc">${esc(e.description)}</p>` : ""}
+    ${props.length ? `<dl class="props">${props.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(typeof v === "object" ? JSON.stringify(v) : v)}</dd>`).join("")}</dl>` : ""}
+    ${e.sources.length ? `<p class="label">Cited in</p><div class="cites">${cites(e.sources)}</div>` : ""}
+    <p class="label">${out.length + inc.length} relationships</p>
+    ${Object.entries(groups).sort((a, b) => b[1].length - a[1].length).map(([g, items]) => `
+      <div class="relgroup"><h3>${esc(g)} (${items.length})</h3>
+      ${items.map(([r, other]) => `<div class="rel"><a class="go" data-go="${esc(other)}" href="#">${esc(byId[other]?.label || other)}</a>
+        ${r.evidence.length ? `<p class="ev">${esc(r.evidence[0])}</p>` : ""}
+        ${r.sources.length ? `<div class="cites" style="margin:3px 0 0">${cites(r.sources.slice(0, 4))}</div>` : ""}</div>`).join("")}
+      </div>`).join("")}`;
+}
+
+const reduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+let homePos = null;
+function savePositions() { homePos = {}; cy.nodes().forEach(n => homePos[n.id()] = { ...n.position() }); }
+function restorePositions() { if (homePos) cy.batch(() => cy.nodes().forEach(n => n.position(homePos[n.id()]))); }
+function neighborDistances(id, keep) {
+  const d = { [id]: 0 }, q = [id];
+  while (q.length) { const x = q.shift(); (adj[x] || []).forEach(y => { if (keep.has(y) && !(y in d)) { d[y] = d[x] + 1; q.push(y); } }); }
+  return d;
+}
+
+function resetView() {
+  selected = null;
+  restorePositions();
+  cy.elements().removeClass("faded focus near path");
+  cy.animate({ fit: { eles: cy.elements(":visible"), padding: 30 }, duration: 300 });
+  $("#mode").textContent = "Overview: all entities";
+}
+
+function resolve(text) {
+  const t = text.trim().toLowerCase(); if (!t) return null;
+  return G.entities.find(e => e.label.toLowerCase() === t || e.id === t || e.aliases.some(a => a.toLowerCase() === t))?.id
+      || G.entities.find(e => e.label.toLowerCase().includes(t))?.id || null;
+}
+
+function shortestPath(a, b) {
+  const prev = { [a]: null }, q = [a];
+  while (q.length) {
+    const x = q.shift(); if (x === b) break;
+    (adj[x] || []).forEach(y => { if (!(y in prev)) { prev[y] = x; q.push(y); } });
+  }
+  if (!(b in prev)) return null;
+  const p = []; for (let x = b; x !== null; x = prev[x]) p.unshift(x); return p;
+}
+
+function showPath() {
+  const a = resolve($("#pa").value), b = resolve($("#pb").value), out = $("#pathout");
+  if (!a || !b) { out.textContent = "Type two entity names that exist in the graph."; return; }
+  const p = shortestPath(a, b);
+  if (!p) { out.textContent = `No connection between ${byId[a].label} and ${byId[b].label}.`; return; }
+  const steps = [];
+  for (let i = 0; i < p.length - 1; i++) {
+    const r = G.relations.find(r => r.source === p[i] && r.target === p[i + 1]) || G.relations.find(r => r.source === p[i + 1] && r.target === p[i]);
+    steps.push(`<li><a class="go" href="#" data-go="${p[i]}">${esc(byId[p[i]].label)}</a> <span class="rt">${r.source === p[i] ? r.type + " \u2192" : "\u2190 " + r.type}</span></li>`);
+  }
+  steps.push(`<li><a class="go" href="#" data-go="${b}">${esc(byId[b].label)}</a></li>`);
+  out.innerHTML = `${p.length - 1} hop${p.length > 2 ? "s" : ""}<ol>${steps.join("")}</ol>`;
+  const set = new Set(p);
+  restorePositions();
+  cy.batch(() => {
+    cy.elements().removeClass("faded focus near path").addClass("faded");
+    p.forEach((id, i) => {
+      cy.$id(id).removeClass("faded").addClass("path near");
+      if (i < p.length - 1) cy.edges().filter(e => (e.source().id() === id && e.target().id() === p[i + 1]) || (e.target().id() === id && e.source().id() === p[i + 1])).removeClass("faded").addClass("path near");
+    });
+  });
+  cy.animate({ fit: { eles: cy.nodes().filter(n => set.has(n.id())), padding: 80 }, duration: 400 });
+  $("#mode").textContent = `Path: ${byId[a].label} \u2192 ${byId[b].label}`;
+}
+
+function suggest() {
+  const t = $("#q").value.trim().toLowerCase(), box = $("#suggest");
+  if (!t) { box.hidden = true; return; }
+  const hits = G.entities.map(e => {
+    const l = e.label.toLowerCase(), s = l === t ? 0 : l.startsWith(t) ? 1 : l.includes(t) ? 2 :
+      e.aliases.some(a => a.toLowerCase().includes(t)) ? 3 : e.id.includes(t) ? 4 : 9;
+    return [s, -e.degree, e];
+  }).filter(x => x[0] < 9).sort((a, b) => a[0] - b[0] || a[1] - b[1]).slice(0, 12);
+  box.innerHTML = hits.length ? hits.map(([, , e], i) => `<button type="button" data-go="${esc(e.id)}" class="${i ? "" : "on"}">
+    <span class="dot" style="width:9px;height:9px;border-radius:50%;flex:none;background:${typeColor(e.type)}"></span>
+    <span style="min-width:0;overflow-wrap:anywhere">${esc(e.label)}</span><span class="n" style="margin-left:auto;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)">${TYPE_LABEL[e.type] || e.type}</span></button>`).join("")
+    : `<p class="hint" style="padding:8px">No match.</p>`;
+  box.hidden = false;
+}
+
+function go(id) {
+  if (!byId[id]) return;
+  if (!nodeVisible(byId[id])) { typeOn[byId[id].type] = true; docFilter = ""; $("#docSel").value = ""; renderTypes(); applyFilters(); }
+  $("#suggest").hidden = true; focus(id);
+}
+
+async function init() {
+  const res = await fetch("graph.json");
+  if (!res.ok) { $("#loading").textContent = "Could not load graph.json."; return; }
+  G = await res.json();
+  G.entities.forEach(e => { byId[e.id] = e; adj[e.id] = []; });
+  G.relations.forEach(r => { adj[r.source]?.push(r.target); adj[r.target]?.push(r.source); });
+  const maxDeg = Math.max(...G.entities.map(e => e.degree));
+  const elements = [
+    ...G.entities.map(e => ({ data: { id: e.id, label: e.label, type: e.type, size: 8 + 34 * Math.sqrt(e.degree / maxDeg) } })),
+    ...G.relations.map((r, i) => ({ data: { id: "r" + i, source: r.source, target: r.target, type: r.type.replace(/_/g, " ") } })),
+  ];
+  $("#docSel").innerHTML += G.meta.documents.map(d => `<option value="${d}">${esc(DOC_NAME[d] || d)}</option>`).join("");
+  $("#names").innerHTML = G.entities.map(e => `<option value="${esc(e.label)}">`).join("");
+  renderTypes();
+  cy = cytoscape({ container: $("#cy"), elements, style: styles(), wheelSensitivity: .25, minZoom: .05, maxZoom: 4,
+    layout: { name: "cose", animate: false, randomize: true, nodeRepulsion: () => 9000, idealEdgeLength: () => 60,
+      edgeElasticity: () => 80, gravity: .35, numIter: 1500, nodeOverlap: 8, componentSpacing: 60 } });
+  $("#loading").hidden = true;
+  savePositions();
+  applyFilters();
+  cy.on("tap", "node", ev => focus(ev.target.id()));
+  cy.on("tap", ev => { if (ev.target === cy) resetView(); });
+  const mq = matchMedia("(prefers-color-scheme: dark)");
+  const restyle = () => cy.style(styles());
+  mq.addEventListener?.("change", restyle);
+  new MutationObserver(restyle).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  if (location.hash.length > 1 && byId[location.hash.slice(1)]) go(location.hash.slice(1));
+}
+
+document.addEventListener("click", ev => {
+  const g = ev.target.closest("[data-go]"); if (g) { ev.preventDefault(); go(g.dataset.go); return; }
+  const c = ev.target.closest(".chip"); if (c) { typeOn[c.dataset.t] = !typeOn[c.dataset.t]; saveTypes(); renderTypes(); applyFilters(); }
+  if (!ev.target.closest(".search")) $("#suggest").hidden = true;
+});
+$("#allTypes").onclick = () => { TYPES.forEach(([t]) => typeOn[t] = true); saveTypes(); renderTypes(); applyFilters(); };
+$("#noTypes").onclick = () => { TYPES.forEach(([t]) => typeOn[t] = false); saveTypes(); renderTypes(); applyFilters(); };
+$("#docSel").onchange = ev => { docFilter = ev.target.value; applyFilters(); };
+$("#q").addEventListener("input", suggest);
+$("#q").addEventListener("keydown", ev => {
+  if (ev.key === "Enter") { const b = $("#suggest button"); if (b) go(b.dataset.go); }
+  if (ev.key === "Escape") $("#suggest").hidden = true;
+});
+$("#findPath").onclick = showPath;
+$("#reset").onclick = resetView;
+$("#fit").onclick = () => cy.animate({ fit: { eles: cy.elements(":visible").not(".faded"), padding: 40 }, duration: 300 });
+$("#hops").onclick = () => { depth = depth % 3 + 1; $("#hops").textContent = `Depth: ${depth}`; if (selected) focus(selected); };
+init();
+</script>
